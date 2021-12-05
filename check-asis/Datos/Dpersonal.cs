@@ -90,5 +90,51 @@ namespace check_asis.Datos
 				ConexionMaestra.cerrar();
 			}
 		}
+
+		public void MostrarPersonal(ref DataTable dt, int desde, int hasta)
+		{
+			try
+			{
+				ConexionMaestra.abrir();
+				SqlDataAdapter da = new SqlDataAdapter("mostrarPersonal", ConexionMaestra.conectar);
+				da.SelectCommand.CommandType = CommandType.StoredProcedure;
+				da.SelectCommand.Parameters.AddWithValue("@Desde", desde);
+				da.SelectCommand.Parameters.AddWithValue("@Hasta", hasta);
+				da.Fill(dt);
+
+
+			}
+			catch (Exception ex)
+			{
+
+				MessageBox.Show(ex.StackTrace);
+			}
+			finally
+			{
+				ConexionMaestra.cerrar();
+			}
+		}
+
+		public void BuscarPersonal(ref DataTable dt, int desde, int hasta, string buscador)
+		{
+			try
+			{
+				ConexionMaestra.abrir();
+				SqlDataAdapter da = new SqlDataAdapter("BuscarPersonal", ConexionMaestra.conectar);
+				da.SelectCommand.CommandType = CommandType.StoredProcedure;
+				da.SelectCommand.Parameters.AddWithValue("@Desde", desde);
+				da.SelectCommand.Parameters.AddWithValue("@Hasta", hasta);
+				da.SelectCommand.Parameters.AddWithValue("@Buscador", buscador);
+				da.Fill(dt);
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.StackTrace);
+			}
+			finally
+			{
+				ConexionMaestra.cerrar();
+			}
+		}
 	}
 }
