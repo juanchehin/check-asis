@@ -1,0 +1,10 @@
+C:\Programacion\check-asis\check-asis\obj\Debug\check-asis.csproj.AssemblyReference.cache
+C:\Programacion\check-asis\check-asis\obj\Debug\check_asis.Presentacion.MenuPrincipal.resources
+C:\Programacion\check-asis\check-asis\obj\Debug\check-asis.csproj.GenerateResource.cache
+C:\Programacion\check-asis\check-asis\bin\Debug\check-asis.exe.config
+C:\Programacion\check-asis\check-asis\bin\Debug\check-asis.exe
+C:\Programacion\check-asis\check-asis\bin\Debug\check-asis.pdb
+C:\Programacion\check-asis\check-asis\obj\Debug\check_asis.Properties.Resources.resources
+C:\Programacion\check-asis\check-asis\obj\Debug\check-asis.csproj.CoreCompileInputs.cache
+C:\Programacion\check-asis\check-asis\obj\Debug\check-asis.exe
+C:\Programacion\check-asis\check-asis\obj\Debug\check-asis.pdb
