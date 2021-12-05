@@ -31,28 +31,30 @@ namespace check_asis.Presentacion
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Personal));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.PanelRegistros = new System.Windows.Forms.Panel();
+            this.PanelCargos = new System.Windows.Forms.Panel();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.btnGuardarCambiosPersonal = new System.Windows.Forms.Button();
+            this.btnGuardarPersonal = new System.Windows.Forms.Button();
+            this.btnAgregarCargo = new System.Windows.Forms.Button();
+            this.cbxPais = new System.Windows.Forms.ComboBox();
+            this.txtIdentifiacion = new System.Windows.Forms.TextBox();
+            this.txtCargo = new System.Windows.Forms.TextBox();
+            this.txtSueldoHora = new System.Windows.Forms.TextBox();
+            this.txtNombres = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.PanelPaginado = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -63,14 +65,12 @@ namespace check_asis.Presentacion
             this.panel4 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.PanelRegistros.SuspendLayout();
+            this.PanelCargos.SuspendLayout();
+            this.PanelPaginado.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -85,165 +85,78 @@ namespace check_asis.Presentacion
             this.dataGridView1.Location = new System.Drawing.Point(0, 77);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(831, 335);
+            this.dataGridView1.Size = new System.Drawing.Size(1048, 438);
             this.dataGridView1.TabIndex = 1;
             // 
-            // panel1
+            // PanelRegistros
             // 
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(70, 38);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(684, 293);
-            this.panel1.TabIndex = 3;
+            this.PanelRegistros.Controls.Add(this.PanelCargos);
+            this.PanelRegistros.Controls.Add(this.button6);
+            this.PanelRegistros.Controls.Add(this.btnGuardarCambiosPersonal);
+            this.PanelRegistros.Controls.Add(this.btnGuardarPersonal);
+            this.PanelRegistros.Controls.Add(this.btnAgregarCargo);
+            this.PanelRegistros.Controls.Add(this.cbxPais);
+            this.PanelRegistros.Controls.Add(this.txtIdentifiacion);
+            this.PanelRegistros.Controls.Add(this.txtCargo);
+            this.PanelRegistros.Controls.Add(this.txtSueldoHora);
+            this.PanelRegistros.Controls.Add(this.txtNombres);
+            this.PanelRegistros.Controls.Add(this.label5);
+            this.PanelRegistros.Controls.Add(this.label4);
+            this.PanelRegistros.Controls.Add(this.label3);
+            this.PanelRegistros.Controls.Add(this.label2);
+            this.PanelRegistros.Controls.Add(this.label1);
+            this.PanelRegistros.Location = new System.Drawing.Point(70, 38);
+            this.PanelRegistros.Name = "PanelRegistros";
+            this.PanelRegistros.Size = new System.Drawing.Size(957, 331);
+            this.PanelRegistros.TabIndex = 3;
             // 
-            // label1
+            // PanelCargos
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(38, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre y Apellido: ";
+            this.PanelCargos.Controls.Add(this.button11);
+            this.PanelCargos.Controls.Add(this.button12);
+            this.PanelCargos.Controls.Add(this.textBox7);
+            this.PanelCargos.Controls.Add(this.label11);
+            this.PanelCargos.Controls.Add(this.textBox5);
+            this.PanelCargos.Controls.Add(this.label10);
+            this.PanelCargos.Location = new System.Drawing.Point(293, 89);
+            this.PanelCargos.Name = "PanelCargos";
+            this.PanelCargos.Size = new System.Drawing.Size(445, 150);
+            this.PanelCargos.TabIndex = 15;
             // 
-            // label2
+            // button11
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(119, 175);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Cargo:";
+            this.button11.Location = new System.Drawing.Point(220, 118);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(93, 23);
+            this.button11.TabIndex = 15;
+            this.button11.Text = "Guardar*";
+            this.button11.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // button12
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(130, 128);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 17);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Pais:";
+            this.button12.Location = new System.Drawing.Point(6, 118);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(93, 23);
+            this.button12.TabIndex = 14;
+            this.button12.Text = "Guardar";
+            this.button12.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // textBox7
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(75, 86);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 17);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Identificacion:";
+            this.textBox7.Location = new System.Drawing.Point(140, 66);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(173, 20);
+            this.textBox7.TabIndex = 9;
             // 
-            // label5
+            // label11
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(55, 219);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(114, 17);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Sueldo por hora:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(175, 45);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(173, 20);
-            this.textBox2.TabIndex = 5;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(175, 219);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(173, 20);
-            this.textBox3.TabIndex = 6;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(175, 175);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(173, 20);
-            this.textBox4.TabIndex = 7;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(175, 83);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(173, 20);
-            this.textBox6.TabIndex = 9;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(175, 128);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(173, 21);
-            this.comboBox1.TabIndex = 10;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(391, 175);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 23);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Agregar cargo";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(255, 254);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(93, 23);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Guardar";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(58, 254);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(93, 23);
-            this.button5.TabIndex = 13;
-            this.button5.Text = "Guardar*";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(391, 43);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(93, 23);
-            this.button6.TabIndex = 14;
-            this.button6.Text = "Volver";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.button11);
-            this.panel2.Controls.Add(this.button12);
-            this.panel2.Controls.Add(this.textBox7);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.textBox5);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Location = new System.Drawing.Point(323, 86);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(358, 150);
-            this.panel2.TabIndex = 15;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(3, 66);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(114, 17);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "Sueldo por hora:";
             // 
             // textBox5
             // 
@@ -262,22 +175,322 @@ namespace check_asis.Presentacion
             this.label10.TabIndex = 6;
             this.label10.Text = "Cargo:";
             // 
-            // label11
+            // button6
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(3, 66);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(114, 17);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "Sueldo por hora:";
+            this.button6.Location = new System.Drawing.Point(391, 43);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(93, 23);
+            this.button6.TabIndex = 14;
+            this.button6.Text = "Volver";
+            this.button6.UseVisualStyleBackColor = true;
             // 
-            // textBox7
+            // btnGuardarCambiosPersonal
             // 
-            this.textBox7.Location = new System.Drawing.Point(140, 66);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(173, 20);
-            this.textBox7.TabIndex = 9;
+            this.btnGuardarCambiosPersonal.Location = new System.Drawing.Point(177, 254);
+            this.btnGuardarCambiosPersonal.Name = "btnGuardarCambiosPersonal";
+            this.btnGuardarCambiosPersonal.Size = new System.Drawing.Size(158, 23);
+            this.btnGuardarCambiosPersonal.TabIndex = 13;
+            this.btnGuardarCambiosPersonal.Text = "Guardar Cambios";
+            this.btnGuardarCambiosPersonal.UseVisualStyleBackColor = true;
+            // 
+            // btnGuardarPersonal
+            // 
+            this.btnGuardarPersonal.Location = new System.Drawing.Point(58, 254);
+            this.btnGuardarPersonal.Name = "btnGuardarPersonal";
+            this.btnGuardarPersonal.Size = new System.Drawing.Size(93, 23);
+            this.btnGuardarPersonal.TabIndex = 12;
+            this.btnGuardarPersonal.Text = "Guardar";
+            this.btnGuardarPersonal.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregarCargo
+            // 
+            this.btnAgregarCargo.Location = new System.Drawing.Point(391, 175);
+            this.btnAgregarCargo.Name = "btnAgregarCargo";
+            this.btnAgregarCargo.Size = new System.Drawing.Size(93, 23);
+            this.btnAgregarCargo.TabIndex = 11;
+            this.btnAgregarCargo.Text = "Agregar cargo";
+            this.btnAgregarCargo.UseVisualStyleBackColor = true;
+            // 
+            // cbxPais
+            // 
+            this.cbxPais.FormattingEnabled = true;
+            this.cbxPais.Items.AddRange(new object[] {
+            "Afganistán",
+            "Albania",
+            "Alemania",
+            "Andorra",
+            "Angola",
+            "Antigua y Barbuda",
+            "Arabia Saudita",
+            "Argelia",
+            "Argentina",
+            "Armenia",
+            "Australia",
+            "Austria",
+            "Azerbaiyán",
+            "Bahamas",
+            "Bangladés",
+            "Barbados",
+            "Baréin",
+            "Bélgica",
+            "Belice",
+            "Benín",
+            "Bielorrusia",
+            "Birmania",
+            "Bolivia",
+            "Bosnia y Herzegovina",
+            "Botsuana",
+            "Brasil",
+            "Brunéi",
+            "Bulgaria",
+            "Burkina Faso",
+            "Burundi",
+            "Bután",
+            "Cabo Verde",
+            "Camboya",
+            "Camerún",
+            "Canadá",
+            "Catar",
+            "Chad",
+            "Chile",
+            "China",
+            "Chipre",
+            "Ciudad del Vaticano",
+            "Colombia",
+            "Comoras",
+            "Corea del Norte",
+            "Corea del Sur",
+            "Costa de Marfil",
+            "Costa Rica",
+            "Croacia",
+            "Cuba",
+            "Dinamarca",
+            "Dominica",
+            "Ecuador",
+            "Egipto",
+            "El Salvador",
+            "Emiratos Árabes Unidos",
+            "Eritrea",
+            "Eslovaquia",
+            "Eslovenia",
+            "España",
+            "Estados Unidos",
+            "Estonia",
+            "Etiopía",
+            "Filipinas",
+            "Finlandia",
+            "Fiyi",
+            "Francia",
+            "Gabón",
+            "Gambia",
+            "Georgia",
+            "Ghana",
+            "Granada",
+            "Grecia",
+            "Guatemala",
+            "Guyana",
+            "Guinea",
+            "Guinea ecuatorial",
+            "Guinea-Bisáu",
+            "Haití",
+            "Honduras",
+            "Hungría",
+            "India",
+            "Indonesia",
+            "Irak",
+            "Irán",
+            "Irlanda",
+            "Islandia",
+            "Islas Marshall",
+            "Islas Salomón",
+            "Israel",
+            "Italia",
+            "Jamaica",
+            "Japón",
+            "Jordania",
+            "Kazajistán",
+            "Kenia",
+            "Kirguistán",
+            "Kiribati",
+            "Kuwait",
+            "Laos",
+            "Lesoto",
+            "Letonia",
+            "Líbano",
+            "Liberia",
+            "Libia",
+            "Liechtenstein",
+            "Lituania",
+            "Luxemburgo",
+            "Macedonia del Norte",
+            "Madagascar",
+            "Malasia",
+            "Malaui",
+            "Maldivas",
+            "Malí",
+            "Malta",
+            "Marruecos",
+            "Mauricio",
+            "Mauritania",
+            "México",
+            "Micronesia",
+            "Moldavia",
+            "Mónaco",
+            "Mongolia",
+            "Montenegro",
+            "Mozambique",
+            "Namibia",
+            "Nauru",
+            "Nepal",
+            "Nicaragua",
+            "Níger",
+            "Nigeria",
+            "Noruega",
+            "Nueva Zelanda",
+            "Omán",
+            "Países Bajos",
+            "Pakistán",
+            "Palaos",
+            "Panamá",
+            "Papúa Nueva Guinea",
+            "Paraguay",
+            "Perú",
+            "Polonia",
+            "Portugal",
+            "Reino Unido",
+            "República Centroafricana",
+            "República Checa",
+            "República del Congo",
+            "República Democrática del Congo",
+            "República Dominicana",
+            "Ruanda",
+            "Rumanía",
+            "Rusia",
+            "Samoa",
+            "San Cristóbal y Nieves",
+            "San Marino",
+            "San Vicente y las Granadinas",
+            "Santa Lucía",
+            "Santo Tomé y Príncipe",
+            "Senegal",
+            "Serbia",
+            "Seychelles",
+            "Sierra Leona",
+            "Singapur",
+            "Siria",
+            "Somalia",
+            "Sri Lanka",
+            "Suazilandia",
+            "Sudáfrica",
+            "Sudán",
+            "Sudán del Sur",
+            "Suecia",
+            "Suiza",
+            "Surinam",
+            "Tailandia",
+            "Tanzania",
+            "Tayikistán",
+            "Timor Oriental",
+            "Togo",
+            "Tonga",
+            "Trinidad y Tobago",
+            "Túnez",
+            "Turkmenistán",
+            "Turquía",
+            "Tuvalu",
+            "Ucrania",
+            "Uganda",
+            "Uruguay",
+            "Uzbekistán",
+            "Vanuatu",
+            "Venezuela",
+            "Vietnam",
+            "Yemen",
+            "Yibuti",
+            "Zambia",
+            "Zimbabue"});
+            this.cbxPais.Location = new System.Drawing.Point(175, 128);
+            this.cbxPais.Name = "cbxPais";
+            this.cbxPais.Size = new System.Drawing.Size(173, 21);
+            this.cbxPais.TabIndex = 10;
+            // 
+            // txtIdentifiacion
+            // 
+            this.txtIdentifiacion.Location = new System.Drawing.Point(175, 83);
+            this.txtIdentifiacion.Name = "txtIdentifiacion";
+            this.txtIdentifiacion.Size = new System.Drawing.Size(173, 20);
+            this.txtIdentifiacion.TabIndex = 9;
+            // 
+            // txtCargo
+            // 
+            this.txtCargo.Location = new System.Drawing.Point(175, 175);
+            this.txtCargo.Name = "txtCargo";
+            this.txtCargo.Size = new System.Drawing.Size(173, 20);
+            this.txtCargo.TabIndex = 7;
+            // 
+            // txtSueldoHora
+            // 
+            this.txtSueldoHora.Location = new System.Drawing.Point(175, 219);
+            this.txtSueldoHora.Name = "txtSueldoHora";
+            this.txtSueldoHora.Size = new System.Drawing.Size(173, 20);
+            this.txtSueldoHora.TabIndex = 6;
+            // 
+            // txtNombres
+            // 
+            this.txtNombres.Location = new System.Drawing.Point(175, 45);
+            this.txtNombres.Name = "txtNombres";
+            this.txtNombres.Size = new System.Drawing.Size(173, 20);
+            this.txtNombres.TabIndex = 5;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(55, 219);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(114, 17);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Sueldo por hora:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(75, 86);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(94, 17);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Identificacion:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(130, 128);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(39, 17);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Pais:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(119, 175);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 17);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Cargo:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(38, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(131, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nombre y Apellido: ";
             // 
             // button9
             // 
@@ -288,21 +501,21 @@ namespace check_asis.Presentacion
             this.button9.Text = "Ultima pagina >>";
             this.button9.UseVisualStyleBackColor = true;
             // 
-            // panel3
+            // PanelPaginado
             // 
-            this.panel3.Controls.Add(this.button7);
-            this.panel3.Controls.Add(this.button8);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.button9);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.button10);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 337);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(831, 75);
-            this.panel3.TabIndex = 4;
+            this.PanelPaginado.Controls.Add(this.button7);
+            this.PanelPaginado.Controls.Add(this.button8);
+            this.PanelPaginado.Controls.Add(this.label6);
+            this.PanelPaginado.Controls.Add(this.button9);
+            this.PanelPaginado.Controls.Add(this.label7);
+            this.PanelPaginado.Controls.Add(this.label8);
+            this.PanelPaginado.Controls.Add(this.label9);
+            this.PanelPaginado.Controls.Add(this.button10);
+            this.PanelPaginado.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PanelPaginado.Location = new System.Drawing.Point(0, 440);
+            this.PanelPaginado.Name = "PanelPaginado";
+            this.PanelPaginado.Size = new System.Drawing.Size(1048, 75);
+            this.PanelPaginado.TabIndex = 4;
             // 
             // button7
             // 
@@ -375,12 +588,12 @@ namespace check_asis.Presentacion
             // 
             this.panel4.Controls.Add(this.textBox1);
             this.panel4.Controls.Add(this.pictureBox1);
-            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.btnAgregar);
             this.panel4.Controls.Add(this.button4);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(831, 77);
+            this.panel4.Size = new System.Drawing.Size(1048, 77);
             this.panel4.TabIndex = 5;
             // 
             // textBox1
@@ -401,16 +614,17 @@ namespace check_asis.Presentacion
             this.pictureBox1.TabIndex = 44;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // btnAgregar
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(760, 17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(48, 50);
-            this.button1.TabIndex = 45;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAgregar.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgregar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregar.BackgroundImage")));
+            this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
+            this.btnAgregar.Location = new System.Drawing.Point(760, 17);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(48, 50);
+            this.btnAgregar.TabIndex = 45;
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // button4
             // 
@@ -421,41 +635,23 @@ namespace check_asis.Presentacion
             this.button4.Text = "Mostrar todos";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(220, 118);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(93, 23);
-            this.button11.TabIndex = 15;
-            this.button11.Text = "Guardar*";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(6, 118);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(93, 23);
-            this.button12.TabIndex = 14;
-            this.button12.Text = "Guardar";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
             // Personal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.PanelPaginado);
+            this.Controls.Add(this.PanelRegistros);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel4);
             this.Name = "Personal";
-            this.Size = new System.Drawing.Size(831, 412);
+            this.Size = new System.Drawing.Size(1048, 515);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.PanelRegistros.ResumeLayout(false);
+            this.PanelRegistros.PerformLayout();
+            this.PanelCargos.ResumeLayout(false);
+            this.PanelCargos.PerformLayout();
+            this.PanelPaginado.ResumeLayout(false);
+            this.PanelPaginado.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -465,28 +661,28 @@ namespace check_asis.Presentacion
 
         #endregion
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Panel PanelRegistros;
+        private System.Windows.Forms.TextBox txtIdentifiacion;
+        private System.Windows.Forms.TextBox txtCargo;
+        private System.Windows.Forms.TextBox txtSueldoHora;
+        private System.Windows.Forms.TextBox txtNombres;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbxPais;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnGuardarCambiosPersonal;
+        private System.Windows.Forms.Button btnGuardarPersonal;
+        private System.Windows.Forms.Button btnAgregarCargo;
+        private System.Windows.Forms.Panel PanelCargos;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel PanelPaginado;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label6;
@@ -497,7 +693,7 @@ namespace check_asis.Presentacion
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;

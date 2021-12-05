@@ -44,9 +44,11 @@ namespace check_asis.Presentacion
             this.btnPersonal = new System.Windows.Forms.Button();
             this.btnPlanilla = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.PanelPadre = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.PanelPadre.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -179,6 +181,7 @@ namespace check_asis.Presentacion
             this.btnPersonal.TabIndex = 1;
             this.btnPersonal.Text = "Personal";
             this.btnPersonal.UseVisualStyleBackColor = true;
+            this.btnPersonal.Click += new System.EventHandler(this.btnPersonal_Click);
             // 
             // btnPlanilla
             // 
@@ -194,19 +197,27 @@ namespace check_asis.Presentacion
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(584, 3);
+            this.label2.Location = new System.Drawing.Point(230, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(323, 63);
             this.label2.TabIndex = 1;
             this.label2.Text = "Bienvenidos";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // PanelPadre
+            // 
+            this.PanelPadre.Controls.Add(this.label2);
+            this.PanelPadre.Location = new System.Drawing.Point(226, 3);
+            this.PanelPadre.Name = "PanelPadre";
+            this.PanelPadre.Size = new System.Drawing.Size(669, 743);
+            this.PanelPadre.TabIndex = 2;
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(907, 749);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.PanelPadre);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MenuPrincipal";
@@ -217,8 +228,9 @@ namespace check_asis.Presentacion
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.PanelPadre.ResumeLayout(false);
+            this.PanelPadre.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -238,5 +250,6 @@ namespace check_asis.Presentacion
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel PanelPadre;
     }
 }
