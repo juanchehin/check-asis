@@ -209,14 +209,14 @@ namespace check_asis.Presentacion
             this.PanelPadre.Controls.Add(this.label2);
             this.PanelPadre.Location = new System.Drawing.Point(226, 3);
             this.PanelPadre.Name = "PanelPadre";
-            this.PanelPadre.Size = new System.Drawing.Size(669, 743);
+            this.PanelPadre.Size = new System.Drawing.Size(886, 737);
             this.PanelPadre.TabIndex = 2;
             // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(907, 749);
+            this.ClientSize = new System.Drawing.Size(1124, 749);
             this.Controls.Add(this.PanelPadre);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

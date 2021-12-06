@@ -30,15 +30,9 @@ namespace check_asis.Presentacion
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Personal));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.datalistadoPersonal = new System.Windows.Forms.DataGridView();
             this.PanelRegistros = new System.Windows.Forms.Panel();
-            this.PanelCargos = new System.Windows.Forms.Panel();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.datalistadoCargos = new System.Windows.Forms.DataGridView();
             this.button6 = new System.Windows.Forms.Button();
             this.btnGuardarCambiosPersonal = new System.Windows.Forms.Button();
             this.btnGuardarPersonal = new System.Windows.Forms.Button();
@@ -53,44 +47,52 @@ namespace check_asis.Presentacion
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
+            this.PanelCargos = new System.Windows.Forms.Panel();
+            this.btnGuardarCambiosC = new System.Windows.Forms.Button();
+            this.btnGuardarC = new System.Windows.Forms.Button();
+            this.txtsueldoG = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtCargoG = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btn_Ultima = new System.Windows.Forms.Button();
             this.PanelPaginado = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btn_atras = new System.Windows.Forms.Button();
+            this.btn_Sig = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbl_Pagina = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
+            this.lbl_totalPaginas = new System.Windows.Forms.Label();
+            this.btn_Primera = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datalistadoPersonal)).BeginInit();
             this.PanelRegistros.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datalistadoCargos)).BeginInit();
             this.PanelCargos.SuspendLayout();
             this.PanelPaginado.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // datalistadoPersonal
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 77);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1048, 438);
-            this.dataGridView1.TabIndex = 1;
+            this.datalistadoPersonal.AllowUserToAddRows = false;
+            this.datalistadoPersonal.AllowUserToDeleteRows = false;
+            this.datalistadoPersonal.AllowUserToResizeRows = false;
+            this.datalistadoPersonal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datalistadoPersonal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.datalistadoPersonal.Location = new System.Drawing.Point(0, 77);
+            this.datalistadoPersonal.Name = "datalistadoPersonal";
+            this.datalistadoPersonal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.datalistadoPersonal.Size = new System.Drawing.Size(1496, 438);
+            this.datalistadoPersonal.TabIndex = 1;
             // 
             // PanelRegistros
             // 
-            this.PanelRegistros.Controls.Add(this.PanelCargos);
+            this.PanelRegistros.Controls.Add(this.datalistadoCargos);
             this.PanelRegistros.Controls.Add(this.button6);
             this.PanelRegistros.Controls.Add(this.btnGuardarCambiosPersonal);
             this.PanelRegistros.Controls.Add(this.btnGuardarPersonal);
@@ -105,75 +107,19 @@ namespace check_asis.Presentacion
             this.PanelRegistros.Controls.Add(this.label3);
             this.PanelRegistros.Controls.Add(this.label2);
             this.PanelRegistros.Controls.Add(this.label1);
+            this.PanelRegistros.Controls.Add(this.PanelCargos);
             this.PanelRegistros.Location = new System.Drawing.Point(70, 38);
             this.PanelRegistros.Name = "PanelRegistros";
             this.PanelRegistros.Size = new System.Drawing.Size(957, 331);
             this.PanelRegistros.TabIndex = 3;
             // 
-            // PanelCargos
+            // datalistadoCargos
             // 
-            this.PanelCargos.Controls.Add(this.button11);
-            this.PanelCargos.Controls.Add(this.button12);
-            this.PanelCargos.Controls.Add(this.textBox7);
-            this.PanelCargos.Controls.Add(this.label11);
-            this.PanelCargos.Controls.Add(this.textBox5);
-            this.PanelCargos.Controls.Add(this.label10);
-            this.PanelCargos.Location = new System.Drawing.Point(293, 89);
-            this.PanelCargos.Name = "PanelCargos";
-            this.PanelCargos.Size = new System.Drawing.Size(445, 150);
-            this.PanelCargos.TabIndex = 15;
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(220, 118);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(93, 23);
-            this.button11.TabIndex = 15;
-            this.button11.Text = "Guardar*";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(6, 118);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(93, 23);
-            this.button12.TabIndex = 14;
-            this.button12.Text = "Guardar";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(140, 66);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(173, 20);
-            this.textBox7.TabIndex = 9;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(3, 66);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(114, 17);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "Sueldo por hora:";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(140, 19);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(173, 20);
-            this.textBox5.TabIndex = 7;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(3, 20);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(50, 17);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "Cargo:";
+            this.datalistadoCargos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datalistadoCargos.Location = new System.Drawing.Point(366, 245);
+            this.datalistadoCargos.Name = "datalistadoCargos";
+            this.datalistadoCargos.Size = new System.Drawing.Size(240, 69);
+            this.datalistadoCargos.TabIndex = 16;
             // 
             // button6
             // 
@@ -201,6 +147,7 @@ namespace check_asis.Presentacion
             this.btnGuardarPersonal.TabIndex = 12;
             this.btnGuardarPersonal.Text = "Guardar";
             this.btnGuardarPersonal.UseVisualStyleBackColor = true;
+            this.btnGuardarPersonal.Click += new System.EventHandler(this.btnGuardarPersonal_Click);
             // 
             // btnAgregarCargo
             // 
@@ -210,6 +157,7 @@ namespace check_asis.Presentacion
             this.btnAgregarCargo.TabIndex = 11;
             this.btnAgregarCargo.Text = "Agregar cargo";
             this.btnAgregarCargo.UseVisualStyleBackColor = true;
+            this.btnAgregarCargo.Click += new System.EventHandler(this.btnAgregarCargo_Click);
             // 
             // cbxPais
             // 
@@ -434,6 +382,8 @@ namespace check_asis.Presentacion
             this.txtSueldoHora.Name = "txtSueldoHora";
             this.txtSueldoHora.Size = new System.Drawing.Size(173, 20);
             this.txtSueldoHora.TabIndex = 6;
+            this.txtSueldoHora.TextChanged += new System.EventHandler(this.txtSueldoHora_TextChanged);
+            this.txtSueldoHora.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSueldoHora_KeyPress);
             // 
             // txtNombres
             // 
@@ -492,48 +442,115 @@ namespace check_asis.Presentacion
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre y Apellido: ";
             // 
-            // button9
+            // PanelCargos
             // 
-            this.button9.Location = new System.Drawing.Point(346, 12);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(120, 23);
-            this.button9.TabIndex = 29;
-            this.button9.Text = "Ultima pagina >>";
-            this.button9.UseVisualStyleBackColor = true;
+            this.PanelCargos.Controls.Add(this.btnGuardarCambiosC);
+            this.PanelCargos.Controls.Add(this.btnGuardarC);
+            this.PanelCargos.Controls.Add(this.txtsueldoG);
+            this.PanelCargos.Controls.Add(this.label11);
+            this.PanelCargos.Controls.Add(this.txtCargoG);
+            this.PanelCargos.Controls.Add(this.label10);
+            this.PanelCargos.Location = new System.Drawing.Point(481, 62);
+            this.PanelCargos.Name = "PanelCargos";
+            this.PanelCargos.Size = new System.Drawing.Size(445, 150);
+            this.PanelCargos.TabIndex = 15;
+            // 
+            // btnGuardarCambiosC
+            // 
+            this.btnGuardarCambiosC.Location = new System.Drawing.Point(220, 118);
+            this.btnGuardarCambiosC.Name = "btnGuardarCambiosC";
+            this.btnGuardarCambiosC.Size = new System.Drawing.Size(93, 23);
+            this.btnGuardarCambiosC.TabIndex = 15;
+            this.btnGuardarCambiosC.Text = "Guardar*";
+            this.btnGuardarCambiosC.UseVisualStyleBackColor = true;
+            // 
+            // btnGuardarC
+            // 
+            this.btnGuardarC.Location = new System.Drawing.Point(6, 118);
+            this.btnGuardarC.Name = "btnGuardarC";
+            this.btnGuardarC.Size = new System.Drawing.Size(93, 23);
+            this.btnGuardarC.TabIndex = 14;
+            this.btnGuardarC.Text = "Guardar";
+            this.btnGuardarC.UseVisualStyleBackColor = true;
+            this.btnGuardarC.Click += new System.EventHandler(this.btnGuardarC_Click);
+            // 
+            // txtsueldoG
+            // 
+            this.txtsueldoG.Location = new System.Drawing.Point(140, 66);
+            this.txtsueldoG.Name = "txtsueldoG";
+            this.txtsueldoG.Size = new System.Drawing.Size(173, 20);
+            this.txtsueldoG.TabIndex = 9;
+            this.txtsueldoG.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsueldoG_KeyPress);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(3, 66);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(114, 17);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "Sueldo por hora:";
+            // 
+            // txtCargoG
+            // 
+            this.txtCargoG.Location = new System.Drawing.Point(140, 19);
+            this.txtCargoG.Name = "txtCargoG";
+            this.txtCargoG.Size = new System.Drawing.Size(173, 20);
+            this.txtCargoG.TabIndex = 7;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(3, 20);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(50, 17);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "Cargo:";
+            // 
+            // btn_Ultima
+            // 
+            this.btn_Ultima.Location = new System.Drawing.Point(346, 12);
+            this.btn_Ultima.Name = "btn_Ultima";
+            this.btn_Ultima.Size = new System.Drawing.Size(120, 23);
+            this.btn_Ultima.TabIndex = 29;
+            this.btn_Ultima.Text = "Ultima pagina >>";
+            this.btn_Ultima.UseVisualStyleBackColor = true;
             // 
             // PanelPaginado
             // 
-            this.PanelPaginado.Controls.Add(this.button7);
-            this.PanelPaginado.Controls.Add(this.button8);
+            this.PanelPaginado.Controls.Add(this.btn_atras);
+            this.PanelPaginado.Controls.Add(this.btn_Sig);
             this.PanelPaginado.Controls.Add(this.label6);
-            this.PanelPaginado.Controls.Add(this.button9);
-            this.PanelPaginado.Controls.Add(this.label7);
+            this.PanelPaginado.Controls.Add(this.btn_Ultima);
+            this.PanelPaginado.Controls.Add(this.lbl_Pagina);
             this.PanelPaginado.Controls.Add(this.label8);
-            this.PanelPaginado.Controls.Add(this.label9);
-            this.PanelPaginado.Controls.Add(this.button10);
+            this.PanelPaginado.Controls.Add(this.lbl_totalPaginas);
+            this.PanelPaginado.Controls.Add(this.btn_Primera);
             this.PanelPaginado.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.PanelPaginado.Location = new System.Drawing.Point(0, 440);
             this.PanelPaginado.Name = "PanelPaginado";
-            this.PanelPaginado.Size = new System.Drawing.Size(1048, 75);
+            this.PanelPaginado.Size = new System.Drawing.Size(1496, 75);
             this.PanelPaginado.TabIndex = 4;
             // 
-            // button7
+            // btn_atras
             // 
-            this.button7.Location = new System.Drawing.Point(148, 12);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(93, 23);
-            this.button7.TabIndex = 32;
-            this.button7.Text = "Anterior";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btn_atras.Location = new System.Drawing.Point(148, 12);
+            this.btn_atras.Name = "btn_atras";
+            this.btn_atras.Size = new System.Drawing.Size(93, 23);
+            this.btn_atras.TabIndex = 32;
+            this.btn_atras.Text = "Anterior";
+            this.btn_atras.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // btn_Sig
             // 
-            this.button8.Location = new System.Drawing.Point(247, 12);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(93, 23);
-            this.button8.TabIndex = 33;
-            this.button8.Text = "Siguiente";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btn_Sig.Location = new System.Drawing.Point(247, 12);
+            this.btn_Sig.Name = "btn_Sig";
+            this.btn_Sig.Size = new System.Drawing.Size(93, 23);
+            this.btn_Sig.TabIndex = 33;
+            this.btn_Sig.Text = "Siguiente";
+            this.btn_Sig.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -545,15 +562,15 @@ namespace check_asis.Presentacion
             this.label6.TabIndex = 34;
             this.label6.Text = "Pagina";
             // 
-            // label7
+            // lbl_Pagina
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(703, 15);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(18, 20);
-            this.label7.TabIndex = 35;
-            this.label7.Text = "0";
+            this.lbl_Pagina.AutoSize = true;
+            this.lbl_Pagina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Pagina.Location = new System.Drawing.Point(703, 15);
+            this.lbl_Pagina.Name = "lbl_Pagina";
+            this.lbl_Pagina.Size = new System.Drawing.Size(18, 20);
+            this.lbl_Pagina.TabIndex = 35;
+            this.lbl_Pagina.Text = "0";
             // 
             // label8
             // 
@@ -565,24 +582,24 @@ namespace check_asis.Presentacion
             this.label8.TabIndex = 36;
             this.label8.Text = "de";
             // 
-            // label9
+            // lbl_totalPaginas
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(760, 15);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(18, 20);
-            this.label9.TabIndex = 37;
-            this.label9.Text = "0";
+            this.lbl_totalPaginas.AutoSize = true;
+            this.lbl_totalPaginas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_totalPaginas.Location = new System.Drawing.Point(760, 15);
+            this.lbl_totalPaginas.Name = "lbl_totalPaginas";
+            this.lbl_totalPaginas.Size = new System.Drawing.Size(18, 20);
+            this.lbl_totalPaginas.TabIndex = 37;
+            this.lbl_totalPaginas.Text = "0";
             // 
-            // button10
+            // btn_Primera
             // 
-            this.button10.Location = new System.Drawing.Point(20, 12);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(120, 23);
-            this.button10.TabIndex = 38;
-            this.button10.Text = "<< Primera pagina";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btn_Primera.Location = new System.Drawing.Point(20, 12);
+            this.btn_Primera.Name = "btn_Primera";
+            this.btn_Primera.Size = new System.Drawing.Size(120, 23);
+            this.btn_Primera.TabIndex = 38;
+            this.btn_Primera.Text = "<< Primera pagina";
+            this.btn_Primera.UseVisualStyleBackColor = true;
             // 
             // panel4
             // 
@@ -593,7 +610,7 @@ namespace check_asis.Presentacion
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1048, 77);
+            this.panel4.Size = new System.Drawing.Size(1496, 77);
             this.panel4.TabIndex = 5;
             // 
             // textBox1
@@ -641,13 +658,14 @@ namespace check_asis.Presentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.PanelPaginado);
             this.Controls.Add(this.PanelRegistros);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.datalistadoPersonal);
             this.Controls.Add(this.panel4);
             this.Name = "Personal";
-            this.Size = new System.Drawing.Size(1048, 515);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Size = new System.Drawing.Size(1496, 515);
+            ((System.ComponentModel.ISupportInitialize)(this.datalistadoPersonal)).EndInit();
             this.PanelRegistros.ResumeLayout(false);
             this.PanelRegistros.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datalistadoCargos)).EndInit();
             this.PanelCargos.ResumeLayout(false);
             this.PanelCargos.PerformLayout();
             this.PanelPaginado.ResumeLayout(false);
@@ -660,7 +678,7 @@ namespace check_asis.Presentacion
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView datalistadoPersonal;
         private System.Windows.Forms.Panel PanelRegistros;
         private System.Windows.Forms.TextBox txtIdentifiacion;
         private System.Windows.Forms.TextBox txtCargo;
@@ -677,25 +695,26 @@ namespace check_asis.Presentacion
         private System.Windows.Forms.Button btnGuardarPersonal;
         private System.Windows.Forms.Button btnAgregarCargo;
         private System.Windows.Forms.Panel PanelCargos;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtsueldoG;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtCargoG;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btn_Ultima;
         private System.Windows.Forms.Panel PanelPaginado;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btn_atras;
+        private System.Windows.Forms.Button btn_Sig;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbl_Pagina;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Label lbl_totalPaginas;
+        private System.Windows.Forms.Button btn_Primera;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button btnGuardarCambiosC;
+        private System.Windows.Forms.Button btnGuardarC;
+        private System.Windows.Forms.DataGridView datalistadoCargos;
     }
 }

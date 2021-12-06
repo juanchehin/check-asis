@@ -136,5 +136,22 @@ namespace check_asis.Datos
 				ConexionMaestra.cerrar();
 			}
 		}
+		public void ContarPersonal(ref int Contador)
+		{
+			try
+			{
+				ConexionMaestra.abrir();
+				SqlCommand cmd = new SqlCommand("select Count(Id_personal) from Personal", ConexionMaestra.conectar);
+				Contador = Convert.ToInt32(cmd.ExecuteScalar());
+			}
+			catch (Exception)
+			{
+				Contador = 0;
+			}
+			finally
+			{
+				ConexionMaestra.cerrar();
+			}
+		}
 	}
 }
