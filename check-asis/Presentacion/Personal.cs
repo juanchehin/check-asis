@@ -17,6 +17,7 @@ namespace check_asis.Presentacion
         public Personal()
         {
             InitializeComponent();
+            PanelCargos.Visible = false;
         }
         int Idcargo = 0;
         int desde = 1;

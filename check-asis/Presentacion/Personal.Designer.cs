@@ -92,6 +92,8 @@ namespace check_asis.Presentacion
             // 
             // PanelRegistros
             // 
+            this.PanelRegistros.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelRegistros.Controls.Add(this.PanelCargos);
             this.PanelRegistros.Controls.Add(this.datalistadoCargos);
             this.PanelRegistros.Controls.Add(this.button6);
             this.PanelRegistros.Controls.Add(this.btnGuardarCambiosPersonal);
@@ -107,10 +109,10 @@ namespace check_asis.Presentacion
             this.PanelRegistros.Controls.Add(this.label3);
             this.PanelRegistros.Controls.Add(this.label2);
             this.PanelRegistros.Controls.Add(this.label1);
-            this.PanelRegistros.Controls.Add(this.PanelCargos);
-            this.PanelRegistros.Location = new System.Drawing.Point(70, 38);
+            this.PanelRegistros.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelRegistros.Location = new System.Drawing.Point(0, 77);
             this.PanelRegistros.Name = "PanelRegistros";
-            this.PanelRegistros.Size = new System.Drawing.Size(957, 331);
+            this.PanelRegistros.Size = new System.Drawing.Size(1496, 363);
             this.PanelRegistros.TabIndex = 3;
             // 
             // datalistadoCargos
@@ -382,7 +384,6 @@ namespace check_asis.Presentacion
             this.txtSueldoHora.Name = "txtSueldoHora";
             this.txtSueldoHora.Size = new System.Drawing.Size(173, 20);
             this.txtSueldoHora.TabIndex = 6;
-            this.txtSueldoHora.TextChanged += new System.EventHandler(this.txtSueldoHora_TextChanged);
             this.txtSueldoHora.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSueldoHora_KeyPress);
             // 
             // txtNombres
@@ -444,13 +445,14 @@ namespace check_asis.Presentacion
             // 
             // PanelCargos
             // 
+            this.PanelCargos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PanelCargos.Controls.Add(this.btnGuardarCambiosC);
             this.PanelCargos.Controls.Add(this.btnGuardarC);
             this.PanelCargos.Controls.Add(this.txtsueldoG);
             this.PanelCargos.Controls.Add(this.label11);
             this.PanelCargos.Controls.Add(this.txtCargoG);
             this.PanelCargos.Controls.Add(this.label10);
-            this.PanelCargos.Location = new System.Drawing.Point(481, 62);
+            this.PanelCargos.Location = new System.Drawing.Point(419, 83);
             this.PanelCargos.Name = "PanelCargos";
             this.PanelCargos.Size = new System.Drawing.Size(445, 150);
             this.PanelCargos.TabIndex = 15;
@@ -656,8 +658,8 @@ namespace check_asis.Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.PanelPaginado);
             this.Controls.Add(this.PanelRegistros);
+            this.Controls.Add(this.PanelPaginado);
             this.Controls.Add(this.datalistadoPersonal);
             this.Controls.Add(this.panel4);
             this.Name = "Personal";
