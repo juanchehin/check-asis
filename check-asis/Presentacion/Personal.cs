@@ -17,7 +17,7 @@ namespace check_asis.Presentacion
         public Personal()
         {
             InitializeComponent();
-            PanelCargos.Visible = false;
+            PanelRegistros.Visible = false;
         }
         int Idcargo = 0;
         int desde = 1;
@@ -36,7 +36,7 @@ namespace check_asis.Presentacion
             PanelRegistros.Dock = DockStyle.Fill;
             btnGuardarPersonal.Visible = true;
             btnGuardarCambiosPersonal.Visible = false;
-            // Limpiar();
+            Limpiar();
         }
         private void Limpiar()
         {
@@ -141,8 +141,9 @@ namespace check_asis.Presentacion
             funcion.buscarCargos(ref dt, txtCargo.Text);
             datalistadoCargos.DataSource = dt;
             Bases.DiseñoDtv(ref datalistadoCargos);
-            datalistadoCargos.Columns[1].Visible = false;
-            datalistadoCargos.Columns[3].Visible = false;
+            // datalistadoCargos.Columns[1].Visible = false;
+            // datalistadoCargos.Columns[3].Visible = false;
+
             datalistadoCargos.Visible = true;
         }
         private void ReiniciarPaginado()

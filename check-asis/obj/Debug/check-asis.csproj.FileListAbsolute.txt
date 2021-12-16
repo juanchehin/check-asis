@@ -9,3 +9,4 @@ C:\Programacion\check-asis\check-asis\obj\Debug\check-asis.csproj.CoreCompileInp
 C:\Programacion\check-asis\check-asis\obj\Debug\check-asis.exe
 C:\Programacion\check-asis\check-asis\obj\Debug\check-asis.pdb
 C:\Programacion\check-asis\check-asis\obj\Debug\check_asis.Presentacion.Personal.resources
+C:\Programacion\check-asis\check-asis\obj\Debug\check-asis.csproj.SuggestedBindingRedirects.cache

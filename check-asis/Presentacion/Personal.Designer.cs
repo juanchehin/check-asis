@@ -32,6 +32,13 @@ namespace check_asis.Presentacion
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Personal));
             this.datalistadoPersonal = new System.Windows.Forms.DataGridView();
             this.PanelRegistros = new System.Windows.Forms.Panel();
+            this.PanelCargos = new System.Windows.Forms.Panel();
+            this.btnGuardarCambiosC = new System.Windows.Forms.Button();
+            this.btnGuardarC = new System.Windows.Forms.Button();
+            this.txtsueldoG = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtCargoG = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.datalistadoCargos = new System.Windows.Forms.DataGridView();
             this.button6 = new System.Windows.Forms.Button();
             this.btnGuardarCambiosPersonal = new System.Windows.Forms.Button();
@@ -47,13 +54,6 @@ namespace check_asis.Presentacion
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.PanelCargos = new System.Windows.Forms.Panel();
-            this.btnGuardarCambiosC = new System.Windows.Forms.Button();
-            this.btnGuardarC = new System.Windows.Forms.Button();
-            this.txtsueldoG = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtCargoG = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.btn_Ultima = new System.Windows.Forms.Button();
             this.PanelPaginado = new System.Windows.Forms.Panel();
             this.btn_atras = new System.Windows.Forms.Button();
@@ -70,8 +70,8 @@ namespace check_asis.Presentacion
             this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.datalistadoPersonal)).BeginInit();
             this.PanelRegistros.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datalistadoCargos)).BeginInit();
             this.PanelCargos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datalistadoCargos)).BeginInit();
             this.PanelPaginado.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -115,12 +115,83 @@ namespace check_asis.Presentacion
             this.PanelRegistros.Size = new System.Drawing.Size(1496, 363);
             this.PanelRegistros.TabIndex = 3;
             // 
+            // PanelCargos
+            // 
+            this.PanelCargos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelCargos.Controls.Add(this.btnGuardarCambiosC);
+            this.PanelCargos.Controls.Add(this.btnGuardarC);
+            this.PanelCargos.Controls.Add(this.txtsueldoG);
+            this.PanelCargos.Controls.Add(this.label11);
+            this.PanelCargos.Controls.Add(this.txtCargoG);
+            this.PanelCargos.Controls.Add(this.label10);
+            this.PanelCargos.Location = new System.Drawing.Point(419, 83);
+            this.PanelCargos.Name = "PanelCargos";
+            this.PanelCargos.Size = new System.Drawing.Size(445, 150);
+            this.PanelCargos.TabIndex = 15;
+            // 
+            // btnGuardarCambiosC
+            // 
+            this.btnGuardarCambiosC.Location = new System.Drawing.Point(220, 118);
+            this.btnGuardarCambiosC.Name = "btnGuardarCambiosC";
+            this.btnGuardarCambiosC.Size = new System.Drawing.Size(93, 23);
+            this.btnGuardarCambiosC.TabIndex = 15;
+            this.btnGuardarCambiosC.Text = "Guardar*";
+            this.btnGuardarCambiosC.UseVisualStyleBackColor = true;
+            // 
+            // btnGuardarC
+            // 
+            this.btnGuardarC.Location = new System.Drawing.Point(6, 118);
+            this.btnGuardarC.Name = "btnGuardarC";
+            this.btnGuardarC.Size = new System.Drawing.Size(93, 23);
+            this.btnGuardarC.TabIndex = 14;
+            this.btnGuardarC.Text = "Guardar";
+            this.btnGuardarC.UseVisualStyleBackColor = true;
+            this.btnGuardarC.Click += new System.EventHandler(this.btnGuardarC_Click);
+            // 
+            // txtsueldoG
+            // 
+            this.txtsueldoG.Location = new System.Drawing.Point(140, 66);
+            this.txtsueldoG.Name = "txtsueldoG";
+            this.txtsueldoG.Size = new System.Drawing.Size(173, 20);
+            this.txtsueldoG.TabIndex = 9;
+            this.txtsueldoG.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsueldoG_KeyPress);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(3, 66);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(114, 17);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "Sueldo por hora:";
+            // 
+            // txtCargoG
+            // 
+            this.txtCargoG.Location = new System.Drawing.Point(140, 19);
+            this.txtCargoG.Name = "txtCargoG";
+            this.txtCargoG.Size = new System.Drawing.Size(173, 20);
+            this.txtCargoG.TabIndex = 7;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(3, 20);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(50, 17);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "Cargo:";
+            // 
             // datalistadoCargos
             // 
+            this.datalistadoCargos.AllowUserToAddRows = false;
+            this.datalistadoCargos.AllowUserToDeleteRows = false;
+            this.datalistadoCargos.AllowUserToResizeRows = false;
             this.datalistadoCargos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datalistadoCargos.Location = new System.Drawing.Point(366, 245);
+            this.datalistadoCargos.Location = new System.Drawing.Point(366, 219);
             this.datalistadoCargos.Name = "datalistadoCargos";
-            this.datalistadoCargos.Size = new System.Drawing.Size(240, 69);
+            this.datalistadoCargos.Size = new System.Drawing.Size(280, 137);
             this.datalistadoCargos.TabIndex = 16;
             // 
             // button6
@@ -443,74 +514,6 @@ namespace check_asis.Presentacion
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre y Apellido: ";
             // 
-            // PanelCargos
-            // 
-            this.PanelCargos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PanelCargos.Controls.Add(this.btnGuardarCambiosC);
-            this.PanelCargos.Controls.Add(this.btnGuardarC);
-            this.PanelCargos.Controls.Add(this.txtsueldoG);
-            this.PanelCargos.Controls.Add(this.label11);
-            this.PanelCargos.Controls.Add(this.txtCargoG);
-            this.PanelCargos.Controls.Add(this.label10);
-            this.PanelCargos.Location = new System.Drawing.Point(419, 83);
-            this.PanelCargos.Name = "PanelCargos";
-            this.PanelCargos.Size = new System.Drawing.Size(445, 150);
-            this.PanelCargos.TabIndex = 15;
-            // 
-            // btnGuardarCambiosC
-            // 
-            this.btnGuardarCambiosC.Location = new System.Drawing.Point(220, 118);
-            this.btnGuardarCambiosC.Name = "btnGuardarCambiosC";
-            this.btnGuardarCambiosC.Size = new System.Drawing.Size(93, 23);
-            this.btnGuardarCambiosC.TabIndex = 15;
-            this.btnGuardarCambiosC.Text = "Guardar*";
-            this.btnGuardarCambiosC.UseVisualStyleBackColor = true;
-            // 
-            // btnGuardarC
-            // 
-            this.btnGuardarC.Location = new System.Drawing.Point(6, 118);
-            this.btnGuardarC.Name = "btnGuardarC";
-            this.btnGuardarC.Size = new System.Drawing.Size(93, 23);
-            this.btnGuardarC.TabIndex = 14;
-            this.btnGuardarC.Text = "Guardar";
-            this.btnGuardarC.UseVisualStyleBackColor = true;
-            this.btnGuardarC.Click += new System.EventHandler(this.btnGuardarC_Click);
-            // 
-            // txtsueldoG
-            // 
-            this.txtsueldoG.Location = new System.Drawing.Point(140, 66);
-            this.txtsueldoG.Name = "txtsueldoG";
-            this.txtsueldoG.Size = new System.Drawing.Size(173, 20);
-            this.txtsueldoG.TabIndex = 9;
-            this.txtsueldoG.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsueldoG_KeyPress);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(3, 66);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(114, 17);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "Sueldo por hora:";
-            // 
-            // txtCargoG
-            // 
-            this.txtCargoG.Location = new System.Drawing.Point(140, 19);
-            this.txtCargoG.Name = "txtCargoG";
-            this.txtCargoG.Size = new System.Drawing.Size(173, 20);
-            this.txtCargoG.TabIndex = 7;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(3, 20);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(50, 17);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "Cargo:";
-            // 
             // btn_Ultima
             // 
             this.btn_Ultima.Location = new System.Drawing.Point(346, 12);
@@ -667,9 +670,9 @@ namespace check_asis.Presentacion
             ((System.ComponentModel.ISupportInitialize)(this.datalistadoPersonal)).EndInit();
             this.PanelRegistros.ResumeLayout(false);
             this.PanelRegistros.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datalistadoCargos)).EndInit();
             this.PanelCargos.ResumeLayout(false);
             this.PanelCargos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datalistadoCargos)).EndInit();
             this.PanelPaginado.ResumeLayout(false);
             this.PanelPaginado.PerformLayout();
             this.panel4.ResumeLayout(false);
