@@ -33,6 +33,7 @@ namespace check_asis.Presentacion
             this.datalistadoPersonal = new System.Windows.Forms.DataGridView();
             this.PanelRegistros = new System.Windows.Forms.Panel();
             this.PanelCargos = new System.Windows.Forms.Panel();
+            this.btnVolverCargos = new System.Windows.Forms.Button();
             this.btnGuardarCambiosC = new System.Windows.Forms.Button();
             this.btnGuardarC = new System.Windows.Forms.Button();
             this.txtsueldoG = new System.Windows.Forms.TextBox();
@@ -40,6 +41,7 @@ namespace check_asis.Presentacion
             this.txtCargoG = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.datalistadoCargos = new System.Windows.Forms.DataGridView();
+            this.EditarC = new System.Windows.Forms.DataGridViewButtonColumn();
             this.button6 = new System.Windows.Forms.Button();
             this.btnGuardarCambiosPersonal = new System.Windows.Forms.Button();
             this.btnGuardarPersonal = new System.Windows.Forms.Button();
@@ -118,29 +120,41 @@ namespace check_asis.Presentacion
             // PanelCargos
             // 
             this.PanelCargos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelCargos.Controls.Add(this.btnVolverCargos);
             this.PanelCargos.Controls.Add(this.btnGuardarCambiosC);
             this.PanelCargos.Controls.Add(this.btnGuardarC);
             this.PanelCargos.Controls.Add(this.txtsueldoG);
             this.PanelCargos.Controls.Add(this.label11);
             this.PanelCargos.Controls.Add(this.txtCargoG);
             this.PanelCargos.Controls.Add(this.label10);
-            this.PanelCargos.Location = new System.Drawing.Point(419, 83);
+            this.PanelCargos.Location = new System.Drawing.Point(521, 63);
             this.PanelCargos.Name = "PanelCargos";
             this.PanelCargos.Size = new System.Drawing.Size(445, 150);
             this.PanelCargos.TabIndex = 15;
+            // 
+            // btnVolverCargos
+            // 
+            this.btnVolverCargos.Location = new System.Drawing.Point(6, 118);
+            this.btnVolverCargos.Name = "btnVolverCargos";
+            this.btnVolverCargos.Size = new System.Drawing.Size(75, 23);
+            this.btnVolverCargos.TabIndex = 16;
+            this.btnVolverCargos.Text = "Volver";
+            this.btnVolverCargos.UseVisualStyleBackColor = true;
+            this.btnVolverCargos.Click += new System.EventHandler(this.btnVolverCargos_Click);
             // 
             // btnGuardarCambiosC
             // 
             this.btnGuardarCambiosC.Location = new System.Drawing.Point(220, 118);
             this.btnGuardarCambiosC.Name = "btnGuardarCambiosC";
-            this.btnGuardarCambiosC.Size = new System.Drawing.Size(93, 23);
+            this.btnGuardarCambiosC.Size = new System.Drawing.Size(137, 23);
             this.btnGuardarCambiosC.TabIndex = 15;
-            this.btnGuardarCambiosC.Text = "Guardar*";
+            this.btnGuardarCambiosC.Text = "Guardar cambios";
             this.btnGuardarCambiosC.UseVisualStyleBackColor = true;
+            this.btnGuardarCambiosC.Click += new System.EventHandler(this.btnGuardarCambiosC_Click);
             // 
             // btnGuardarC
             // 
-            this.btnGuardarC.Location = new System.Drawing.Point(6, 118);
+            this.btnGuardarC.Location = new System.Drawing.Point(121, 118);
             this.btnGuardarC.Name = "btnGuardarC";
             this.btnGuardarC.Size = new System.Drawing.Size(93, 23);
             this.btnGuardarC.TabIndex = 14;
@@ -189,10 +203,22 @@ namespace check_asis.Presentacion
             this.datalistadoCargos.AllowUserToDeleteRows = false;
             this.datalistadoCargos.AllowUserToResizeRows = false;
             this.datalistadoCargos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datalistadoCargos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.EditarC});
             this.datalistadoCargos.Location = new System.Drawing.Point(366, 219);
             this.datalistadoCargos.Name = "datalistadoCargos";
+            this.datalistadoCargos.ReadOnly = true;
             this.datalistadoCargos.Size = new System.Drawing.Size(280, 137);
             this.datalistadoCargos.TabIndex = 16;
+            this.datalistadoCargos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datalistadoCargos_CellClick);
+            // 
+            // EditarC
+            // 
+            this.EditarC.HeaderText = "Editar";
+            this.EditarC.Name = "EditarC";
+            this.EditarC.ReadOnly = true;
+            this.EditarC.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.EditarC.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // button6
             // 
@@ -721,5 +747,7 @@ namespace check_asis.Presentacion
         private System.Windows.Forms.Button btnGuardarCambiosC;
         private System.Windows.Forms.Button btnGuardarC;
         private System.Windows.Forms.DataGridView datalistadoCargos;
+        private System.Windows.Forms.Button btnVolverCargos;
+        private System.Windows.Forms.DataGridViewButtonColumn EditarC;
     }
 }

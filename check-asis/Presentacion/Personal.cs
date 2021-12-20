@@ -27,6 +27,9 @@ namespace check_asis.Presentacion
         private int items_por_pagina = 10;
         string Estado;
         int totalPaginas;
+
+        string sueldo;
+        string cargo;
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             // LocalizarDtvCargos();
@@ -213,6 +216,77 @@ namespace check_asis.Presentacion
         private void txtSueldoHora_KeyPress(object sender, KeyPressEventArgs e)
         {
             Bases.Decimales(txtSueldoHora, e);
+        }
+
+        private void datalistadoCargos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == datalistadoCargos.Columns["EditarC"].Index)
+            {
+                // MessageBox.Show("pasa");
+
+                if (datalistadoCargos.Rows[e.RowIndex].Cells[1].Value != null)
+                {
+                    // MessageBox.Show("pasa 1");
+                    // MessageBox.Show(datalistadoCargos.Rows[e.RowIndex].Cells[1].Value.ToString());
+                    Idcargo = Convert.ToInt32(datalistadoCargos.Rows[e.RowIndex].Cells[1].Value.ToString());
+
+                    cargo = datalistadoCargos.Rows[e.RowIndex].Cells[2].Value.ToString();
+                    sueldo = datalistadoCargos.Rows[e.RowIndex].Cells[3].Value.ToString();
+
+                    ObtenerCargosEditar(Idcargo, cargo,sueldo);
+                }
+            }
+            if (e.ColumnIndex == datalistadoCargos.Columns["Cargo"].Index)
+            {
+                ObtenerDatosCargos();
+            }
+        }
+        private void ObtenerDatosCargos()
+        {
+            Idcargo = Convert.ToInt32(datalistadoCargos.SelectedCells[1].Value);
+            txtCargo.Text = datalistadoCargos.SelectedCells[2].Value.ToString();
+            txtSueldoHora.Text = datalistadoCargos.SelectedCells[3].Value.ToString();
+            datalistadoCargos.Visible = false;
+            // PanelBtnguardarPer.Visible = true;
+            // lblsueldo.Visible = true;
+        }
+        private void ObtenerCargosEditar(int Idcargo,string cargo,string sueldo)
+        {
+            // Idcargo = Convert.ToInt32(datalistadoCargos.SelectedCells[1].Value);
+            txtCargoG.Text = cargo;
+            txtsueldoG.Text = sueldo;
+
+            btnGuardarC.Visible = false;
+            btnGuardarCambiosC.Visible = true;
+            // txtCargoG.Focus();
+            // txtCargoG.SelectAll();
+            PanelCargos.Visible = true;
+            PanelCargos.Dock = DockStyle.Fill;
+            PanelCargos.BringToFront();
+        }
+
+        private void btnVolverCargos_Click(object sender, EventArgs e)
+        {
+            PanelCargos.Visible = false;
+        }
+
+        private void btnGuardarCambiosC_Click(object sender, EventArgs e)
+        {
+            EditarCargos();
+        }
+        private void EditarCargos()
+        {
+            Lcargos parametros = new Lcargos();
+            Dcargos funcion = new Dcargos();
+            parametros.Id_cargo = Idcargo;
+            parametros.Cargo = txtCargoG.Text;
+            parametros.SueldoPorHora = Convert.ToDouble(txtsueldoG.Text);
+            if (funcion.editar_Cargo(parametros) == true)
+            {
+                txtCargo.Clear();
+                BuscarCargos();
+                PanelCargos.Visible = false;
+            }
         }
     }
 }
