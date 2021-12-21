@@ -17,6 +17,7 @@ namespace check_asis.Presentacion
         public Personal()
         {
             InitializeComponent();
+            MostrarPersonal();
             PanelRegistros.Visible = false;
         }
         int Idcargo = 0;
@@ -30,6 +31,8 @@ namespace check_asis.Presentacion
 
         string sueldo;
         string cargo;
+
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             // LocalizarDtvCargos();
@@ -53,19 +56,14 @@ namespace check_asis.Presentacion
         {
             if (!string.IsNullOrEmpty(txtNombres.Text))
             {
-                MessageBox.Show("pasa");
                 if (!string.IsNullOrEmpty(txtIdentifiacion.Text))
                 {
-                    MessageBox.Show("pasa 1");
                     if (!string.IsNullOrEmpty(cbxPais.Text))
                     {
-                        MessageBox.Show("pasa 2, ID cargo es : " + Idcargo);
                         if (Idcargo > 0)
                         {
-                            MessageBox.Show("pasa 3");
                             if (!string.IsNullOrEmpty(txtSueldoHora.Text))
                             {
-                                MessageBox.Show("pasa 4");
                                 Insertar_Personal();
                             }
                         }
