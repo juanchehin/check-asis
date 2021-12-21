@@ -85,6 +85,7 @@ namespace check_asis.Presentacion
             parametros.Pais = cbxPais.Text;
             parametros.Id_cargo = Idcargo;
             parametros.SueldoPorHora = Convert.ToDouble(txtSueldoHora.Text);
+
             if (funcion.InsertarPersonal(parametros) == true)
             {
                 ReiniciarPaginado();
@@ -225,6 +226,7 @@ namespace check_asis.Presentacion
 
         private void datalistadoCargos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            // Selecciono columna "Editar Cargo"
             if (e.ColumnIndex == datalistadoCargos.Columns["EditarC"].Index)
             {
                 if (datalistadoCargos.Rows[e.RowIndex].Cells[1].Value != null)
@@ -237,16 +239,24 @@ namespace check_asis.Presentacion
                     ObtenerCargosEditar(Idcargo, cargo,sueldo);
                 }
             }
+            // Selecciono columna "Cargo" para cargar en el txtCargo
             if (e.ColumnIndex == datalistadoCargos.Columns["Cargo"].Index)
             {
-                ObtenerDatosCargos();
+                    if (datalistadoCargos.Rows[e.RowIndex].Cells[1].Value != null)
+                    {
+                        Idcargo = Convert.ToInt32(datalistadoCargos.Rows[e.RowIndex].Cells[1].Value.ToString());
+                        cargo = datalistadoCargos.Rows[e.RowIndex].Cells[2].Value.ToString();
+                        sueldo = datalistadoCargos.Rows[e.RowIndex].Cells[3].Value.ToString();
+
+                        ObtenerDatosCargos(Idcargo, cargo, sueldo);
+                    }
             }
         }
-        private void ObtenerDatosCargos()
+        private void ObtenerDatosCargos(int Idcargo, string cargo, string sueldo)
         {
-            Idcargo = Convert.ToInt32(datalistadoCargos.SelectedCells[1].Value);
-            txtCargo.Text = datalistadoCargos.SelectedCells[2].Value.ToString();
-            txtSueldoHora.Text = datalistadoCargos.SelectedCells[3].Value.ToString();
+            // Idcargo = Idcargo;
+            txtCargo.Text = cargo;
+            txtSueldoHora.Text = sueldo;
             datalistadoCargos.Visible = false;
             // PanelBtnguardarPer.Visible = true;
             // lblsueldo.Visible = true;
