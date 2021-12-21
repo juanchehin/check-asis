@@ -153,5 +153,28 @@ namespace check_asis.Datos
 				ConexionMaestra.cerrar();
 			}
 		}
+
+		public bool restaurar_personal(Lpersonal parametros)
+		{
+			try
+			{
+				ConexionMaestra.abrir();
+				SqlCommand cmd = new SqlCommand("restaurar_personal", ConexionMaestra.conectar);
+				cmd.CommandType = CommandType.StoredProcedure;
+				cmd.Parameters.AddWithValue("@Idpersonal", parametros.Id_personal); ;
+				cmd.ExecuteNonQuery();
+				return true;
+			}
+			catch (Exception ex)
+			{
+
+				MessageBox.Show(ex.Message);
+				return false;
+			}
+			finally
+			{
+				ConexionMaestra.cerrar();
+			}
+		}
 	}
 }

@@ -296,5 +296,92 @@ namespace check_asis.Presentacion
                 PanelCargos.Visible = false;
             }
         }
+
+        private void datalistadoPersonal_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == datalistadoPersonal.Columns["Eliminar"].Index)
+            {
+                DialogResult result = MessageBox.Show("¿Solo se Cambiara el Estado para que no pueda acceder, Desea Continuar?", "Eliminando registros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.OK)
+                {
+                    EliminarPersonal();
+                }
+
+            }
+            if (e.ColumnIndex == datalistadoPersonal.Columns["Editar"].Index)
+            {
+                ObtenerDatos();
+            }
+        }
+
+        private void EliminarPersonal()
+        {
+            Idpersonal = Convert.ToInt32(datalistadoPersonal.SelectedCells[2].Value);
+            Lpersonal parametros = new Lpersonal();
+            Dpersonal funcion = new Dpersonal();
+            parametros.Id_personal = Idpersonal;
+            if (funcion.eliminarPersonal(parametros) == true)
+            {
+                MostrarPersonal();
+            }
+        }
+
+        private void ObtenerDatos()
+        {
+
+            Idpersonal = Convert.ToInt32(datalistadoPersonal.SelectedCells[2].Value);
+            Estado = datalistadoPersonal.SelectedCells[8].Value.ToString();
+            if (Estado == "ELIMINADO")
+            {
+                restaurar_personal();
+            }
+            else
+            {
+                LocalizarDtvCargos();
+                txtNombres.Text = datalistadoPersonal.SelectedCells[3].Value.ToString();
+                txtIdentifiacion.Text = datalistadoPersonal.SelectedCells[4].Value.ToString();
+                cbxPais.Text = datalistadoPersonal.SelectedCells[10].Value.ToString();
+                txtCargo.Text = datalistadoPersonal.SelectedCells[6].Value.ToString();
+                Idcargo = Convert.ToInt32(datalistadoPersonal.SelectedCells[7].Value);
+                txtSueldoHora.Text = datalistadoPersonal.SelectedCells[5].Value.ToString();
+                PanelPaginado.Visible = false;
+                PanelRegistros.Visible = true;
+                PanelRegistros.Dock = DockStyle.Fill;
+                datalistadoCargos.Visible = false;
+                // lblsueldo.Visible = true;
+                // PanelBtnguardarPer.Visible = true;
+                btnGuardarPersonal.Visible = false;
+                btnGuardarCambiosPersonal.Visible = true;
+                PanelCargos.Visible = false;
+            }
+        }
+        private void restaurar_personal()
+        {
+            DialogResult result = MessageBox.Show("Este Personal se Elimino. ¿Desea Volver a Habilitarlo?", "Restauracion de registros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (result == DialogResult.OK)
+            {
+                HabilitarPersonal();
+            }
+
+        }
+        private void LocalizarDtvCargos()
+        {
+            datalistadoCargos.Location = new Point(txtSueldoHora.Location.X, txtSueldoHora.Location.Y);
+            datalistadoCargos.Size = new Size(469, 141);
+            datalistadoCargos.Visible = true;
+            // lblsueldo.Visible = false;
+            // PanelBtnguardarPer.Visible = false;
+        }
+        private void HabilitarPersonal()
+        {
+            Lpersonal parametros = new Lpersonal();
+            Dpersonal funcion = new Dpersonal();
+            parametros.Id_personal = Idpersonal;
+            if (funcion.restaurar_personal(parametros) == true)
+            {
+                MostrarPersonal();
+            }
+
+        }
     }
 }

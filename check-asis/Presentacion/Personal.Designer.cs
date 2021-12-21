@@ -70,6 +70,8 @@ namespace check_asis.Presentacion
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.datalistadoPersonal)).BeginInit();
             this.PanelRegistros.SuspendLayout();
             this.PanelCargos.SuspendLayout();
@@ -85,12 +87,17 @@ namespace check_asis.Presentacion
             this.datalistadoPersonal.AllowUserToDeleteRows = false;
             this.datalistadoPersonal.AllowUserToResizeRows = false;
             this.datalistadoPersonal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datalistadoPersonal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Editar,
+            this.Eliminar});
             this.datalistadoPersonal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.datalistadoPersonal.Location = new System.Drawing.Point(0, 77);
             this.datalistadoPersonal.Name = "datalistadoPersonal";
+            this.datalistadoPersonal.ReadOnly = true;
             this.datalistadoPersonal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datalistadoPersonal.Size = new System.Drawing.Size(1496, 438);
             this.datalistadoPersonal.TabIndex = 1;
+            this.datalistadoPersonal.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datalistadoPersonal_CellClick);
             // 
             // PanelRegistros
             // 
@@ -683,6 +690,18 @@ namespace check_asis.Presentacion
             this.button4.Text = "Mostrar todos";
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // Editar
+            // 
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Name = "Editar";
+            this.Editar.ReadOnly = true;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            // 
             // Personal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -749,5 +768,7 @@ namespace check_asis.Presentacion
         private System.Windows.Forms.DataGridView datalistadoCargos;
         private System.Windows.Forms.Button btnVolverCargos;
         private System.Windows.Forms.DataGridViewButtonColumn EditarC;
+        private System.Windows.Forms.DataGridViewButtonColumn Editar;
+        private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
     }
 }
