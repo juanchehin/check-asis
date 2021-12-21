@@ -53,14 +53,19 @@ namespace check_asis.Presentacion
         {
             if (!string.IsNullOrEmpty(txtNombres.Text))
             {
+                MessageBox.Show("pasa");
                 if (!string.IsNullOrEmpty(txtIdentifiacion.Text))
                 {
+                    MessageBox.Show("pasa 1");
                     if (!string.IsNullOrEmpty(cbxPais.Text))
                     {
+                        MessageBox.Show("pasa 2, ID cargo es : " + Idcargo);
                         if (Idcargo > 0)
                         {
+                            MessageBox.Show("pasa 3");
                             if (!string.IsNullOrEmpty(txtSueldoHora.Text))
                             {
+                                MessageBox.Show("pasa 4");
                                 Insertar_Personal();
                             }
                         }
@@ -222,12 +227,8 @@ namespace check_asis.Presentacion
         {
             if (e.ColumnIndex == datalistadoCargos.Columns["EditarC"].Index)
             {
-                // MessageBox.Show("pasa");
-
                 if (datalistadoCargos.Rows[e.RowIndex].Cells[1].Value != null)
                 {
-                    // MessageBox.Show("pasa 1");
-                    // MessageBox.Show(datalistadoCargos.Rows[e.RowIndex].Cells[1].Value.ToString());
                     Idcargo = Convert.ToInt32(datalistadoCargos.Rows[e.RowIndex].Cells[1].Value.ToString());
 
                     cargo = datalistadoCargos.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -252,14 +253,13 @@ namespace check_asis.Presentacion
         }
         private void ObtenerCargosEditar(int Idcargo,string cargo,string sueldo)
         {
-            // Idcargo = Convert.ToInt32(datalistadoCargos.SelectedCells[1].Value);
             txtCargoG.Text = cargo;
             txtsueldoG.Text = sueldo;
 
             btnGuardarC.Visible = false;
             btnGuardarCambiosC.Visible = true;
-            // txtCargoG.Focus();
-            // txtCargoG.SelectAll();
+            txtCargoG.Focus();
+            txtCargoG.SelectAll();
             PanelCargos.Visible = true;
             PanelCargos.Dock = DockStyle.Fill;
             PanelCargos.BringToFront();

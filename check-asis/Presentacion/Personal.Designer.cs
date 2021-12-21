@@ -243,7 +243,7 @@ namespace check_asis.Presentacion
             this.btnGuardarPersonal.Location = new System.Drawing.Point(58, 254);
             this.btnGuardarPersonal.Name = "btnGuardarPersonal";
             this.btnGuardarPersonal.Size = new System.Drawing.Size(93, 23);
-            this.btnGuardarPersonal.TabIndex = 12;
+            this.btnGuardarPersonal.TabIndex = 6;
             this.btnGuardarPersonal.Text = "Guardar";
             this.btnGuardarPersonal.UseVisualStyleBackColor = true;
             this.btnGuardarPersonal.Click += new System.EventHandler(this.btnGuardarPersonal_Click);
@@ -459,28 +459,28 @@ namespace check_asis.Presentacion
             this.cbxPais.Location = new System.Drawing.Point(175, 128);
             this.cbxPais.Name = "cbxPais";
             this.cbxPais.Size = new System.Drawing.Size(173, 21);
-            this.cbxPais.TabIndex = 10;
+            this.cbxPais.TabIndex = 3;
             // 
             // txtIdentifiacion
             // 
             this.txtIdentifiacion.Location = new System.Drawing.Point(175, 83);
             this.txtIdentifiacion.Name = "txtIdentifiacion";
             this.txtIdentifiacion.Size = new System.Drawing.Size(173, 20);
-            this.txtIdentifiacion.TabIndex = 9;
+            this.txtIdentifiacion.TabIndex = 2;
             // 
             // txtCargo
             // 
             this.txtCargo.Location = new System.Drawing.Point(175, 175);
             this.txtCargo.Name = "txtCargo";
             this.txtCargo.Size = new System.Drawing.Size(173, 20);
-            this.txtCargo.TabIndex = 7;
+            this.txtCargo.TabIndex = 4;
             // 
             // txtSueldoHora
             // 
             this.txtSueldoHora.Location = new System.Drawing.Point(175, 219);
             this.txtSueldoHora.Name = "txtSueldoHora";
             this.txtSueldoHora.Size = new System.Drawing.Size(173, 20);
-            this.txtSueldoHora.TabIndex = 6;
+            this.txtSueldoHora.TabIndex = 5;
             this.txtSueldoHora.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSueldoHora_KeyPress);
             // 
             // txtNombres
@@ -488,7 +488,7 @@ namespace check_asis.Presentacion
             this.txtNombres.Location = new System.Drawing.Point(175, 45);
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(173, 20);
-            this.txtNombres.TabIndex = 5;
+            this.txtNombres.TabIndex = 1;
             // 
             // label5
             // 
