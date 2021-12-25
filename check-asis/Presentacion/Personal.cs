@@ -347,7 +347,7 @@ namespace check_asis.Presentacion
                 PanelPaginado.Visible = false;
                 PanelRegistros.Visible = true;
                 PanelRegistros.Dock = DockStyle.Fill;
-                datalistadoCargos.Visible = false;
+                // datalistadoCargos.Visible = false;
                 // lblsueldo.Visible = true;
                 // PanelBtnguardarPer.Visible = true;
                 btnGuardarPersonal.Visible = false;
@@ -364,11 +364,14 @@ namespace check_asis.Presentacion
             }
 
         }
+        
+        /* Posiciona el Data Grid view de 'cargos' en un lugar en la pantalla */
         private void LocalizarDtvCargos()
         {
             datalistadoCargos.Location = new Point(txtSueldoHora.Location.X, txtSueldoHora.Location.Y);
             datalistadoCargos.Size = new Size(469, 141);
             datalistadoCargos.Visible = true;
+            BuscarCargos();
             // lblsueldo.Visible = false;
             // PanelBtnguardarPer.Visible = false;
         }
@@ -382,6 +385,36 @@ namespace check_asis.Presentacion
                 MostrarPersonal();
             }
 
+        }
+
+        private void EditarPersonal()
+        {
+            Lpersonal parametros = new Lpersonal();
+            Dpersonal funcion = new Dpersonal();
+
+            parametros.Id_personal = Idpersonal;
+            parametros.Nombres = txtNombres.Text;
+            parametros.Identificacion = txtIdentifiacion.Text;
+            parametros.Pais = cbxPais.Text;
+            parametros.Id_cargo = Idcargo;
+            parametros.SueldoPorHora = Convert.ToDouble(txtSueldoHora.Text);
+
+            if (funcion.editarPersonal(parametros) == true)
+            {
+                MostrarPersonal();
+                PanelRegistros.Visible = false;
+            }
+        }
+
+        private void btnGuardarCambiosPersonal_Click(object sender, EventArgs e)
+        {
+            EditarPersonal();
+        }
+
+        private void btnVolverPersonal_Click(object sender, EventArgs e)
+        {
+            PanelRegistros.Visible = false;
+            PanelPaginado.Visible = true;
         }
     }
 }
