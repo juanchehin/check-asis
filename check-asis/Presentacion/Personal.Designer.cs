@@ -119,6 +119,7 @@ namespace check_asis.Presentacion
             this.btn_Ultima.TabIndex = 29;
             this.btn_Ultima.Text = "Ultima pagina >>";
             this.btn_Ultima.UseVisualStyleBackColor = true;
+            this.btn_Ultima.Click += new System.EventHandler(this.btn_Ultima_Click);
             // 
             // PanelPaginado
             // 
@@ -144,6 +145,7 @@ namespace check_asis.Presentacion
             this.btn_atras.TabIndex = 32;
             this.btn_atras.Text = "Anterior";
             this.btn_atras.UseVisualStyleBackColor = true;
+            this.btn_atras.Click += new System.EventHandler(this.btn_atras_Click);
             // 
             // btn_Sig
             // 
@@ -153,6 +155,7 @@ namespace check_asis.Presentacion
             this.btn_Sig.TabIndex = 33;
             this.btn_Sig.Text = "Siguiente";
             this.btn_Sig.UseVisualStyleBackColor = true;
+            this.btn_Sig.Click += new System.EventHandler(this.btn_Sig_Click);
             // 
             // label6
             // 
@@ -202,6 +205,7 @@ namespace check_asis.Presentacion
             this.btn_Primera.TabIndex = 38;
             this.btn_Primera.Text = "<< Primera pagina";
             this.btn_Primera.UseVisualStyleBackColor = true;
+            this.btn_Primera.Click += new System.EventHandler(this.btn_Primera_Click);
             // 
             // panel4
             // 
@@ -568,7 +572,7 @@ namespace check_asis.Presentacion
             // 
             // btnVolverPersonal
             // 
-            this.btnVolverPersonal.Location = new System.Drawing.Point(391, 43);
+            this.btnVolverPersonal.Location = new System.Drawing.Point(345, 254);
             this.btnVolverPersonal.Name = "btnVolverPersonal";
             this.btnVolverPersonal.Size = new System.Drawing.Size(93, 23);
             this.btnVolverPersonal.TabIndex = 14;

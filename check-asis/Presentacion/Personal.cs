@@ -164,35 +164,31 @@ namespace check_asis.Presentacion
 
             if (Contador > hasta)
             {
+                btn_Sig.Enabled = true;
+                btn_atras.Enabled = false;
+                btn_Ultima.Enabled = true;
+                btn_Primera.Enabled = true;
 
-                btn_Sig.Visible = true;
+                /*btn_Sig.Visible = true;
                 btn_atras.Visible = false;
                 btn_Ultima.Visible = true;
-                btn_Primera.Visible = true;
+                btn_Primera.Visible = true;*/
             }
             else
             {
+                btn_Sig.Enabled = false;
+                btn_atras.Enabled = false;
+                btn_Ultima.Enabled = false;
+                btn_Primera.Enabled = false;
 
-                btn_Sig.Visible = false;
+                /* btn_Sig.Visible = false;
                 btn_atras.Visible = false;
                 btn_Ultima.Visible = false;
-                btn_Primera.Visible = false;
+                btn_Primera.Visible = false;*/
             }
             Paginar();
         }
-        private void Paginar()
-        {
-            try
-            {
-                lbl_Pagina.Text = (hasta / items_por_pagina).ToString();
-                lbl_totalPaginas.Text = Math.Ceiling(Convert.ToSingle(Contador) / items_por_pagina).ToString();
-                totalPaginas = Convert.ToInt32(lbl_totalPaginas.Text);
-            }
-            catch (Exception)
-            {
-
-            }
-        }
+       
         private void Contar()
         {
             Dpersonal funcion = new Dpersonal();
@@ -419,6 +415,105 @@ namespace check_asis.Presentacion
         {
             PanelRegistros.Visible = false;
             PanelPaginado.Visible = true;
+        }
+
+        private void btn_Sig_Click(object sender, EventArgs e)
+        {
+            desde += 10;
+            hasta += 10;
+            MostrarPersonal();
+            Contar();
+            if (Contador > hasta)
+            {
+                btn_Sig.Enabled = true;
+                btn_atras.Enabled = true;
+
+                /*btn_Sig.Visible = true;
+                btn_atras.Visible = true;*/
+            }
+            else
+            {
+                btn_Sig.Enabled = false;
+                btn_atras.Enabled = true;
+
+                /*btn_Sig.Visible = false;
+                btn_atras.Visible = true;*/
+            }
+            Paginar();
+        }
+        private void Paginar()
+        {
+            try
+            {
+                lbl_Pagina.Text = (hasta / items_por_pagina).ToString();
+                lbl_totalPaginas.Text = Math.Ceiling(Convert.ToSingle(Contador) / items_por_pagina).ToString();
+                totalPaginas = Convert.ToInt32(lbl_totalPaginas.Text);
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        private void btn_atras_Click(object sender, EventArgs e)
+        {
+            desde -= 10;
+            hasta -= 10;
+            MostrarPersonal();
+            Contar();
+
+            if (Contador > hasta)
+            {
+                btn_Sig.Enabled = true;
+                btn_atras.Enabled = true;
+
+                /*btn_Sig.Visible = true;
+                btn_atras.Visible = true;*/
+            }
+            else
+            {
+                btn_Sig.Enabled = false;
+                btn_atras.Enabled = true;
+
+                /*btn_Sig.Visible = false;
+                btn_atras.Visible = true;*/
+            }
+            if (desde == 1)
+            {
+                ReiniciarPaginado();
+            }
+            Paginar();
+        }
+
+        private void btn_Ultima_Click(object sender, EventArgs e)
+        {
+            hasta = totalPaginas * items_por_pagina;
+            desde = hasta - 9;
+            MostrarPersonal();
+            Contar();
+            if (Contador > hasta)
+            {
+                btn_Sig.Enabled = true;
+                btn_atras.Enabled = true;
+
+                /*btn_Sig.Visible = true;
+                btn_atras.Visible = true;*/
+            }
+            else
+            {
+                btn_Sig.Enabled = false;
+                btn_atras.Enabled = true;
+
+                /*btn_Sig.Visible = false;
+                btn_atras.Visible = true;*/
+            }
+            Paginar();
+        }
+
+        private void btn_Primera_Click(object sender, EventArgs e)
+        {
+            ReiniciarPaginado();
+            MostrarPersonal();
         }
     }
 }
