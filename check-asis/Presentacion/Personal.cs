@@ -141,13 +141,16 @@ namespace check_asis.Presentacion
 
         }
 
+        /* Carga el listado de cargos en el data grid view */
         private void BuscarCargos()
         {
             DataTable dt = new DataTable();
             Dcargos funcion = new Dcargos();
-            funcion.buscarCargos(ref dt, txtCargo.Text);
+
+            funcion.buscarCargos(ref dt, txtCargo.Text);            
             datalistadoCargos.DataSource = dt;
             Bases.DiseñoDtv(ref datalistadoCargos);
+
             // datalistadoCargos.Columns[1].Visible = false;
             // datalistadoCargos.Columns[3].Visible = false;
 
@@ -372,6 +375,7 @@ namespace check_asis.Presentacion
             datalistadoCargos.Size = new Size(469, 141);
             datalistadoCargos.Visible = true;
             BuscarCargos();
+            Limpiar();
             // lblsueldo.Visible = false;
             // PanelBtnguardarPer.Visible = false;
         }
