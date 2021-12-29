@@ -16,7 +16,8 @@ namespace check_asis
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Presentacion.MenuPrincipal());
+            // Application.Run(new Presentacion.MenuPrincipal());
+            Application.Run(new Presentacion.TomarAsistencia());
         }
     }
 }

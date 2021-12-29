@@ -154,6 +154,25 @@ namespace check_asis.Datos
 			}
 		}
 
+		public void BuscarPersonalIdentidad(ref DataTable dt, string buscador)
+		{
+			try
+			{
+				ConexionMaestra.abrir();
+				SqlDataAdapter da = new SqlDataAdapter("BuscarPersonalIdentidad", ConexionMaestra.conectar);
+				da.SelectCommand.CommandType = CommandType.StoredProcedure;
+				da.SelectCommand.Parameters.AddWithValue("@Buscador", buscador);
+				da.Fill(dt);
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.StackTrace);
+			}
+			finally
+			{
+				ConexionMaestra.cerrar();
+			}
+		}
 		public bool restaurar_personal(Lpersonal parametros)
 		{
 			try
