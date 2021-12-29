@@ -43,10 +43,10 @@ namespace check_asis.Presentacion
             this.lbl_totalPaginas = new System.Windows.Forms.Label();
             this.btn_Primera = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBuscador = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnMostrarTodos = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -209,23 +209,24 @@ namespace check_asis.Presentacion
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.textBox1);
+            this.panel4.Controls.Add(this.txtBuscador);
             this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Controls.Add(this.btnAgregar);
-            this.panel4.Controls.Add(this.button4);
+            this.panel4.Controls.Add(this.btnMostrarTodos);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1496, 77);
             this.panel4.TabIndex = 5;
             // 
-            // textBox1
+            // txtBuscador
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(3, 17);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(206, 26);
-            this.textBox1.TabIndex = 43;
+            this.txtBuscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscador.Location = new System.Drawing.Point(3, 17);
+            this.txtBuscador.Name = "txtBuscador";
+            this.txtBuscador.Size = new System.Drawing.Size(206, 26);
+            this.txtBuscador.TabIndex = 43;
+            this.txtBuscador.TextChanged += new System.EventHandler(this.txtBuscador_TextChanged);
             // 
             // pictureBox1
             // 
@@ -249,14 +250,15 @@ namespace check_asis.Presentacion
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // button4
+            // btnMostrarTodos
             // 
-            this.button4.Location = new System.Drawing.Point(325, 17);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(93, 23);
-            this.button4.TabIndex = 46;
-            this.button4.Text = "Mostrar todos";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnMostrarTodos.Location = new System.Drawing.Point(325, 17);
+            this.btnMostrarTodos.Name = "btnMostrarTodos";
+            this.btnMostrarTodos.Size = new System.Drawing.Size(93, 23);
+            this.btnMostrarTodos.TabIndex = 46;
+            this.btnMostrarTodos.Text = "Mostrar todos";
+            this.btnMostrarTodos.UseVisualStyleBackColor = true;
+            this.btnMostrarTodos.Click += new System.EventHandler(this.btnMostrarTodos_Click);
             // 
             // label1
             // 
@@ -745,10 +747,10 @@ namespace check_asis.Presentacion
         private System.Windows.Forms.Label lbl_totalPaginas;
         private System.Windows.Forms.Button btn_Primera;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBuscador;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnMostrarTodos;
         private System.Windows.Forms.DataGridViewButtonColumn Editar;
         private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
         private System.Windows.Forms.Label label1;

@@ -515,5 +515,24 @@ namespace check_asis.Presentacion
             ReiniciarPaginado();
             MostrarPersonal();
         }
+
+        private void txtBuscador_TextChanged(object sender, EventArgs e)
+        {
+            BuscarPersonal();
+        }
+        private void BuscarPersonal()
+        {
+            DataTable dt = new DataTable();
+            Dpersonal funcion = new Dpersonal();
+            funcion.BuscarPersonal(ref dt, desde, hasta,txtBuscador.Text);
+            datalistadoPersonal.DataSource = dt;
+            DiseñarDtvPersonal();
+        }
+
+        private void btnMostrarTodos_Click(object sender, EventArgs e)
+        {
+            ReiniciarPaginado();
+            MostrarPersonal();
+        }
     }
 }
