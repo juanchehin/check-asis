@@ -27,7 +27,7 @@ namespace check_asis.Presentacion
         }
         private void validar_conexion()
         {
-            VerificarConexion();
+            /*VerificarConexion();
             if (Indicador == "Correcto")
             {
                 MostrarUsuarios();
@@ -48,7 +48,7 @@ namespace check_asis.Presentacion
                 Dispose();
                 ElecccionServidor frm = new ElecccionServidor();
                 frm.ShowDialog();
-            }
+            }*/
         }
     }
 }

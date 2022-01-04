@@ -32,7 +32,7 @@
             this.txtBuscador = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataListadoUsuarios = new System.Windows.Forms.DataGridView();
             this.panelRegistro = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,7 +42,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataListadoModulos = new System.Windows.Forms.DataGridView();
             this.Marcar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
@@ -63,10 +63,10 @@
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataListadoUsuarios)).BeginInit();
             this.panelRegistro.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataListadoModulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Icono)).BeginInit();
             this.panelIcono.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -112,13 +112,13 @@
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // dataGridView1
+            // dataListadoUsuarios
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 83);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(746, 422);
-            this.dataGridView1.TabIndex = 51;
+            this.dataListadoUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataListadoUsuarios.Location = new System.Drawing.Point(17, 83);
+            this.dataListadoUsuarios.Name = "dataListadoUsuarios";
+            this.dataListadoUsuarios.Size = new System.Drawing.Size(746, 422);
+            this.dataListadoUsuarios.TabIndex = 51;
             // 
             // panelRegistro
             // 
@@ -199,21 +199,22 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dataGridView2);
+            this.panel2.Controls.Add(this.dataListadoModulos);
             this.panel2.Location = new System.Drawing.Point(20, 169);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(358, 181);
             this.panel2.TabIndex = 7;
             // 
-            // dataGridView2
+            // dataListadoModulos
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataListadoModulos.AllowUserToAddRows = false;
+            this.dataListadoModulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataListadoModulos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Marcar});
-            this.dataGridView2.Location = new System.Drawing.Point(15, 14);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(332, 150);
-            this.dataGridView2.TabIndex = 0;
+            this.dataListadoModulos.Location = new System.Drawing.Point(15, 14);
+            this.dataListadoModulos.Name = "dataListadoModulos";
+            this.dataListadoModulos.Size = new System.Drawing.Size(332, 150);
+            this.dataListadoModulos.TabIndex = 0;
             // 
             // Marcar
             // 
@@ -228,6 +229,7 @@
             this.btnGuardar.TabIndex = 53;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnActualizar
             // 
@@ -410,18 +412,18 @@
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.panelRegistro);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataListadoUsuarios);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.txtBuscador);
             this.Controls.Add(this.pictureBox1);
             this.Name = "CtlUsuarios";
             this.Size = new System.Drawing.Size(963, 565);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataListadoUsuarios)).EndInit();
             this.panelRegistro.ResumeLayout(false);
             this.panelRegistro.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataListadoModulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Icono)).EndInit();
             this.panelIcono.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -445,10 +447,10 @@
         private System.Windows.Forms.TextBox txtBuscador;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataListadoUsuarios;
         private System.Windows.Forms.Panel panelRegistro;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataListadoModulos;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Marcar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtContraseña;

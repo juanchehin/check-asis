@@ -11,3 +11,8 @@ C:\Programacion\check-asis\check-asis\obj\Debug\check-asis.pdb
 C:\Programacion\check-asis\check-asis\obj\Debug\check_asis.Presentacion.Personal.resources
 C:\Programacion\check-asis\check-asis\obj\Debug\check-asis.csproj.SuggestedBindingRedirects.cache
 C:\Programacion\check-asis\check-asis\obj\Debug\check_asis.Presentacion.TomarAsistencia.resources
+C:\Programacion\check-asis\check-asis\obj\Debug\check_asis.Presentacion.asistente_instalacion.ConexionRemota.resources
+C:\Programacion\check-asis\check-asis\obj\Debug\check_asis.Presentacion.asistente_instalacion.EleccionServidor.resources
+C:\Programacion\check-asis\check-asis\obj\Debug\check_asis.Presentacion.asistente_instalacion.InstalacionBD.resources
+C:\Programacion\check-asis\check-asis\obj\Debug\check_asis.Presentacion.CtlUsuarios.resources
+C:\Programacion\check-asis\check-asis\obj\Debug\check_asis.Presentacion.Login.resources

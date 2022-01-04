@@ -50,12 +50,16 @@
     <Compile Include="Datos\DAsistencias.cs" />
     <Compile Include="Datos\Dcargos.cs" />
     <Compile Include="Datos\Dmodulos.cs" />
+    <Compile Include="Datos\Dpermisos.cs" />
     <Compile Include="Datos\Dpersonal.cs" />
+    <Compile Include="Datos\Dusuarios.cs" />
     <Compile Include="Logica\Bases.cs" />
     <Compile Include="Logica\LAsistencias.cs" />
     <Compile Include="Logica\Lcargos.cs" />
     <Compile Include="Logica\Lmodulos.cs" />
+    <Compile Include="Logica\Lpermisos.cs" />
     <Compile Include="Logica\Lpersonal.cs" />
+    <Compile Include="Logica\Lusuarios.cs" />
     <Compile Include="Presentacion\asistente-instalacion\ConexionRemota.cs">
       <SubType>Form</SubType>
     </Compile>
