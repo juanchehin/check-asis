@@ -49,10 +49,12 @@
     <Compile Include="Datos\ConexionMaestra.cs" />
     <Compile Include="Datos\DAsistencias.cs" />
     <Compile Include="Datos\Dcargos.cs" />
+    <Compile Include="Datos\Dmodulos.cs" />
     <Compile Include="Datos\Dpersonal.cs" />
     <Compile Include="Logica\Bases.cs" />
     <Compile Include="Logica\LAsistencias.cs" />
     <Compile Include="Logica\Lcargos.cs" />
+    <Compile Include="Logica\Lmodulos.cs" />
     <Compile Include="Logica\Lpersonal.cs" />
     <Compile Include="Presentacion\asistente-instalacion\ConexionRemota.cs">
       <SubType>Form</SubType>
