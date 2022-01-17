@@ -113,7 +113,7 @@ namespace check_asis.Presentacion
             this.btnRespaldos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRespaldos.Location = new System.Drawing.Point(0, 169);
             this.btnRespaldos.Name = "btnRespaldos";
-            this.btnRespaldos.Size = new System.Drawing.Size(213, 48);
+            this.btnRespaldos.Size = new System.Drawing.Size(210, 48);
             this.btnRespaldos.TabIndex = 4;
             this.btnRespaldos.Text = "Respaldar BD";
             this.btnRespaldos.UseVisualStyleBackColor = true;
@@ -125,7 +125,7 @@ namespace check_asis.Presentacion
             this.btnRestaurar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRestaurar.Location = new System.Drawing.Point(0, 111);
             this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.Size = new System.Drawing.Size(213, 48);
+            this.btnRestaurar.Size = new System.Drawing.Size(210, 48);
             this.btnRestaurar.TabIndex = 3;
             this.btnRestaurar.Text = "Restaurar BD";
             this.btnRestaurar.UseVisualStyleBackColor = true;

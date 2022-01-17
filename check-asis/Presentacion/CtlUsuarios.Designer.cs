@@ -146,7 +146,7 @@
             this.lblAnuncioIcono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAnuncioIcono.Location = new System.Drawing.Point(394, 14);
             this.lblAnuncioIcono.Name = "lblAnuncioIcono";
-            this.lblAnuncioIcono.Size = new System.Drawing.Size(125, 95);
+            this.lblAnuncioIcono.Size = new System.Drawing.Size(142, 108);
             this.lblAnuncioIcono.TabIndex = 57;
             this.lblAnuncioIcono.Text = "Elije un icono";
             this.lblAnuncioIcono.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -160,6 +160,7 @@
             this.Icono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Icono.TabIndex = 56;
             this.Icono.TabStop = false;
+            this.Icono.Click += new System.EventHandler(this.Icono_Click);
             // 
             // panel2
             // 

@@ -185,37 +185,37 @@ namespace check_asis.Presentacion
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            Icono.Image = pictureBox4.Image;
+            Icono.Image = pictureBox5.Image;
             ocultarPanelIconos();
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            Icono.Image = pictureBox4.Image;
+            Icono.Image = pictureBox6.Image;
             ocultarPanelIconos();
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-            Icono.Image = pictureBox4.Image;
+            Icono.Image = pictureBox7.Image;
             ocultarPanelIconos();
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            Icono.Image = pictureBox4.Image;
+            Icono.Image = pictureBox8.Image;
             ocultarPanelIconos();
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)
         {
-            Icono.Image = pictureBox4.Image;
+            Icono.Image = pictureBox9.Image;
             ocultarPanelIconos();
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
-            Icono.Image = pictureBox4.Image;
+            Icono.Image = pictureBox10.Image;
             ocultarPanelIconos();
         }
 
@@ -231,6 +231,11 @@ namespace check_asis.Presentacion
                 Icono.Image = new Bitmap(dlg.FileName);
                 ocultarPanelIconos();
             }
+        }
+
+        private void Icono_Click(object sender, EventArgs e)
+        {
+            MostrarPanelIcono();
         }
     }
 }
