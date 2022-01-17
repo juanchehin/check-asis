@@ -43,7 +43,7 @@ namespace check_asis.Datos
 			try
 			{
 				ConexionMaestra.abrir();
-				SqlDataAdapter da = new SqlDataAdapter("Select * from Usuarios", CONEXIONMAESTRA.conectar);
+				SqlDataAdapter da = new SqlDataAdapter("Select * from Usuarios", ConexionMaestra.conectar);
 				da.Fill(dt);
 			}
 			catch (Exception ex)

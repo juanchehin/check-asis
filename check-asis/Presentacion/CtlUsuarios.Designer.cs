@@ -34,22 +34,23 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dataListadoUsuarios = new System.Windows.Forms.DataGridView();
             this.panelRegistro = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblAnuncioIcono = new System.Windows.Forms.Label();
+            this.Icono = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataListadoModulos = new System.Windows.Forms.DataGridView();
             this.Marcar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
-            this.Icono = new System.Windows.Forms.PictureBox();
-            this.lblAnuncioIcono = new System.Windows.Forms.Label();
             this.panelIcono = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -60,14 +61,14 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.AgregarIconoPC = new System.Windows.Forms.PictureBox();
+            this.dlg = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataListadoUsuarios)).BeginInit();
             this.panelRegistro.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Icono)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListadoModulos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Icono)).BeginInit();
             this.panelIcono.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -79,7 +80,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AgregarIconoPC)).BeginInit();
             this.SuspendLayout();
             // 
             // txtBuscador
@@ -139,63 +140,26 @@
             this.panelRegistro.TabIndex = 52;
             this.panelRegistro.Visible = false;
             // 
-            // label1
+            // lblAnuncioIcono
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(32, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre : ";
+            this.lblAnuncioIcono.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblAnuncioIcono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnuncioIcono.Location = new System.Drawing.Point(394, 14);
+            this.lblAnuncioIcono.Name = "lblAnuncioIcono";
+            this.lblAnuncioIcono.Size = new System.Drawing.Size(125, 95);
+            this.lblAnuncioIcono.TabIndex = 57;
+            this.lblAnuncioIcono.Text = "Elije un icono";
+            this.lblAnuncioIcono.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblAnuncioIcono.Click += new System.EventHandler(this.lblAnuncioIcono_Click);
             // 
-            // label2
+            // Icono
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 64);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Usuario : ";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(99, 14);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(213, 21);
-            this.txtNombre.TabIndex = 2;
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Location = new System.Drawing.Point(99, 64);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(213, 21);
-            this.txtUsuario.TabIndex = 3;
-            // 
-            // txtContraseña
-            // 
-            this.txtContraseña.Location = new System.Drawing.Point(99, 104);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(213, 21);
-            this.txtContraseña.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 107);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 15);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Contraseña :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 151);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 15);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Permisos :";
+            this.Icono.Location = new System.Drawing.Point(394, 14);
+            this.Icono.Name = "Icono";
+            this.Icono.Size = new System.Drawing.Size(142, 108);
+            this.Icono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Icono.TabIndex = 56;
+            this.Icono.TabStop = false;
             // 
             // panel2
             // 
@@ -220,6 +184,64 @@
             // 
             this.Marcar.HeaderText = "Marcar";
             this.Marcar.Name = "Marcar";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(17, 151);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 15);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Permisos :";
+            // 
+            // txtContraseña
+            // 
+            this.txtContraseña.Location = new System.Drawing.Point(99, 104);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Size = new System.Drawing.Size(213, 21);
+            this.txtContraseña.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(17, 107);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 15);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Contraseña :";
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Location = new System.Drawing.Point(99, 64);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(213, 21);
+            this.txtUsuario.TabIndex = 3;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(99, 14);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(213, 21);
+            this.txtNombre.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(34, 64);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 15);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Usuario : ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(32, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nombre : ";
             // 
             // btnGuardar
             // 
@@ -249,38 +271,27 @@
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
             // 
-            // Icono
-            // 
-            this.Icono.Location = new System.Drawing.Point(394, 14);
-            this.Icono.Name = "Icono";
-            this.Icono.Size = new System.Drawing.Size(142, 108);
-            this.Icono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Icono.TabIndex = 56;
-            this.Icono.TabStop = false;
-            // 
-            // lblAnuncioIcono
-            // 
-            this.lblAnuncioIcono.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblAnuncioIcono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnuncioIcono.Location = new System.Drawing.Point(394, 14);
-            this.lblAnuncioIcono.Name = "lblAnuncioIcono";
-            this.lblAnuncioIcono.Size = new System.Drawing.Size(125, 95);
-            this.lblAnuncioIcono.TabIndex = 57;
-            this.lblAnuncioIcono.Text = "Elije un icono";
-            this.lblAnuncioIcono.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // panelIcono
             // 
             this.panelIcono.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelIcono.Controls.Add(this.button4);
             this.panelIcono.Controls.Add(this.flowLayoutPanel1);
             this.panelIcono.Controls.Add(this.flowLayoutPanel2);
-            this.panelIcono.Controls.Add(this.pictureBox11);
-            this.panelIcono.Location = new System.Drawing.Point(288, 63);
+            this.panelIcono.Controls.Add(this.AgregarIconoPC);
+            this.panelIcono.Location = new System.Drawing.Point(3, 147);
             this.panelIcono.Name = "panelIcono";
             this.panelIcono.Size = new System.Drawing.Size(493, 332);
             this.panelIcono.TabIndex = 56;
             this.panelIcono.Visible = false;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(397, 306);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(93, 23);
+            this.button4.TabIndex = 57;
+            this.button4.Text = "Volver";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanel1
             // 
@@ -302,6 +313,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox4
             // 
@@ -312,6 +324,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 1;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox5
             // 
@@ -322,6 +335,7 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 2;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox6
             // 
@@ -332,6 +346,7 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 3;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // flowLayoutPanel2
             // 
@@ -353,6 +368,7 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 0;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // pictureBox8
             // 
@@ -363,6 +379,7 @@
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 1;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // pictureBox9
             // 
@@ -373,6 +390,7 @@
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 2;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
             // 
             // pictureBox10
             // 
@@ -383,25 +401,22 @@
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 3;
             this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
             // 
-            // pictureBox11
+            // AgregarIconoPC
             // 
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(10, 218);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(110, 92);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 4;
-            this.pictureBox11.TabStop = false;
+            this.AgregarIconoPC.Image = ((System.Drawing.Image)(resources.GetObject("AgregarIconoPC.Image")));
+            this.AgregarIconoPC.Location = new System.Drawing.Point(10, 218);
+            this.AgregarIconoPC.Name = "AgregarIconoPC";
+            this.AgregarIconoPC.Size = new System.Drawing.Size(110, 92);
+            this.AgregarIconoPC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.AgregarIconoPC.TabIndex = 4;
+            this.AgregarIconoPC.TabStop = false;
+            this.AgregarIconoPC.Click += new System.EventHandler(this.AgregarIconoPC_Click);
             // 
-            // button4
+            // dlg
             // 
-            this.button4.Location = new System.Drawing.Point(397, 306);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(93, 23);
-            this.button4.TabIndex = 57;
-            this.button4.Text = "Volver";
-            this.button4.UseVisualStyleBackColor = true;
+            this.dlg.FileName = "openFileDialog1";
             // 
             // CtlUsuarios
             // 
@@ -422,9 +437,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataListadoUsuarios)).EndInit();
             this.panelRegistro.ResumeLayout(false);
             this.panelRegistro.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Icono)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataListadoModulos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Icono)).EndInit();
             this.panelIcono.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -436,7 +451,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AgregarIconoPC)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -475,7 +490,8 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox AgregarIconoPC;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.OpenFileDialog dlg;
     }
 }

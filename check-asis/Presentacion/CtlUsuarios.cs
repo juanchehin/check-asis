@@ -153,5 +153,84 @@ namespace check_asis.Presentacion
             dataListadoUsuarios.Columns[5].Visible = false;
             dataListadoUsuarios.Columns[6].Visible = false;
         }
+
+        private void lblAnuncioIcono_Click(object sender, EventArgs e)
+        {
+            MostrarPanelIcono();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Icono.Image = pictureBox3.Image;
+            ocultarPanelIconos();
+        }
+        private void ocultarPanelIconos()
+        {
+            panelIcono.Visible = false;
+            lblAnuncioIcono.Visible = false;
+            Icono.Visible = true;
+        }
+        private void MostrarPanelIcono()
+        {
+            panelIcono.Visible = true;
+            panelIcono.Dock = DockStyle.Fill;
+            panelIcono.BringToFront();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Icono.Image = pictureBox4.Image;
+            ocultarPanelIconos();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            Icono.Image = pictureBox4.Image;
+            ocultarPanelIconos();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Icono.Image = pictureBox4.Image;
+            ocultarPanelIconos();
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            Icono.Image = pictureBox4.Image;
+            ocultarPanelIconos();
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            Icono.Image = pictureBox4.Image;
+            ocultarPanelIconos();
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            Icono.Image = pictureBox4.Image;
+            ocultarPanelIconos();
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            Icono.Image = pictureBox4.Image;
+            ocultarPanelIconos();
+        }
+
+        private void AgregarIconoPC_Click(object sender, EventArgs e)
+        {
+            dlg.InitialDirectory = "";
+            dlg.Filter = "Imagenes|*.jpg;*.png";
+            dlg.FilterIndex = 2;
+            dlg.Title = "Cargador de imagenes";
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                Icono.BackgroundImage = null;
+                Icono.Image = new Bitmap(dlg.FileName);
+                ocultarPanelIconos();
+            }
+        }
     }
 }
