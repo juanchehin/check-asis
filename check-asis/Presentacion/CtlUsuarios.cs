@@ -237,5 +237,10 @@ namespace check_asis.Presentacion
         {
             MostrarPanelIcono();
         }
+
+        private void CtlUsuarios_Load(object sender, EventArgs e)
+        {
+            MostrarUsuarios();
+        }
     }
 }

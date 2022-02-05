@@ -34,7 +34,9 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dataListadoUsuarios = new System.Windows.Forms.DataGridView();
             this.panelRegistro = new System.Windows.Forms.Panel();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.lblAnuncioIcono = new System.Windows.Forms.Label();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.Icono = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataListadoModulos = new System.Windows.Forms.DataGridView();
@@ -46,9 +48,7 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
-            this.btnVolver = new System.Windows.Forms.Button();
             this.panelIcono = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -123,7 +123,9 @@
             // 
             // panelRegistro
             // 
+            this.panelRegistro.Controls.Add(this.btnVolver);
             this.panelRegistro.Controls.Add(this.lblAnuncioIcono);
+            this.panelRegistro.Controls.Add(this.btnGuardar);
             this.panelRegistro.Controls.Add(this.Icono);
             this.panelRegistro.Controls.Add(this.panel2);
             this.panelRegistro.Controls.Add(this.label4);
@@ -140,6 +142,15 @@
             this.panelRegistro.TabIndex = 52;
             this.panelRegistro.Visible = false;
             // 
+            // btnVolver
+            // 
+            this.btnVolver.Location = new System.Drawing.Point(99, 363);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(75, 23);
+            this.btnVolver.TabIndex = 55;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            // 
             // lblAnuncioIcono
             // 
             this.lblAnuncioIcono.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -151,6 +162,16 @@
             this.lblAnuncioIcono.Text = "Elije un icono";
             this.lblAnuncioIcono.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblAnuncioIcono.Click += new System.EventHandler(this.lblAnuncioIcono_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(7, 363);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.TabIndex = 53;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // Icono
             // 
@@ -244,33 +265,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre : ";
             // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Location = new System.Drawing.Point(530, 511);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 53;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(611, 511);
+            this.btnActualizar.Location = new System.Drawing.Point(688, 511);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(75, 23);
             this.btnActualizar.TabIndex = 54;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
-            // 
-            // btnVolver
-            // 
-            this.btnVolver.Location = new System.Drawing.Point(692, 511);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(75, 23);
-            this.btnVolver.TabIndex = 55;
-            this.btnVolver.Text = "Volver";
-            this.btnVolver.UseVisualStyleBackColor = true;
             // 
             // panelIcono
             // 
@@ -279,7 +281,7 @@
             this.panelIcono.Controls.Add(this.flowLayoutPanel1);
             this.panelIcono.Controls.Add(this.flowLayoutPanel2);
             this.panelIcono.Controls.Add(this.AgregarIconoPC);
-            this.panelIcono.Location = new System.Drawing.Point(3, 147);
+            this.panelIcono.Location = new System.Drawing.Point(3, 50);
             this.panelIcono.Name = "panelIcono";
             this.panelIcono.Size = new System.Drawing.Size(493, 332);
             this.panelIcono.TabIndex = 56;
@@ -423,10 +425,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panelIcono);
-            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnActualizar);
-            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.panelIcono);
             this.Controls.Add(this.panelRegistro);
             this.Controls.Add(this.dataListadoUsuarios);
             this.Controls.Add(this.btnAgregar);
@@ -434,6 +434,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "CtlUsuarios";
             this.Size = new System.Drawing.Size(963, 565);
+            this.Load += new System.EventHandler(this.CtlUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataListadoUsuarios)).EndInit();
             this.panelRegistro.ResumeLayout(false);
