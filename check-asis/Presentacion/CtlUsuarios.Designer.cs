@@ -63,6 +63,7 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.AgregarIconoPC = new System.Windows.Forms.PictureBox();
             this.dlg = new System.Windows.Forms.OpenFileDialog();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataListadoUsuarios)).BeginInit();
             this.panelRegistro.SuspendLayout();
@@ -123,6 +124,7 @@
             // 
             // panelRegistro
             // 
+            this.panelRegistro.Controls.Add(this.label5);
             this.panelRegistro.Controls.Add(this.btnVolver);
             this.panelRegistro.Controls.Add(this.lblAnuncioIcono);
             this.panelRegistro.Controls.Add(this.btnGuardar);
@@ -222,6 +224,7 @@
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(213, 21);
             this.txtContraseña.TabIndex = 5;
+            this.txtContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContraseña_KeyPress);
             // 
             // label3
             // 
@@ -281,7 +284,7 @@
             this.panelIcono.Controls.Add(this.flowLayoutPanel1);
             this.panelIcono.Controls.Add(this.flowLayoutPanel2);
             this.panelIcono.Controls.Add(this.AgregarIconoPC);
-            this.panelIcono.Location = new System.Drawing.Point(3, 50);
+            this.panelIcono.Location = new System.Drawing.Point(542, 37);
             this.panelIcono.Name = "panelIcono";
             this.panelIcono.Size = new System.Drawing.Size(493, 332);
             this.panelIcono.TabIndex = 56;
@@ -421,6 +424,16 @@
             // 
             this.dlg.FileName = "openFileDialog1";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(189, 128);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(123, 13);
+            this.label5.TabIndex = 58;
+            this.label5.Text = "Ingrese hasta 6 numeros";
+            // 
             // CtlUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -495,5 +508,6 @@
         private System.Windows.Forms.PictureBox AgregarIconoPC;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.OpenFileDialog dlg;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -151,7 +151,7 @@ namespace check_asis.Presentacion
             Bases.DiseñoDtvEliminar(ref dataListadoUsuarios);
             dataListadoUsuarios.Columns[2].Visible = false;
             dataListadoUsuarios.Columns[5].Visible = false;
-            dataListadoUsuarios.Columns[6].Visible = false;
+            //dataListadoUsuarios.Columns[6].Visible = false;
         }
 
         private void lblAnuncioIcono_Click(object sender, EventArgs e)
@@ -241,6 +241,22 @@ namespace check_asis.Presentacion
         private void CtlUsuarios_Load(object sender, EventArgs e)
         {
             MostrarUsuarios();
+        }
+
+        private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
     }
 }
