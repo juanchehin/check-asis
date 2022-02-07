@@ -34,6 +34,7 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dataListadoUsuarios = new System.Windows.Forms.DataGridView();
             this.panelRegistro = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
             this.lblAnuncioIcono = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -50,7 +51,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.panelIcono = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnVolverIcono = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -63,7 +64,6 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.AgregarIconoPC = new System.Windows.Forms.PictureBox();
             this.dlg = new System.Windows.Forms.OpenFileDialog();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataListadoUsuarios)).BeginInit();
             this.panelRegistro.SuspendLayout();
@@ -144,6 +144,16 @@
             this.panelRegistro.TabIndex = 52;
             this.panelRegistro.Visible = false;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(189, 128);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(123, 13);
+            this.label5.TabIndex = 58;
+            this.label5.Text = "Ingrese hasta 6 numeros";
+            // 
             // btnVolver
             // 
             this.btnVolver.Location = new System.Drawing.Point(99, 363);
@@ -152,6 +162,7 @@
             this.btnVolver.TabIndex = 55;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // lblAnuncioIcono
             // 
@@ -280,7 +291,7 @@
             // panelIcono
             // 
             this.panelIcono.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelIcono.Controls.Add(this.button4);
+            this.panelIcono.Controls.Add(this.btnVolverIcono);
             this.panelIcono.Controls.Add(this.flowLayoutPanel1);
             this.panelIcono.Controls.Add(this.flowLayoutPanel2);
             this.panelIcono.Controls.Add(this.AgregarIconoPC);
@@ -290,14 +301,15 @@
             this.panelIcono.TabIndex = 56;
             this.panelIcono.Visible = false;
             // 
-            // button4
+            // btnVolverIcono
             // 
-            this.button4.Location = new System.Drawing.Point(397, 306);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(93, 23);
-            this.button4.TabIndex = 57;
-            this.button4.Text = "Volver";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnVolverIcono.Location = new System.Drawing.Point(397, 306);
+            this.btnVolverIcono.Name = "btnVolverIcono";
+            this.btnVolverIcono.Size = new System.Drawing.Size(93, 23);
+            this.btnVolverIcono.TabIndex = 57;
+            this.btnVolverIcono.Text = "Volver";
+            this.btnVolverIcono.UseVisualStyleBackColor = true;
+            this.btnVolverIcono.Click += new System.EventHandler(this.btnVolverIcono_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -424,16 +436,6 @@
             // 
             this.dlg.FileName = "openFileDialog1";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(189, 128);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(123, 13);
-            this.label5.TabIndex = 58;
-            this.label5.Text = "Ingrese hasta 6 numeros";
-            // 
             // CtlUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -506,7 +508,7 @@
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox AgregarIconoPC;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnVolverIcono;
         private System.Windows.Forms.OpenFileDialog dlg;
         private System.Windows.Forms.Label label5;
     }

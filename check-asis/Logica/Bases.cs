@@ -31,21 +31,13 @@ namespace check_asis.Logica
         {
             int cont = 1;
 
-            Console.WriteLine(Listado);
             foreach (DataGridViewRow row in Listado.Rows)
             {
                     if (Listado.Rows.Count > cont)
                     {
                         cont++;
-                        Console.WriteLine(cont);
-                        Console.WriteLine(row.Cells["Estado"].Value.ToString());
-                        /*Console.WriteLine(row.Cells[1].Value.ToString());
-                        Console.WriteLine(row.Cells[2].Value.ToString());
-                        Console.WriteLine(row.Cells[3].Value.ToString());
-                        Console.WriteLine(row.Cells[4].Value.ToString());*/
                         string estado;
                         estado = row.Cells["Estado"].Value.ToString();
-                        Console.WriteLine(estado);
                         if (estado == "ELIMINADO")
                         {
                             row.DefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Strikeout | FontStyle.Bold);

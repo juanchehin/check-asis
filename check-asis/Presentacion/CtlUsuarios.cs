@@ -258,5 +258,15 @@ namespace check_asis.Presentacion
                 e.Handled = true;
             }
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            panelRegistro.Visible = false;
+        }
+
+        private void btnVolverIcono_Click(object sender, EventArgs e)
+        {
+            ocultarPanelIconos();
+        }
     }
 }
