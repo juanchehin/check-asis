@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InstalacionBD));
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,9 +51,16 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.timerCRARINI = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.timer4 = new System.Windows.Forms.Timer(this.components);
+            this.panelCargando = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.GroupBox1.SuspendLayout();
             this.GroupBox2.SuspendLayout();
+            this.panelCargando.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel5
@@ -254,11 +262,30 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Nombre de la instancia : ";
             // 
+            // panelCargando
+            // 
+            this.panelCargando.Controls.Add(this.label8);
+            this.panelCargando.Location = new System.Drawing.Point(12, 12);
+            this.panelCargando.Name = "panelCargando";
+            this.panelCargando.Size = new System.Drawing.Size(406, 231);
+            this.panelCargando.TabIndex = 15;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(114, 38);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(191, 25);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Instalando servidor...";
+            // 
             // InstalacionBD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1039, 749);
+            this.ClientSize = new System.Drawing.Size(1010, 749);
+            this.Controls.Add(this.panelCargando);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -267,10 +294,13 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "InstalacionBD";
             this.Text = "Instalacion de la base de datos";
+            this.Load += new System.EventHandler(this.InstalacionBD_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.GroupBox1.ResumeLayout(false);
             this.GroupBox2.ResumeLayout(false);
+            this.panelCargando.ResumeLayout(false);
+            this.panelCargando.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -299,5 +329,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Timer timerCRARINI;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Timer timer3;
+        private System.Windows.Forms.Timer timer4;
+        private System.Windows.Forms.Panel panelCargando;
+        private System.Windows.Forms.Label label8;
     }
 }

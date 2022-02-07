@@ -1,5 +1,6 @@
 ﻿using check_asis.Datos;
 using check_asis.Logica;
+using check_asis.Presentacion.asistente_instalacion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,8 +38,8 @@ namespace check_asis.Presentacion
                 if (Contador == 0)
                 {
                     Dispose();
-                    // UsuarioPrincipal frm = new UsuarioPrincipal();
-                    // frm.ShowDialog();
+                    UsuarioPrincipal frm = new UsuarioPrincipal();
+                    frm.ShowDialog();
                 }
                 else
                 {
@@ -49,8 +50,8 @@ namespace check_asis.Presentacion
             else
             {
                 Dispose();
-                // ElecccionServidor frm = new ElecccionServidor();
-                // frm.ShowDialog();
+                EleccionServidor frm = new EleccionServidor();
+                frm.ShowDialog();
             }
         }
         private void VerificarConexion()
