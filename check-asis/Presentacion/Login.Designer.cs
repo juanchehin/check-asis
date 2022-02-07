@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.PanelIngreso_de_contraseña = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -38,9 +38,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.PanelUsuarios = new System.Windows.Forms.Panel();
+            this.PanelIngreso_de_contraseña.SuspendLayout();
+            this.PanelUsuarios.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel5
@@ -52,17 +52,17 @@
             this.panel5.Size = new System.Drawing.Size(81, 54);
             this.panel5.TabIndex = 8;
             // 
-            // panel1
+            // PanelIngreso_de_contraseña
             // 
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.btnIniciarSesion);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(57, 72);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(379, 344);
-            this.panel1.TabIndex = 9;
+            this.PanelIngreso_de_contraseña.Controls.Add(this.label2);
+            this.PanelIngreso_de_contraseña.Controls.Add(this.btnIniciarSesion);
+            this.PanelIngreso_de_contraseña.Controls.Add(this.button1);
+            this.PanelIngreso_de_contraseña.Controls.Add(this.textBox1);
+            this.PanelIngreso_de_contraseña.Controls.Add(this.label1);
+            this.PanelIngreso_de_contraseña.Location = new System.Drawing.Point(57, 72);
+            this.PanelIngreso_de_contraseña.Name = "PanelIngreso_de_contraseña";
+            this.PanelIngreso_de_contraseña.Size = new System.Drawing.Size(379, 344);
+            this.PanelIngreso_de_contraseña.TabIndex = 9;
             // 
             // label2
             // 
@@ -122,34 +122,37 @@
             // 
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 103);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(373, 225);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(600, 600);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
-            // panel2
+            // PanelUsuarios
             // 
-            this.panel2.Controls.Add(this.flowLayoutPanel1);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(409, 69);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(379, 344);
-            this.panel2.TabIndex = 10;
+            this.PanelUsuarios.Controls.Add(this.flowLayoutPanel1);
+            this.PanelUsuarios.Controls.Add(this.label4);
+            this.PanelUsuarios.Location = new System.Drawing.Point(409, 69);
+            this.PanelUsuarios.Name = "PanelUsuarios";
+            this.PanelUsuarios.Size = new System.Drawing.Size(379, 344);
+            this.PanelUsuarios.TabIndex = 10;
+            this.PanelUsuarios.Visible = false;
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.PanelUsuarios);
+            this.Controls.Add(this.PanelIngreso_de_contraseña);
             this.Controls.Add(this.panel5);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Login_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.PanelIngreso_de_contraseña.ResumeLayout(false);
+            this.PanelIngreso_de_contraseña.PerformLayout();
+            this.PanelUsuarios.ResumeLayout(false);
+            this.PanelUsuarios.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -157,7 +160,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel PanelIngreso_de_contraseña;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.Button button1;
@@ -165,6 +168,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel PanelUsuarios;
     }
 }
