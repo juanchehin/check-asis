@@ -1,4 +1,5 @@
 ﻿using check_asis.Datos;
+using check_asis.Logica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -135,6 +136,33 @@ namespace check_asis.Presentacion
             Dusuarios funcion = new Dusuarios();
             funcion.mostrar_Usuarios(ref dt);
             Contador = dt.Rows.Count;
+        }
+
+        private void txtContraseña_TextChanged(object sender, EventArgs e)
+        {
+            validarUsuarios();
+        }
+        private void validarUsuarios()
+        {
+            Lusuarios parametros = new Lusuarios();
+            Dusuarios funcion = new Dusuarios();
+            parametros.Password = txtContraseña.Text;
+            parametros.Login = Usuario;
+            funcion.validarUsuario(parametros, ref Idusuario);
+            if (Idusuario > 0)
+            {
+                Dispose();
+                MenuPrincipal frm = new MenuPrincipal();
+                //frm.Idusuario = Idusuario;
+                //frm.LoginV = Usuario;
+                //frm.Icono.Image = Icono.Image;
+                frm.ShowDialog();
+            }
+        }
+
+        private void btnIniciarSesion_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Contraseña erronea", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

@@ -34,7 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtContraseña = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -57,7 +57,7 @@
             this.PanelIngreso_de_contraseña.Controls.Add(this.label2);
             this.PanelIngreso_de_contraseña.Controls.Add(this.btnIniciarSesion);
             this.PanelIngreso_de_contraseña.Controls.Add(this.button1);
-            this.PanelIngreso_de_contraseña.Controls.Add(this.textBox1);
+            this.PanelIngreso_de_contraseña.Controls.Add(this.txtContraseña);
             this.PanelIngreso_de_contraseña.Controls.Add(this.label1);
             this.PanelIngreso_de_contraseña.Location = new System.Drawing.Point(57, 72);
             this.PanelIngreso_de_contraseña.Name = "PanelIngreso_de_contraseña";
@@ -81,6 +81,7 @@
             this.btnIniciarSesion.TabIndex = 3;
             this.btnIniciarSesion.Text = "Iniciar Sesion";
             this.btnIniciarSesion.UseVisualStyleBackColor = true;
+            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
             // 
             // button1
             // 
@@ -91,12 +92,13 @@
             this.button1.Text = "Cambio de usuario";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtContraseña
             // 
-            this.textBox1.Location = new System.Drawing.Point(84, 100);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(222, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtContraseña.Location = new System.Drawing.Point(84, 100);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Size = new System.Drawing.Size(222, 20);
+            this.txtContraseña.TabIndex = 1;
+            this.txtContraseña.TextChanged += new System.EventHandler(this.txtContraseña_TextChanged);
             // 
             // label1
             // 
@@ -164,7 +166,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
