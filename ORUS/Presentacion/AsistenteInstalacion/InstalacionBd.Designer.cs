@@ -56,18 +56,6 @@
             this.GroupBox6 = new System.Windows.Forms.GroupBox();
             this.txtCrearUsuarioDb = new System.Windows.Forms.TextBox();
             this.txtArgumentosini = new System.Windows.Forms.RichTextBox();
-            this.Panel10 = new System.Windows.Forms.Panel();
-            this.GroupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtEliminarBase = new System.Windows.Forms.RichTextBox();
-            this.lblRutaInstancia = new System.Windows.Forms.Label();
-            this.min2 = new System.Windows.Forms.Label();
-            this.Label7 = new System.Windows.Forms.Label();
-            this.seg2 = new System.Windows.Forms.Label();
-            this.milise = new System.Windows.Forms.Label();
-            this.mils2 = new System.Windows.Forms.Label();
-            this.txtservidor = new System.Windows.Forms.Label();
-            this.seg3 = new System.Windows.Forms.Label();
-            this.mil3 = new System.Windows.Forms.Label();
             this.GroupBox2 = new System.Windows.Forms.GroupBox();
             this.txtCrear_procedimientos = new System.Windows.Forms.RichTextBox();
             this.txtnombre_scrypt = new System.Windows.Forms.TextBox();
@@ -83,6 +71,16 @@
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.TimerCRARINI = new System.Windows.Forms.Timer(this.components);
+            this.mil3 = new System.Windows.Forms.Label();
+            this.seg3 = new System.Windows.Forms.Label();
+            this.mils2 = new System.Windows.Forms.Label();
+            this.milise = new System.Windows.Forms.Label();
+            this.seg2 = new System.Windows.Forms.Label();
+            this.Label7 = new System.Windows.Forms.Label();
+            this.min2 = new System.Windows.Forms.Label();
+            this.lblRutaInstancia = new System.Windows.Forms.Label();
+            this.Panel10 = new System.Windows.Forms.Panel();
+            this.txtservidor = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox7)).BeginInit();
             this.Panel2.SuspendLayout();
@@ -94,9 +92,8 @@
             this.Panel9.SuspendLayout();
             this.panel8.SuspendLayout();
             this.GroupBox6.SuspendLayout();
-            this.Panel10.SuspendLayout();
-            this.GroupBox1.SuspendLayout();
             this.GroupBox2.SuspendLayout();
+            this.Panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -106,7 +103,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1438, 90);
+            this.panel1.Size = new System.Drawing.Size(1370, 90);
             this.panel1.TabIndex = 621;
             // 
             // Label66
@@ -403,136 +400,6 @@
             this.txtArgumentosini.TabIndex = 589;
             this.txtArgumentosini.Text = resources.GetString("txtArgumentosini.Text");
             // 
-            // Panel10
-            // 
-            this.Panel10.Controls.Add(this.GroupBox1);
-            this.Panel10.Controls.Add(this.lblRutaInstancia);
-            this.Panel10.Controls.Add(this.min2);
-            this.Panel10.Controls.Add(this.Label7);
-            this.Panel10.Controls.Add(this.seg2);
-            this.Panel10.Controls.Add(this.milise);
-            this.Panel10.Controls.Add(this.mils2);
-            this.Panel10.Controls.Add(this.txtservidor);
-            this.Panel10.Controls.Add(this.seg3);
-            this.Panel10.Controls.Add(this.mil3);
-            this.Panel10.Location = new System.Drawing.Point(343, 4);
-            this.Panel10.Name = "Panel10";
-            this.Panel10.Size = new System.Drawing.Size(332, 171);
-            this.Panel10.TabIndex = 608;
-            // 
-            // GroupBox1
-            // 
-            this.GroupBox1.Controls.Add(this.txtEliminarBase);
-            this.GroupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox1.ForeColor = System.Drawing.Color.White;
-            this.GroupBox1.Location = new System.Drawing.Point(3, 7);
-            this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Size = new System.Drawing.Size(316, 154);
-            this.GroupBox1.TabIndex = 608;
-            this.GroupBox1.TabStop = false;
-            this.GroupBox1.Text = "Script para Eliminar la base de datos";
-            // 
-            // txtEliminarBase
-            // 
-            this.txtEliminarBase.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtEliminarBase.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEliminarBase.Location = new System.Drawing.Point(3, 16);
-            this.txtEliminarBase.Name = "txtEliminarBase";
-            this.txtEliminarBase.Size = new System.Drawing.Size(310, 135);
-            this.txtEliminarBase.TabIndex = 589;
-            this.txtEliminarBase.Text = "alter database BASEADACURSO set single_user with rollback immediate \nDROP DATABAS" +
-    "E BASEADACURSO";
-            // 
-            // lblRutaInstancia
-            // 
-            this.lblRutaInstancia.AutoSize = true;
-            this.lblRutaInstancia.BackColor = System.Drawing.Color.White;
-            this.lblRutaInstancia.Location = new System.Drawing.Point(144, 23);
-            this.lblRutaInstancia.Name = "lblRutaInstancia";
-            this.lblRutaInstancia.Size = new System.Drawing.Size(83, 13);
-            this.lblRutaInstancia.TabIndex = 605;
-            this.lblRutaInstancia.Text = "lblRutaInstancia";
-            // 
-            // min2
-            // 
-            this.min2.AutoSize = true;
-            this.min2.ForeColor = System.Drawing.Color.White;
-            this.min2.Location = new System.Drawing.Point(102, 110);
-            this.min2.Name = "min2";
-            this.min2.Size = new System.Drawing.Size(19, 13);
-            this.min2.TabIndex = 618;
-            this.min2.Text = "00";
-            // 
-            // Label7
-            // 
-            this.Label7.AutoSize = true;
-            this.Label7.ForeColor = System.Drawing.Color.White;
-            this.Label7.Location = new System.Drawing.Point(112, 72);
-            this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(49, 13);
-            this.Label7.TabIndex = 618;
-            this.Label7.Text = "Servidor:";
-            // 
-            // seg2
-            // 
-            this.seg2.AutoSize = true;
-            this.seg2.ForeColor = System.Drawing.Color.White;
-            this.seg2.Location = new System.Drawing.Point(127, 110);
-            this.seg2.Name = "seg2";
-            this.seg2.Size = new System.Drawing.Size(19, 13);
-            this.seg2.TabIndex = 618;
-            this.seg2.Text = "00";
-            // 
-            // milise
-            // 
-            this.milise.AutoSize = true;
-            this.milise.ForeColor = System.Drawing.Color.White;
-            this.milise.Location = new System.Drawing.Point(130, 85);
-            this.milise.Name = "milise";
-            this.milise.Size = new System.Drawing.Size(19, 13);
-            this.milise.TabIndex = 618;
-            this.milise.Text = "00";
-            // 
-            // mils2
-            // 
-            this.mils2.AutoSize = true;
-            this.mils2.ForeColor = System.Drawing.Color.White;
-            this.mils2.Location = new System.Drawing.Point(208, 110);
-            this.mils2.Name = "mils2";
-            this.mils2.Size = new System.Drawing.Size(19, 13);
-            this.mils2.TabIndex = 618;
-            this.mils2.Text = "00";
-            // 
-            // txtservidor
-            // 
-            this.txtservidor.AutoSize = true;
-            this.txtservidor.ForeColor = System.Drawing.Color.White;
-            this.txtservidor.Location = new System.Drawing.Point(167, 72);
-            this.txtservidor.Name = "txtservidor";
-            this.txtservidor.Size = new System.Drawing.Size(16, 13);
-            this.txtservidor.TabIndex = 611;
-            this.txtservidor.Text = "---";
-            // 
-            // seg3
-            // 
-            this.seg3.AutoSize = true;
-            this.seg3.ForeColor = System.Drawing.Color.White;
-            this.seg3.Location = new System.Drawing.Point(246, 23);
-            this.seg3.Name = "seg3";
-            this.seg3.Size = new System.Drawing.Size(13, 13);
-            this.seg3.TabIndex = 620;
-            this.seg3.Text = "0";
-            // 
-            // mil3
-            // 
-            this.mil3.AutoSize = true;
-            this.mil3.ForeColor = System.Drawing.Color.White;
-            this.mil3.Location = new System.Drawing.Point(277, 36);
-            this.mil3.Name = "mil3";
-            this.mil3.Size = new System.Drawing.Size(13, 13);
-            this.mil3.TabIndex = 619;
-            this.mil3.Text = "0";
-            // 
             // GroupBox2
             // 
             this.GroupBox2.Controls.Add(this.txtCrear_procedimientos);
@@ -657,12 +524,118 @@
             this.TimerCRARINI.Interval = 10;
             this.TimerCRARINI.Tick += new System.EventHandler(this.TimerCRARINI_Tick);
             // 
+            // mil3
+            // 
+            this.mil3.AutoSize = true;
+            this.mil3.ForeColor = System.Drawing.Color.White;
+            this.mil3.Location = new System.Drawing.Point(277, 36);
+            this.mil3.Name = "mil3";
+            this.mil3.Size = new System.Drawing.Size(13, 13);
+            this.mil3.TabIndex = 619;
+            this.mil3.Text = "0";
+            // 
+            // seg3
+            // 
+            this.seg3.AutoSize = true;
+            this.seg3.ForeColor = System.Drawing.Color.White;
+            this.seg3.Location = new System.Drawing.Point(246, 23);
+            this.seg3.Name = "seg3";
+            this.seg3.Size = new System.Drawing.Size(13, 13);
+            this.seg3.TabIndex = 620;
+            this.seg3.Text = "0";
+            // 
+            // mils2
+            // 
+            this.mils2.AutoSize = true;
+            this.mils2.ForeColor = System.Drawing.Color.White;
+            this.mils2.Location = new System.Drawing.Point(208, 110);
+            this.mils2.Name = "mils2";
+            this.mils2.Size = new System.Drawing.Size(19, 13);
+            this.mils2.TabIndex = 618;
+            this.mils2.Text = "00";
+            // 
+            // milise
+            // 
+            this.milise.AutoSize = true;
+            this.milise.ForeColor = System.Drawing.Color.White;
+            this.milise.Location = new System.Drawing.Point(130, 85);
+            this.milise.Name = "milise";
+            this.milise.Size = new System.Drawing.Size(19, 13);
+            this.milise.TabIndex = 618;
+            this.milise.Text = "00";
+            // 
+            // seg2
+            // 
+            this.seg2.AutoSize = true;
+            this.seg2.ForeColor = System.Drawing.Color.White;
+            this.seg2.Location = new System.Drawing.Point(127, 110);
+            this.seg2.Name = "seg2";
+            this.seg2.Size = new System.Drawing.Size(19, 13);
+            this.seg2.TabIndex = 618;
+            this.seg2.Text = "00";
+            // 
+            // Label7
+            // 
+            this.Label7.AutoSize = true;
+            this.Label7.ForeColor = System.Drawing.Color.White;
+            this.Label7.Location = new System.Drawing.Point(112, 72);
+            this.Label7.Name = "Label7";
+            this.Label7.Size = new System.Drawing.Size(49, 13);
+            this.Label7.TabIndex = 618;
+            this.Label7.Text = "Servidor:";
+            // 
+            // min2
+            // 
+            this.min2.AutoSize = true;
+            this.min2.ForeColor = System.Drawing.Color.White;
+            this.min2.Location = new System.Drawing.Point(102, 110);
+            this.min2.Name = "min2";
+            this.min2.Size = new System.Drawing.Size(19, 13);
+            this.min2.TabIndex = 618;
+            this.min2.Text = "00";
+            // 
+            // lblRutaInstancia
+            // 
+            this.lblRutaInstancia.AutoSize = true;
+            this.lblRutaInstancia.BackColor = System.Drawing.Color.White;
+            this.lblRutaInstancia.Location = new System.Drawing.Point(144, 23);
+            this.lblRutaInstancia.Name = "lblRutaInstancia";
+            this.lblRutaInstancia.Size = new System.Drawing.Size(83, 13);
+            this.lblRutaInstancia.TabIndex = 605;
+            this.lblRutaInstancia.Text = "lblRutaInstancia";
+            // 
+            // Panel10
+            // 
+            this.Panel10.Controls.Add(this.lblRutaInstancia);
+            this.Panel10.Controls.Add(this.min2);
+            this.Panel10.Controls.Add(this.Label7);
+            this.Panel10.Controls.Add(this.seg2);
+            this.Panel10.Controls.Add(this.milise);
+            this.Panel10.Controls.Add(this.mils2);
+            this.Panel10.Controls.Add(this.txtservidor);
+            this.Panel10.Controls.Add(this.seg3);
+            this.Panel10.Controls.Add(this.mil3);
+            this.Panel10.Location = new System.Drawing.Point(343, 4);
+            this.Panel10.Name = "Panel10";
+            this.Panel10.Size = new System.Drawing.Size(332, 171);
+            this.Panel10.TabIndex = 608;
+            // 
+            // txtservidor
+            // 
+            this.txtservidor.AutoSize = true;
+            this.txtservidor.ForeColor = System.Drawing.Color.White;
+            this.txtservidor.Location = new System.Drawing.Point(167, 72);
+            this.txtservidor.Name = "txtservidor";
+            this.txtservidor.Size = new System.Drawing.Size(16, 13);
+            this.txtservidor.TabIndex = 611;
+            this.txtservidor.Text = "---";
+            // 
             // InstalacionBd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1438, 744);
+            this.ClientSize = new System.Drawing.Size(1370, 744);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.Panel2);
             this.Controls.Add(this.panel1);
@@ -686,10 +659,9 @@
             this.panel8.PerformLayout();
             this.GroupBox6.ResumeLayout(false);
             this.GroupBox6.PerformLayout();
+            this.GroupBox2.ResumeLayout(false);
             this.Panel10.ResumeLayout(false);
             this.Panel10.PerformLayout();
-            this.GroupBox1.ResumeLayout(false);
-            this.GroupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -722,18 +694,6 @@
         internal System.Windows.Forms.GroupBox GroupBox6;
         internal System.Windows.Forms.TextBox txtCrearUsuarioDb;
         internal System.Windows.Forms.RichTextBox txtArgumentosini;
-        internal System.Windows.Forms.Panel Panel10;
-        internal System.Windows.Forms.GroupBox GroupBox1;
-        internal System.Windows.Forms.RichTextBox txtEliminarBase;
-        internal System.Windows.Forms.Label lblRutaInstancia;
-        internal System.Windows.Forms.Label min2;
-        internal System.Windows.Forms.Label Label7;
-        internal System.Windows.Forms.Label seg2;
-        internal System.Windows.Forms.Label milise;
-        internal System.Windows.Forms.Label mils2;
-        internal System.Windows.Forms.Label txtservidor;
-        internal System.Windows.Forms.Label seg3;
-        internal System.Windows.Forms.Label mil3;
         internal System.Windows.Forms.GroupBox GroupBox2;
         internal System.Windows.Forms.RichTextBox txtCrear_procedimientos;
         internal System.Windows.Forms.TextBox txtnombre_scrypt;
@@ -749,5 +709,15 @@
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Timer timer4;
         private System.Windows.Forms.Timer TimerCRARINI;
+        internal System.Windows.Forms.Panel Panel10;
+        internal System.Windows.Forms.Label lblRutaInstancia;
+        internal System.Windows.Forms.Label min2;
+        internal System.Windows.Forms.Label Label7;
+        internal System.Windows.Forms.Label seg2;
+        internal System.Windows.Forms.Label milise;
+        internal System.Windows.Forms.Label mils2;
+        internal System.Windows.Forms.Label txtservidor;
+        internal System.Windows.Forms.Label seg3;
+        internal System.Windows.Forms.Label mil3;
     }
 }

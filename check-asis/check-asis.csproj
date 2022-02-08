@@ -54,6 +54,8 @@
     <Compile Include="Datos\Dpersonal.cs" />
     <Compile Include="Datos\Dusuarios.cs" />
     <Compile Include="Logica\Bases.cs" />
+    <Compile Include="Logica\Desencriptar.cs" />
+    <Compile Include="Logica\Encriptar.cs" />
     <Compile Include="Logica\LAsistencias.cs" />
     <Compile Include="Logica\Lcargos.cs" />
     <Compile Include="Logica\Lmodulos.cs" />

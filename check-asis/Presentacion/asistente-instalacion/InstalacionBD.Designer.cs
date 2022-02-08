@@ -35,16 +35,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.GroupBox6 = new System.Windows.Forms.GroupBox();
+            this.txtCrearUsuarioDb = new System.Windows.Forms.TextBox();
             this.txtArgumentosini = new System.Windows.Forms.RichTextBox();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
             this.txtEliminarBase = new System.Windows.Forms.RichTextBox();
             this.GroupBox2 = new System.Windows.Forms.GroupBox();
             this.txtCrear_procedimientos = new System.Windows.Forms.RichTextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtnombre_scrypt = new System.Windows.Forms.TextBox();
             this.TXTbasededatos = new System.Windows.Forms.TextBox();
             this.lblcontraseña = new System.Windows.Forms.TextBox();
             this.txtusuario = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblnombredeservicio = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -54,14 +56,13 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
-            this.GroupBox6 = new System.Windows.Forms.GroupBox();
-            this.txtCrearUsuarioDb = new System.Windows.Forms.TextBox();
             this.panelCargando = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
+            this.txtservidor = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.GroupBox6.SuspendLayout();
             this.GroupBox1.SuspendLayout();
             this.GroupBox2.SuspendLayout();
-            this.GroupBox6.SuspendLayout();
             this.panelCargando.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -107,11 +108,11 @@
             this.panel1.Controls.Add(this.txtArgumentosini);
             this.panel1.Controls.Add(this.GroupBox1);
             this.panel1.Controls.Add(this.GroupBox2);
-            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.txtnombre_scrypt);
             this.panel1.Controls.Add(this.TXTbasededatos);
             this.panel1.Controls.Add(this.lblcontraseña);
             this.panel1.Controls.Add(this.txtusuario);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.lblnombredeservicio);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
@@ -121,6 +122,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(936, 732);
             this.panel1.TabIndex = 14;
+            // 
+            // GroupBox6
+            // 
+            this.GroupBox6.Controls.Add(this.txtCrearUsuarioDb);
+            this.GroupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox6.ForeColor = System.Drawing.Color.Black;
+            this.GroupBox6.Location = new System.Drawing.Point(500, 281);
+            this.GroupBox6.Name = "GroupBox6";
+            this.GroupBox6.Size = new System.Drawing.Size(233, 304);
+            this.GroupBox6.TabIndex = 633;
+            this.GroupBox6.TabStop = false;
+            this.GroupBox6.Text = "Servira para Crear un Usuario para el Servidor - NO TOCAR";
+            // 
+            // txtCrearUsuarioDb
+            // 
+            this.txtCrearUsuarioDb.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtCrearUsuarioDb.Location = new System.Drawing.Point(3, 39);
+            this.txtCrearUsuarioDb.Multiline = true;
+            this.txtCrearUsuarioDb.Name = "txtCrearUsuarioDb";
+            this.txtCrearUsuarioDb.Size = new System.Drawing.Size(227, 262);
+            this.txtCrearUsuarioDb.TabIndex = 629;
+            this.txtCrearUsuarioDb.Text = resources.GetString("txtCrearUsuarioDb.Text");
             // 
             // txtArgumentosini
             // 
@@ -175,12 +198,12 @@
             this.txtCrear_procedimientos.TabIndex = 589;
             this.txtCrear_procedimientos.Text = resources.GetString("txtCrear_procedimientos.Text");
             // 
-            // textBox5
+            // txtnombre_scrypt
             // 
-            this.textBox5.Location = new System.Drawing.Point(134, 132);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 9;
+            this.txtnombre_scrypt.Location = new System.Drawing.Point(134, 132);
+            this.txtnombre_scrypt.Name = "txtnombre_scrypt";
+            this.txtnombre_scrypt.Size = new System.Drawing.Size(100, 20);
+            this.txtnombre_scrypt.TabIndex = 9;
             // 
             // TXTbasededatos
             // 
@@ -203,12 +226,12 @@
             this.txtusuario.Size = new System.Drawing.Size(100, 20);
             this.txtusuario.TabIndex = 6;
             // 
-            // textBox1
+            // lblnombredeservicio
             // 
-            this.textBox1.Location = new System.Drawing.Point(134, 14);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
+            this.lblnombredeservicio.Location = new System.Drawing.Point(134, 14);
+            this.lblnombredeservicio.Name = "lblnombredeservicio";
+            this.lblnombredeservicio.Size = new System.Drawing.Size(100, 20);
+            this.lblnombredeservicio.TabIndex = 5;
             // 
             // label7
             // 
@@ -255,27 +278,9 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Nombre de la instancia : ";
             // 
-            // GroupBox6
+            // timer4
             // 
-            this.GroupBox6.Controls.Add(this.txtCrearUsuarioDb);
-            this.GroupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox6.ForeColor = System.Drawing.Color.Black;
-            this.GroupBox6.Location = new System.Drawing.Point(500, 281);
-            this.GroupBox6.Name = "GroupBox6";
-            this.GroupBox6.Size = new System.Drawing.Size(233, 304);
-            this.GroupBox6.TabIndex = 633;
-            this.GroupBox6.TabStop = false;
-            this.GroupBox6.Text = "Servira para Crear un Usuario para el Servidor - NO TOCAR";
-            // 
-            // txtCrearUsuarioDb
-            // 
-            this.txtCrearUsuarioDb.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtCrearUsuarioDb.Location = new System.Drawing.Point(3, 39);
-            this.txtCrearUsuarioDb.Multiline = true;
-            this.txtCrearUsuarioDb.Name = "txtCrearUsuarioDb";
-            this.txtCrearUsuarioDb.Size = new System.Drawing.Size(227, 262);
-            this.txtCrearUsuarioDb.TabIndex = 629;
-            this.txtCrearUsuarioDb.Text = resources.GetString("txtCrearUsuarioDb.Text");
+            this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
             // panelCargando
             // 
@@ -295,11 +300,22 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Instalando servidor...";
             // 
+            // txtservidor
+            // 
+            this.txtservidor.AutoSize = true;
+            this.txtservidor.ForeColor = System.Drawing.Color.White;
+            this.txtservidor.Location = new System.Drawing.Point(640, 273);
+            this.txtservidor.Name = "txtservidor";
+            this.txtservidor.Size = new System.Drawing.Size(16, 13);
+            this.txtservidor.TabIndex = 612;
+            this.txtservidor.Text = "---";
+            // 
             // InstalacionBD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1010, 749);
+            this.Controls.Add(this.txtservidor);
             this.Controls.Add(this.panelCargando);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.progressBar1);
@@ -312,10 +328,10 @@
             this.Load += new System.EventHandler(this.InstalacionBD_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.GroupBox1.ResumeLayout(false);
-            this.GroupBox2.ResumeLayout(false);
             this.GroupBox6.ResumeLayout(false);
             this.GroupBox6.PerformLayout();
+            this.GroupBox1.ResumeLayout(false);
+            this.GroupBox2.ResumeLayout(false);
             this.panelCargando.ResumeLayout(false);
             this.panelCargando.PerformLayout();
             this.ResumeLayout(false);
@@ -335,11 +351,11 @@
         internal System.Windows.Forms.RichTextBox txtEliminarBase;
         internal System.Windows.Forms.GroupBox GroupBox2;
         internal System.Windows.Forms.RichTextBox txtCrear_procedimientos;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtnombre_scrypt;
         private System.Windows.Forms.TextBox TXTbasededatos;
         private System.Windows.Forms.TextBox lblcontraseña;
         private System.Windows.Forms.TextBox txtusuario;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox lblnombredeservicio;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -353,5 +369,6 @@
         internal System.Windows.Forms.TextBox txtCrearUsuarioDb;
         private System.Windows.Forms.Panel panelCargando;
         private System.Windows.Forms.Label label8;
+        internal System.Windows.Forms.Label txtservidor;
     }
 }
