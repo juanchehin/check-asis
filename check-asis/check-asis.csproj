@@ -127,6 +127,9 @@
     <EmbeddedResource Include="Presentacion\asistente-instalacion\InstalacionBD.resx">
       <DependentUpon>InstalacionBD.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\asistente-instalacion\UsuarioPrincipal.resx">
+      <DependentUpon>UsuarioPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\CtlUsuarios.resx">
       <DependentUpon>CtlUsuarios.cs</DependentUpon>
       <SubType>Designer</SubType>
