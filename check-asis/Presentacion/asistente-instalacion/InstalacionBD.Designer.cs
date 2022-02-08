@@ -35,16 +35,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.txtArgumentosini = new System.Windows.Forms.RichTextBox();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
             this.txtEliminarBase = new System.Windows.Forms.RichTextBox();
             this.GroupBox2 = new System.Windows.Forms.GroupBox();
             this.txtCrear_procedimientos = new System.Windows.Forms.RichTextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TXTbasededatos = new System.Windows.Forms.TextBox();
+            this.lblcontraseña = new System.Windows.Forms.TextBox();
+            this.txtusuario = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -55,11 +54,14 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
+            this.GroupBox6 = new System.Windows.Forms.GroupBox();
+            this.txtCrearUsuarioDb = new System.Windows.Forms.TextBox();
             this.panelCargando = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.GroupBox1.SuspendLayout();
             this.GroupBox2.SuspendLayout();
+            this.GroupBox6.SuspendLayout();
             this.panelCargando.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,33 +103,24 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.richTextBox1);
+            this.panel1.Controls.Add(this.GroupBox6);
             this.panel1.Controls.Add(this.txtArgumentosini);
             this.panel1.Controls.Add(this.GroupBox1);
             this.panel1.Controls.Add(this.GroupBox2);
             this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.TXTbasededatos);
+            this.panel1.Controls.Add(this.lblcontraseña);
+            this.panel1.Controls.Add(this.txtusuario);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(39, 362);
+            this.panel1.Location = new System.Drawing.Point(12, 352);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(936, 732);
             this.panel1.TabIndex = 14;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(464, 369);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(446, 216);
-            this.richTextBox1.TabIndex = 625;
-            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
             // txtArgumentosini
             // 
@@ -143,7 +136,7 @@
             this.GroupBox1.Controls.Add(this.txtEliminarBase);
             this.GroupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox1.ForeColor = System.Drawing.Color.Black;
-            this.GroupBox1.Location = new System.Drawing.Point(464, 180);
+            this.GroupBox1.Location = new System.Drawing.Point(503, 103);
             this.GroupBox1.Name = "GroupBox1";
             this.GroupBox1.Size = new System.Drawing.Size(316, 154);
             this.GroupBox1.TabIndex = 624;
@@ -189,26 +182,26 @@
             this.textBox5.Size = new System.Drawing.Size(100, 20);
             this.textBox5.TabIndex = 9;
             // 
-            // textBox4
+            // TXTbasededatos
             // 
-            this.textBox4.Location = new System.Drawing.Point(134, 103);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 8;
+            this.TXTbasededatos.Location = new System.Drawing.Point(134, 103);
+            this.TXTbasededatos.Name = "TXTbasededatos";
+            this.TXTbasededatos.Size = new System.Drawing.Size(100, 20);
+            this.TXTbasededatos.TabIndex = 8;
             // 
-            // textBox3
+            // lblcontraseña
             // 
-            this.textBox3.Location = new System.Drawing.Point(134, 71);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 7;
+            this.lblcontraseña.Location = new System.Drawing.Point(134, 71);
+            this.lblcontraseña.Name = "lblcontraseña";
+            this.lblcontraseña.Size = new System.Drawing.Size(100, 20);
+            this.lblcontraseña.TabIndex = 7;
             // 
-            // textBox2
+            // txtusuario
             // 
-            this.textBox2.Location = new System.Drawing.Point(134, 42);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 6;
+            this.txtusuario.Location = new System.Drawing.Point(134, 42);
+            this.txtusuario.Name = "txtusuario";
+            this.txtusuario.Size = new System.Drawing.Size(100, 20);
+            this.txtusuario.TabIndex = 6;
             // 
             // textBox1
             // 
@@ -262,19 +255,41 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Nombre de la instancia : ";
             // 
+            // GroupBox6
+            // 
+            this.GroupBox6.Controls.Add(this.txtCrearUsuarioDb);
+            this.GroupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox6.ForeColor = System.Drawing.Color.Black;
+            this.GroupBox6.Location = new System.Drawing.Point(500, 281);
+            this.GroupBox6.Name = "GroupBox6";
+            this.GroupBox6.Size = new System.Drawing.Size(233, 304);
+            this.GroupBox6.TabIndex = 633;
+            this.GroupBox6.TabStop = false;
+            this.GroupBox6.Text = "Servira para Crear un Usuario para el Servidor - NO TOCAR";
+            // 
+            // txtCrearUsuarioDb
+            // 
+            this.txtCrearUsuarioDb.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtCrearUsuarioDb.Location = new System.Drawing.Point(3, 39);
+            this.txtCrearUsuarioDb.Multiline = true;
+            this.txtCrearUsuarioDb.Name = "txtCrearUsuarioDb";
+            this.txtCrearUsuarioDb.Size = new System.Drawing.Size(227, 262);
+            this.txtCrearUsuarioDb.TabIndex = 629;
+            this.txtCrearUsuarioDb.Text = resources.GetString("txtCrearUsuarioDb.Text");
+            // 
             // panelCargando
             // 
             this.panelCargando.Controls.Add(this.label8);
-            this.panelCargando.Location = new System.Drawing.Point(12, 12);
+            this.panelCargando.Location = new System.Drawing.Point(18, 28);
             this.panelCargando.Name = "panelCargando";
-            this.panelCargando.Size = new System.Drawing.Size(406, 231);
+            this.panelCargando.Size = new System.Drawing.Size(351, 151);
             this.panelCargando.TabIndex = 15;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(114, 38);
+            this.label8.Location = new System.Drawing.Point(78, 17);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(191, 25);
             this.label8.TabIndex = 0;
@@ -286,11 +301,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1010, 749);
             this.Controls.Add(this.panelCargando);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "InstalacionBD";
             this.Text = "Instalacion de la base de datos";
@@ -299,6 +314,8 @@
             this.panel1.PerformLayout();
             this.GroupBox1.ResumeLayout(false);
             this.GroupBox2.ResumeLayout(false);
+            this.GroupBox6.ResumeLayout(false);
+            this.GroupBox6.PerformLayout();
             this.panelCargando.ResumeLayout(false);
             this.panelCargando.PerformLayout();
             this.ResumeLayout(false);
@@ -313,16 +330,15 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Panel panel1;
-        internal System.Windows.Forms.RichTextBox richTextBox1;
         internal System.Windows.Forms.RichTextBox txtArgumentosini;
         internal System.Windows.Forms.GroupBox GroupBox1;
         internal System.Windows.Forms.RichTextBox txtEliminarBase;
         internal System.Windows.Forms.GroupBox GroupBox2;
         internal System.Windows.Forms.RichTextBox txtCrear_procedimientos;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TXTbasededatos;
+        private System.Windows.Forms.TextBox lblcontraseña;
+        private System.Windows.Forms.TextBox txtusuario;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -333,6 +349,8 @@
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Timer timer4;
+        internal System.Windows.Forms.GroupBox GroupBox6;
+        internal System.Windows.Forms.TextBox txtCrearUsuarioDb;
         private System.Windows.Forms.Panel panelCargando;
         private System.Windows.Forms.Label label8;
     }
