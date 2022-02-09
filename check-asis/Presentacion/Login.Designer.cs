@@ -39,8 +39,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.PanelUsuarios = new System.Windows.Forms.Panel();
+            this.Icono = new System.Windows.Forms.PictureBox();
             this.PanelIngreso_de_contraseña.SuspendLayout();
             this.PanelUsuarios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Icono)).BeginInit();
             this.SuspendLayout();
             // 
             // panel5
@@ -137,11 +139,21 @@
             this.PanelUsuarios.TabIndex = 10;
             this.PanelUsuarios.Visible = false;
             // 
+            // Icono
+            // 
+            this.Icono.Location = new System.Drawing.Point(309, 12);
+            this.Icono.Name = "Icono";
+            this.Icono.Size = new System.Drawing.Size(30, 29);
+            this.Icono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Icono.TabIndex = 618;
+            this.Icono.TabStop = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Icono);
             this.Controls.Add(this.PanelUsuarios);
             this.Controls.Add(this.PanelIngreso_de_contraseña);
             this.Controls.Add(this.panel5);
@@ -155,6 +167,7 @@
             this.PanelIngreso_de_contraseña.PerformLayout();
             this.PanelUsuarios.ResumeLayout(false);
             this.PanelUsuarios.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Icono)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -171,5 +184,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel PanelUsuarios;
+        private System.Windows.Forms.PictureBox Icono;
     }
 }

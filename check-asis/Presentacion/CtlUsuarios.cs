@@ -268,5 +268,98 @@ namespace check_asis.Presentacion
         {
             ocultarPanelIconos();
         }
+        private void ObtenerDatos()
+        {
+            capturarIdUsuario();
+            txtnombre.Text = datalistadoUsuarios.SelectedCells[3].Value.ToString();
+            txtusuario.Text = datalistadoUsuarios.SelectedCells[4].Value.ToString();
+            if (txtusuario.Text == "admin")
+            {
+                txtusuario.Enabled = false;
+                datalistadoModulos.Enabled = false;
+            }
+            else
+            {
+                txtusuario.Enabled = true;
+                datalistadoModulos.Enabled = true;
+            }
+            txtcontraseña.Text = datalistadoUsuarios.SelectedCells[5].Value.ToString();
+
+            Icono.BackgroundImage = null;
+            byte[] b = (byte[])(datalistadoUsuarios.SelectedCells[6].Value);
+            MemoryStream ms = new MemoryStream(b);
+            Icono.Image = Image.FromStream(ms);
+            panelRegistro.Visible = true;
+            panelRegistro.Dock = DockStyle.Fill;
+            lblanuncioIcono.Visible = false;
+            btnActualizar.Visible = true;
+            btnguardar.Visible = false;
+            MostrarModulos();
+            mostrarPermisos();
+        }
+
+        private void dataListadoUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataListadoUsuarios.Columns["Editar"].Index)
+            {
+                obtenerEstado();
+                if (estado == "ELIMINADO")
+                {
+                    DialogResult resultado = MessageBox.Show("Este Usuario se Elimino. ¿Desea Volver a Habilitarlo?", "Restauracion de registros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (resultado == DialogResult.OK)
+                    {
+                        RestaurarUsuario();
+                    }
+                }
+                else
+                {
+                    ObtenerDatos();
+                }
+
+            }
+            if (e.ColumnIndex == datalistadoUsuarios.Columns["Eliminar"].Index)
+            {
+                DialogResult resultado = MessageBox.Show("¿Realmente desea eliminar este Registro?", "Eliminando registros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (resultado == DialogResult.OK)
+                {
+                    capturarIdUsuario();
+                    EliminarUsuarios();
+                }
+
+            }
+        }
+        private void obtenerEstado()
+        {
+            estado = datalistadoUsuarios.SelectedCells[7].Value.ToString();
+        }
+        private void ObtenerDatos()
+        {
+            capturarIdUsuario();
+            txtnombre.Text = datalistadoUsuarios.SelectedCells[3].Value.ToString();
+            txtusuario.Text = datalistadoUsuarios.SelectedCells[4].Value.ToString();
+            if (txtusuario.Text == "admin")
+            {
+                txtusuario.Enabled = false;
+                datalistadoModulos.Enabled = false;
+            }
+            else
+            {
+                txtusuario.Enabled = true;
+                datalistadoModulos.Enabled = true;
+            }
+            txtcontraseña.Text = datalistadoUsuarios.SelectedCells[5].Value.ToString();
+
+            Icono.BackgroundImage = null;
+            byte[] b = (byte[])(datalistadoUsuarios.SelectedCells[6].Value);
+            MemoryStream ms = new MemoryStream(b);
+            Icono.Image = Image.FromStream(ms);
+            panelRegistro.Visible = true;
+            panelRegistro.Dock = DockStyle.Fill;
+            lblanuncioIcono.Visible = false;
+            btnActualizar.Visible = true;
+            btnguardar.Visible = false;
+            MostrarModulos();
+            mostrarPermisos();
+        }
     }
 }

@@ -16,3 +16,4 @@ C:\Programacion\check-asis\check-asis\obj\Debug\check_asis.Presentacion.asistent
 C:\Programacion\check-asis\check-asis\obj\Debug\check_asis.Presentacion.asistente_instalacion.InstalacionBD.resources
 C:\Programacion\check-asis\check-asis\obj\Debug\check_asis.Presentacion.CtlUsuarios.resources
 C:\Programacion\check-asis\check-asis\obj\Debug\check_asis.Presentacion.Login.resources
+C:\Programacion\check-asis\check-asis\obj\Debug\check_asis.Presentacion.asistente_instalacion.UsuarioPrincipal.resources

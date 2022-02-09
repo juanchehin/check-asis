@@ -652,6 +652,19 @@
         gMnX+DJuAUm5+Hz/DyPXqa0uc4KdAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="txtCrearUsuarioDb.Text" xml:space="preserve">
+    <value>CREATE LOGIN ada369 WITH PASSWORD = 'softwarereal'
+GO
+Use BASEADA ;
+GO
+IF NOT EXISTS (SELECT * FROM sys.database_principals WHERE name = N'ada369')
+BEGIN
+    CREATE USER [ada369] FOR LOGIN [ada369]
+    EXEC sp_addrolemember N'db_owner', N'ada369'
+    EXEC master..sp_addsrvrolemember @loginame = N'ada369', @rolename = N'sysadmin'
+END;
+GO</value>
+  </data>
   <data name="txtArgumentosini.Text" xml:space="preserve">
     <value>;SQL Server 2014 Configuration File
 [OPTIONS]
@@ -1287,19 +1300,6 @@ GO
 USE [master]
 GO
 ALTER DATABASE [check] SET  READ_WRITE 
-GO</value>
-  </data>
-  <data name="txtCrearUsuarioDb.Text" xml:space="preserve">
-    <value>CREATE LOGIN ada369 WITH PASSWORD = 'softwarereal'
-GO
-Use BASEADA ;
-GO
-IF NOT EXISTS (SELECT * FROM sys.database_principals WHERE name = N'ada369')
-BEGIN
-    CREATE USER [ada369] FOR LOGIN [ada369]
-    EXEC sp_addrolemember N'db_owner', N'ada369'
-    EXEC master..sp_addsrvrolemember @loginame = N'ada369', @rolename = N'sysadmin'
-END;
 GO</value>
   </data>
   <metadata name="timerCRARINI.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

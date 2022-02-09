@@ -121,6 +121,7 @@
             this.dataListadoUsuarios.Name = "dataListadoUsuarios";
             this.dataListadoUsuarios.Size = new System.Drawing.Size(746, 422);
             this.dataListadoUsuarios.TabIndex = 51;
+            this.dataListadoUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataListadoUsuarios_CellClick);
             // 
             // panelRegistro
             // 

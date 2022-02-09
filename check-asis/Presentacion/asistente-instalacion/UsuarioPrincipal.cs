@@ -67,8 +67,8 @@ namespace check_asis.Presentacion.asistente_instalacion
         }
         private void InsertarcopiasBd()
         {
-            DcopiasBd funcion = new DcopiasBd();
-            funcion.InsertarCopiasBd();
+            //DcopiasBd funcion = new DcopiasBd();
+            //funcion.InsertarCopiasBd();
         }
         private void ObtenerIdUsuario()
         {

@@ -40,15 +40,16 @@ namespace check_asis.Presentacion
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnRegistro = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.btnPersonal = new System.Windows.Forms.Button();
             this.btnPlanilla = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.PanelPadre = new System.Windows.Forms.Panel();
+            this.Icono = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.PanelPadre.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Icono)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -157,7 +158,7 @@ namespace check_asis.Presentacion
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.panel6);
+            this.panel3.Controls.Add(this.Icono);
             this.panel3.Controls.Add(this.btnPersonal);
             this.panel3.Controls.Add(this.btnPlanilla);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -165,13 +166,6 @@ namespace check_asis.Presentacion
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(220, 202);
             this.panel3.TabIndex = 0;
-            // 
-            // panel6
-            // 
-            this.panel6.Location = new System.Drawing.Point(6, 3);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(57, 38);
-            this.panel6.TabIndex = 2;
             // 
             // btnPersonal
             // 
@@ -213,6 +207,15 @@ namespace check_asis.Presentacion
             this.PanelPadre.Size = new System.Drawing.Size(886, 737);
             this.PanelPadre.TabIndex = 2;
             // 
+            // Icono
+            // 
+            this.Icono.Location = new System.Drawing.Point(6, 3);
+            this.Icono.Name = "Icono";
+            this.Icono.Size = new System.Drawing.Size(56, 38);
+            this.Icono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Icono.TabIndex = 2;
+            this.Icono.TabStop = false;
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,6 +234,7 @@ namespace check_asis.Presentacion
             this.panel3.ResumeLayout(false);
             this.PanelPadre.ResumeLayout(false);
             this.PanelPadre.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Icono)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -249,8 +253,8 @@ namespace check_asis.Presentacion
         private System.Windows.Forms.Button btnPlanilla;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel PanelPadre;
+        public System.Windows.Forms.PictureBox Icono;
     }
 }

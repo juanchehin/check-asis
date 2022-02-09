@@ -154,9 +154,9 @@ namespace check_asis.Presentacion
             {
                 Dispose();
                 MenuPrincipal frm = new MenuPrincipal();
-                //frm.Idusuario = Idusuario;
-                //frm.LoginV = Usuario;
-                //frm.Icono.Image = Icono.Image;
+                frm.Idusuario = Idusuario;
+                frm.LoginV = Usuario;
+                frm.Icono.Image = Icono.Image;
                 frm.ShowDialog();
             }
         }

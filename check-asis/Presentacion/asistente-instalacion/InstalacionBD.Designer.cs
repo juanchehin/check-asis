@@ -128,7 +128,7 @@
             this.GroupBox6.Controls.Add(this.txtCrearUsuarioDb);
             this.GroupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox6.ForeColor = System.Drawing.Color.Black;
-            this.GroupBox6.Location = new System.Drawing.Point(500, 281);
+            this.GroupBox6.Location = new System.Drawing.Point(492, 180);
             this.GroupBox6.Name = "GroupBox6";
             this.GroupBox6.Size = new System.Drawing.Size(233, 304);
             this.GroupBox6.TabIndex = 633;
@@ -159,7 +159,7 @@
             this.GroupBox1.Controls.Add(this.txtEliminarBase);
             this.GroupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox1.ForeColor = System.Drawing.Color.Black;
-            this.GroupBox1.Location = new System.Drawing.Point(503, 103);
+            this.GroupBox1.Location = new System.Drawing.Point(503, 14);
             this.GroupBox1.Name = "GroupBox1";
             this.GroupBox1.Size = new System.Drawing.Size(316, 154);
             this.GroupBox1.TabIndex = 624;
