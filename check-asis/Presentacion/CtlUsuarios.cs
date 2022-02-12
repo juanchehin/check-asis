@@ -268,35 +268,6 @@ namespace check_asis.Presentacion
         {
             ocultarPanelIconos();
         }
-        private void ObtenerDatos()
-        {
-            capturarIdUsuario();
-            txtnombre.Text = datalistadoUsuarios.SelectedCells[3].Value.ToString();
-            txtusuario.Text = datalistadoUsuarios.SelectedCells[4].Value.ToString();
-            if (txtusuario.Text == "admin")
-            {
-                txtusuario.Enabled = false;
-                datalistadoModulos.Enabled = false;
-            }
-            else
-            {
-                txtusuario.Enabled = true;
-                datalistadoModulos.Enabled = true;
-            }
-            txtcontraseña.Text = datalistadoUsuarios.SelectedCells[5].Value.ToString();
-
-            Icono.BackgroundImage = null;
-            byte[] b = (byte[])(datalistadoUsuarios.SelectedCells[6].Value);
-            MemoryStream ms = new MemoryStream(b);
-            Icono.Image = Image.FromStream(ms);
-            panelRegistro.Visible = true;
-            panelRegistro.Dock = DockStyle.Fill;
-            lblanuncioIcono.Visible = false;
-            btnActualizar.Visible = true;
-            btnguardar.Visible = false;
-            MostrarModulos();
-            mostrarPermisos();
-        }
 
         private void dataListadoUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -317,7 +288,7 @@ namespace check_asis.Presentacion
                 }
 
             }
-            if (e.ColumnIndex == datalistadoUsuarios.Columns["Eliminar"].Index)
+            if (e.ColumnIndex == dataListadoUsuarios.Columns["Eliminar"].Index)
             {
                 DialogResult resultado = MessageBox.Show("¿Realmente desea eliminar este Registro?", "Eliminando registros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (resultado == DialogResult.OK)
@@ -330,36 +301,84 @@ namespace check_asis.Presentacion
         }
         private void obtenerEstado()
         {
-            estado = datalistadoUsuarios.SelectedCells[7].Value.ToString();
+            estado = dataListadoUsuarios.SelectedCells[7].Value.ToString();
         }
         private void ObtenerDatos()
         {
             capturarIdUsuario();
-            txtnombre.Text = datalistadoUsuarios.SelectedCells[3].Value.ToString();
-            txtusuario.Text = datalistadoUsuarios.SelectedCells[4].Value.ToString();
-            if (txtusuario.Text == "admin")
+            txtNombre.Text = dataListadoUsuarios.SelectedCells[3].Value.ToString();
+            txtUsuario.Text = dataListadoUsuarios.SelectedCells[4].Value.ToString();
+            if (txtUsuario.Text == "admin")
             {
-                txtusuario.Enabled = false;
-                datalistadoModulos.Enabled = false;
+                txtUsuario.Enabled = false;
+                dataListadoModulos.Enabled = false;
             }
             else
             {
-                txtusuario.Enabled = true;
-                datalistadoModulos.Enabled = true;
+                txtUsuario.Enabled = true;
+                dataListadoModulos.Enabled = true;
             }
-            txtcontraseña.Text = datalistadoUsuarios.SelectedCells[5].Value.ToString();
+            txtContraseña.Text = dataListadoUsuarios.SelectedCells[5].Value.ToString();
 
             Icono.BackgroundImage = null;
-            byte[] b = (byte[])(datalistadoUsuarios.SelectedCells[6].Value);
+            byte[] b = (byte[])(dataListadoUsuarios.SelectedCells[6].Value);
             MemoryStream ms = new MemoryStream(b);
             Icono.Image = Image.FromStream(ms);
             panelRegistro.Visible = true;
             panelRegistro.Dock = DockStyle.Fill;
-            lblanuncioIcono.Visible = false;
+            //lblanuncioIcono.Visible = false;
             btnActualizar.Visible = true;
-            btnguardar.Visible = false;
+            btnGuardar.Visible = false;
             MostrarModulos();
             mostrarPermisos();
+        }
+
+        private void RestaurarUsuario()
+        {
+            capturarIdUsuario();
+            Lusuarios parametros = new Lusuarios();
+            Dusuarios funcion = new Dusuarios();
+            parametros.IdUsuario = IdUsuario;
+            if (funcion.restaurar_usuario(parametros) == true)
+            {
+                MostrarUsuarios();
+            }
+        }
+        private void capturarIdUsuario()
+        {
+            IdUsuario = Convert.ToInt32(dataListadoUsuarios.SelectedCells[2].Value);
+            login = dataListadoUsuarios.SelectedCells[4].Value.ToString();
+        }
+        private void mostrarPermisos()
+        {
+            DataTable dt = new DataTable();
+            Dpermisos funcion = new Dpermisos();
+            Lpermisos parametros = new Lpermisos();
+            parametros.IdUsuario = IdUsuario;
+            funcion.mostrar_Permisos(ref dt, parametros);
+            foreach (DataRow rowPermisos in dt.Rows)
+            {
+                int idmoduloPermisos = Convert.ToInt32(rowPermisos["IdModulo"]);
+                foreach (DataGridViewRow rowModulos in dataListadoModulos.Rows)
+                {
+                    int Idmodulo = Convert.ToInt32(rowModulos.Cells["IdModulo"].Value);
+                    if (idmoduloPermisos == Idmodulo)
+                    {
+                        rowModulos.Cells[0].Value = true;
+                    }
+                }
+            }
+        }
+        private void EliminarUsuarios()
+        {
+            Lusuarios parametros = new Lusuarios();
+            Dusuarios funcion = new Dusuarios();
+            parametros.IdUsuario = IdUsuario;
+            parametros.Login = login;
+            if (funcion.eliminar_Usuarios(parametros) == true)
+            {
+                MostrarUsuarios();
+            }
         }
     }
 }
