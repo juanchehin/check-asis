@@ -174,8 +174,8 @@
             this.txtEliminarBase.Name = "txtEliminarBase";
             this.txtEliminarBase.Size = new System.Drawing.Size(310, 135);
             this.txtEliminarBase.TabIndex = 589;
-            this.txtEliminarBase.Text = "alter database BASEADACURSO set single_user with rollback immediate \nDROP DATABAS" +
-    "E BASEADACURSO";
+            this.txtEliminarBase.Text = "alter database check set single_user with rollback immediate \nDROP DATABAS" +
+    "E check";
             // 
             // GroupBox2
             // 
