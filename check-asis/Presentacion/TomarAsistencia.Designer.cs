@@ -91,6 +91,7 @@
             this.txtIdentificacion.Size = new System.Drawing.Size(333, 20);
             this.txtIdentificacion.TabIndex = 11;
             this.txtIdentificacion.TextChanged += new System.EventHandler(this.txtIdentificacion_TextChanged);
+            this.txtIdentificacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdentificacion_KeyPress);
             // 
             // label3
             // 

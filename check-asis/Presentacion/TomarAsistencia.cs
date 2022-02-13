@@ -1,13 +1,7 @@
 ﻿using check_asis.Datos;
 using check_asis.Logica;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace check_asis.Presentacion
@@ -135,6 +129,12 @@ namespace check_asis.Presentacion
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
+            confirmarAsistencia();
+        }
+
+        private void confirmarAsistencia()
+        {
+
             DialogResult resultado = MessageBox.Show("¿Desea confirmar la operacion?", "Check-asis", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (resultado == DialogResult.OK)
             {
@@ -166,6 +166,15 @@ namespace check_asis.Presentacion
             Dispose();
             Login frm = new Login();
             frm.ShowDialog();
+        }
+
+        private void txtIdentificacion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                confirmarAsistencia();
+            }
+            
         }
     }
 }

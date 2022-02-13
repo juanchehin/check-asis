@@ -90,7 +90,7 @@ namespace check_asis.Presentacion
 
         private void btnRegistro_Click(object sender, EventArgs e)
         {
-            Dispose();
+            // Dispose();
             TomarAsistencia frm = new TomarAsistencia();
             frm.ShowDialog();
         }
