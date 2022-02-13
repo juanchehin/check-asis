@@ -94,5 +94,18 @@ namespace check_asis.Presentacion
             TomarAsistencia frm = new TomarAsistencia();
             frm.ShowDialog();
         }
+
+        private void btnRestaurar_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnRespaldos_Click(object sender, EventArgs e)
+        {
+            PanelPadre.Controls.Clear();
+            CopiasBD control = new CopiasBD();
+            control.Dock = DockStyle.Fill;
+            PanelPadre.Controls.Add(control);
+        }
     }
 }

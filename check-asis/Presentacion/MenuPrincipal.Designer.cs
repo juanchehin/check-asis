@@ -118,6 +118,7 @@ namespace check_asis.Presentacion
             this.btnRespaldos.TabIndex = 4;
             this.btnRespaldos.Text = "Respaldar BD";
             this.btnRespaldos.UseVisualStyleBackColor = true;
+            this.btnRespaldos.Click += new System.EventHandler(this.btnRespaldos_Click);
             // 
             // btnRestaurar
             // 
@@ -130,6 +131,7 @@ namespace check_asis.Presentacion
             this.btnRestaurar.TabIndex = 3;
             this.btnRestaurar.Text = "Restaurar BD";
             this.btnRestaurar.UseVisualStyleBackColor = true;
+            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
             // 
             // btnUsuarios
             // 

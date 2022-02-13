@@ -55,6 +55,7 @@
     <Compile Include="Datos\ConexionMaestra.cs" />
     <Compile Include="Datos\DAsistencias.cs" />
     <Compile Include="Datos\Dcargos.cs" />
+    <Compile Include="Datos\DCopiasBD.cs" />
     <Compile Include="Datos\Dmodulos.cs" />
     <Compile Include="Datos\Dpermisos.cs" />
     <Compile Include="Datos\Dpersonal.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="Logica\Encriptar.cs" />
     <Compile Include="Logica\LAsistencias.cs" />
     <Compile Include="Logica\Lcargos.cs" />
+    <Compile Include="Logica\LCopiasBD.cs" />
     <Compile Include="Logica\Lmodulos.cs" />
     <Compile Include="Logica\Lpermisos.cs" />
     <Compile Include="Logica\Lpersonal.cs" />
@@ -91,6 +93,12 @@
     </Compile>
     <Compile Include="Presentacion\asistente-instalacion\UsuarioPrincipal.Designer.cs">
       <DependentUpon>UsuarioPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\CopiasBD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentacion\CopiasBD.Designer.cs">
+      <DependentUpon>CopiasBD.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\CtlUsuarios.cs">
       <SubType>UserControl</SubType>
@@ -148,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\asistente-instalacion\UsuarioPrincipal.resx">
       <DependentUpon>UsuarioPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\CopiasBD.resx">
+      <DependentUpon>CopiasBD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\CtlUsuarios.resx">
       <DependentUpon>CtlUsuarios.cs</DependentUpon>
