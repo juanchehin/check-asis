@@ -22,6 +22,7 @@ namespace check_asis.Presentacion
         int IdUsuario;
         string login;
         string estado;
+
         private void Limpiar()
         {
             txtNombre.Clear();
@@ -149,21 +150,15 @@ namespace check_asis.Presentacion
         {
             Bases.DiseñoDtv(ref dataListadoUsuarios);
             Bases.DiseñoDtvEliminar(ref dataListadoUsuarios);
-            dataListadoUsuarios.Columns[2].Visible = false;
-            dataListadoUsuarios.Columns[5].Visible = false;
+            //dataListadoUsuarios.Columns[2].Visible = false;
+            //dataListadoUsuarios.Columns[5].Visible = false;
             //dataListadoUsuarios.Columns[6].Visible = false;
         }
 
         private void lblAnuncioIcono_Click(object sender, EventArgs e)
         {
             MostrarPanelIcono();
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            Icono.Image = pictureBox3.Image;
-            ocultarPanelIconos();
-        }
+        }       
         private void ocultarPanelIconos()
         {
             panelIcono.Visible = false;
@@ -177,6 +172,11 @@ namespace check_asis.Presentacion
             panelIcono.BringToFront();
         }
 
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Icono.Image = pictureBox3.Image;
+            ocultarPanelIconos();
+        }
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             Icono.Image = pictureBox4.Image;
@@ -262,6 +262,7 @@ namespace check_asis.Presentacion
         private void btnVolver_Click(object sender, EventArgs e)
         {
             panelRegistro.Visible = false;
+            btnActualizar.Visible = true;
         }
 
         private void btnVolverIcono_Click(object sender, EventArgs e)
@@ -271,9 +272,13 @@ namespace check_asis.Presentacion
 
         private void dataListadoUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            estado = dataListadoUsuarios.Rows[e.RowIndex].Cells["Estado"].Value.ToString();
+            IdUsuario = Convert.ToInt32(dataListadoUsuarios.Rows[e.RowIndex].Cells["IdUsuario"].Value);
+
             if (e.ColumnIndex == dataListadoUsuarios.Columns["Editar"].Index)
             {
-                obtenerEstado();
+                //obtenerEstado();
+                btnActualizar.Visible = false;
                 if (estado == "ELIMINADO")
                 {
                     DialogResult resultado = MessageBox.Show("Este Usuario se Elimino. ¿Desea Volver a Habilitarlo?", "Restauracion de registros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
@@ -284,6 +289,15 @@ namespace check_asis.Presentacion
                 }
                 else
                 {
+                    txtNombre.Text = dataListadoUsuarios.Rows[e.RowIndex].Cells["NombreApellidos"].Value.ToString();
+                    txtUsuario.Text = dataListadoUsuarios.Rows[e.RowIndex].Cells["Login"].Value.ToString();
+                    txtContraseña.Text = dataListadoUsuarios.Rows[e.RowIndex].Cells["Password"].Value.ToString();
+
+                    Icono.BackgroundImage = null;
+                    byte[] b = (byte[])(dataListadoUsuarios.Rows[e.RowIndex].Cells["Icono"].Value);
+                    MemoryStream ms = new MemoryStream(b);
+                    Icono.Image = Image.FromStream(ms);
+
                     ObtenerDatos();
                 }
 
@@ -293,7 +307,8 @@ namespace check_asis.Presentacion
                 DialogResult resultado = MessageBox.Show("¿Realmente desea eliminar este Registro?", "Eliminando registros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (resultado == DialogResult.OK)
                 {
-                    capturarIdUsuario();
+                    //capturarIdUsuario();
+                    IdUsuario = Convert.ToInt32(dataListadoUsuarios.Rows[e.RowIndex].Cells["IdUsuario"].Value);
                     EliminarUsuarios();
                 }
 
@@ -301,13 +316,15 @@ namespace check_asis.Presentacion
         }
         private void obtenerEstado()
         {
-            estado = dataListadoUsuarios.SelectedCells[7].Value.ToString();
+            //estado = dataListadoUsuarios.SelectedCells[7].Value.ToString();.
+            //estado = dataListadoUsuarios.Rows[e.RowIndex].Cells["Estado"].Value.ToString()
+            //Console.WriteLine(estado);
         }
         private void ObtenerDatos()
         {
-            capturarIdUsuario();
-            txtNombre.Text = dataListadoUsuarios.SelectedCells[3].Value.ToString();
-            txtUsuario.Text = dataListadoUsuarios.SelectedCells[4].Value.ToString();
+            //capturarIdUsuario();
+            //txtNombre.Text = dataListadoUsuarios.SelectedCells[3].Value.ToString();
+            //txtUsuario.Text = dataListadoUsuarios.SelectedCells[4].Value.ToString();
             if (txtUsuario.Text == "admin")
             {
                 txtUsuario.Enabled = false;
@@ -318,16 +335,16 @@ namespace check_asis.Presentacion
                 txtUsuario.Enabled = true;
                 dataListadoModulos.Enabled = true;
             }
-            txtContraseña.Text = dataListadoUsuarios.SelectedCells[5].Value.ToString();
+            //txtContraseña.Text = dataListadoUsuarios.SelectedCells[5].Value.ToString();
 
-            Icono.BackgroundImage = null;
+            /*Icono.BackgroundImage = null;
             byte[] b = (byte[])(dataListadoUsuarios.SelectedCells[6].Value);
             MemoryStream ms = new MemoryStream(b);
-            Icono.Image = Image.FromStream(ms);
+            Icono.Image = Image.FromStream(ms);*/
             panelRegistro.Visible = true;
             panelRegistro.Dock = DockStyle.Fill;
             //lblanuncioIcono.Visible = false;
-            btnActualizar.Visible = true;
+            //btnActualizar.Visible = true;
             btnGuardar.Visible = false;
             MostrarModulos();
             mostrarPermisos();
