@@ -1,13 +1,7 @@
 ﻿using check_asis.Datos;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace check_asis.Presentacion
@@ -27,7 +21,6 @@ namespace check_asis.Presentacion
             funcion.mostrar_asistencias_diarias(ref dt, dtInicio.Value, dtFin.Value, Convert.ToInt32(lblNroSemana.Text));
             rpt.DataSource = dt;
             rpt.table1.DataSource = dt;
-
 
             reportViewer1.Report = rpt;
             reportViewer1.RefreshReport();

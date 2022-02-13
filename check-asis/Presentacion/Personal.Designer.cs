@@ -69,10 +69,10 @@ namespace check_asis.Presentacion
             this.txtCargoG = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.PanelRegistros = new System.Windows.Forms.Panel();
-            this.txtCargo = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtSueldoHora = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtCargo = new System.Windows.Forms.TextBox();
+            this.txtSueldoHora = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.datalistadoPersonal)).BeginInit();
             this.PanelPaginado.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -598,7 +598,7 @@ namespace check_asis.Presentacion
             // 
             // btnVolverCargos
             // 
-            this.btnVolverCargos.Location = new System.Drawing.Point(6, 118);
+            this.btnVolverCargos.Location = new System.Drawing.Point(133, 122);
             this.btnVolverCargos.Name = "btnVolverCargos";
             this.btnVolverCargos.Size = new System.Drawing.Size(75, 23);
             this.btnVolverCargos.TabIndex = 16;
@@ -608,7 +608,7 @@ namespace check_asis.Presentacion
             // 
             // btnGuardarCambiosC
             // 
-            this.btnGuardarCambiosC.Location = new System.Drawing.Point(220, 118);
+            this.btnGuardarCambiosC.Location = new System.Drawing.Point(214, 122);
             this.btnGuardarCambiosC.Name = "btnGuardarCambiosC";
             this.btnGuardarCambiosC.Size = new System.Drawing.Size(137, 23);
             this.btnGuardarCambiosC.TabIndex = 15;
@@ -618,7 +618,7 @@ namespace check_asis.Presentacion
             // 
             // btnGuardarC
             // 
-            this.btnGuardarC.Location = new System.Drawing.Point(121, 118);
+            this.btnGuardarC.Location = new System.Drawing.Point(6, 122);
             this.btnGuardarC.Name = "btnGuardarC";
             this.btnGuardarC.Size = new System.Drawing.Size(93, 23);
             this.btnGuardarC.TabIndex = 14;
@@ -687,6 +687,16 @@ namespace check_asis.Presentacion
             this.PanelRegistros.Size = new System.Drawing.Size(1496, 428);
             this.PanelRegistros.TabIndex = 3;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(437, 44);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(50, 17);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Cargo:";
+            // 
             // txtCargo
             // 
             this.txtCargo.Enabled = false;
@@ -694,16 +704,6 @@ namespace check_asis.Presentacion
             this.txtCargo.Name = "txtCargo";
             this.txtCargo.Size = new System.Drawing.Size(173, 20);
             this.txtCargo.TabIndex = 4;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(373, 87);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(114, 17);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Sueldo por hora:";
             // 
             // txtSueldoHora
             // 
@@ -714,15 +714,15 @@ namespace check_asis.Presentacion
             this.txtSueldoHora.TabIndex = 5;
             this.txtSueldoHora.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSueldoHora_KeyPress);
             // 
-            // label7
+            // label5
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(437, 44);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 17);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Cargo:";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(373, 87);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(114, 17);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Sueldo por hora:";
             // 
             // Personal
             // 

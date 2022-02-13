@@ -42,7 +42,7 @@
             this.reportViewer1.AccessibilityKeyMap = null;
             this.reportViewer1.Location = new System.Drawing.Point(0, 123);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(949, 421);
+            this.reportViewer1.Size = new System.Drawing.Size(1086, 580);
             this.reportViewer1.TabIndex = 6;
             this.reportViewer1.ViewMode = Telerik.ReportViewer.WinForms.ViewMode.PrintPreview;
             // 
@@ -114,7 +114,7 @@
             this.Controls.Add(this.dtInicio);
             this.Controls.Add(this.label1);
             this.Name = "Preplanilla";
-            this.Size = new System.Drawing.Size(774, 492);
+            this.Size = new System.Drawing.Size(1111, 723);
             this.ResumeLayout(false);
             this.PerformLayout();
 

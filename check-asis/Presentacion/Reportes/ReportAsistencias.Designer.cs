@@ -18,6 +18,11 @@ namespace check_asis.Presentacion.Reportes
             Telerik.Reporting.TableGroup tableGroup7 = new Telerik.Reporting.TableGroup();
             Telerik.Reporting.Drawing.StyleRule styleRule1 = new Telerik.Reporting.Drawing.StyleRule();
             this.textBox17 = new Telerik.Reporting.TextBox();
+            this.textBox15 = new Telerik.Reporting.TextBox();
+            this.textBox2 = new Telerik.Reporting.TextBox();
+            this.textBox4 = new Telerik.Reporting.TextBox();
+            this.textBox6 = new Telerik.Reporting.TextBox();
+            this.textBox19 = new Telerik.Reporting.TextBox();
             this.pageHeaderSection1 = new Telerik.Reporting.PageHeaderSection();
             this.textBox1 = new Telerik.Reporting.TextBox();
             this.textBox9 = new Telerik.Reporting.TextBox();
@@ -29,22 +34,17 @@ namespace check_asis.Presentacion.Reportes
             this.detail = new Telerik.Reporting.DetailSection();
             this.table1 = new Telerik.Reporting.Table();
             this.textBox18 = new Telerik.Reporting.TextBox();
-            this.pageFooterSection1 = new Telerik.Reporting.PageFooterSection();
-            this.textBox8 = new Telerik.Reporting.TextBox();
-            this.reportHeaderSection1 = new Telerik.Reporting.ReportHeaderSection();
-            this.textBox19 = new Telerik.Reporting.TextBox();
             this.textBox20 = new Telerik.Reporting.TextBox();
-            this.textBox2 = new Telerik.Reporting.TextBox();
             this.textBox3 = new Telerik.Reporting.TextBox();
-            this.textBox4 = new Telerik.Reporting.TextBox();
             this.textBox5 = new Telerik.Reporting.TextBox();
-            this.textBox6 = new Telerik.Reporting.TextBox();
             this.textBox7 = new Telerik.Reporting.TextBox();
-            this.textBox15 = new Telerik.Reporting.TextBox();
             this.textBox16 = new Telerik.Reporting.TextBox();
             this.textBox21 = new Telerik.Reporting.TextBox();
             this.textBox22 = new Telerik.Reporting.TextBox();
             this.textBox23 = new Telerik.Reporting.TextBox();
+            this.pageFooterSection1 = new Telerik.Reporting.PageFooterSection();
+            this.textBox8 = new Telerik.Reporting.TextBox();
+            this.reportHeaderSection1 = new Telerik.Reporting.ReportHeaderSection();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // textBox17
@@ -57,6 +57,45 @@ namespace check_asis.Presentacion.Reportes
             this.textBox17.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox17.StyleName = "";
             this.textBox17.Value = "=Fields.fecha";
+            // 
+            // textBox15
+            // 
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.831D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
+            this.textBox15.StyleName = "";
+            this.textBox15.Value = "=Fields.dia";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.408D), Telerik.Reporting.Drawing.Unit.Cm(1.9D));
+            this.textBox2.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.Dashed;
+            this.textBox2.StyleName = "";
+            this.textBox2.Value = "=Sum(Fields.SueldoPorHora)*(Sum(Fields.Horas))";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.905D), Telerik.Reporting.Drawing.Unit.Cm(1.9D));
+            this.textBox4.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.Dashed;
+            this.textBox4.StyleName = "";
+            this.textBox4.Value = "=Fields.SueldoPorHora\t";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.879D), Telerik.Reporting.Drawing.Unit.Cm(1.9D));
+            this.textBox6.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.Dashed;
+            this.textBox6.StyleName = "";
+            this.textBox6.Value = "=Sum(Fields.Horas)";
+            // 
+            // textBox19
+            // 
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.963D), Telerik.Reporting.Drawing.Unit.Cm(1.9D));
+            this.textBox19.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.Dashed;
+            this.textBox19.StyleName = "";
+            this.textBox19.Value = "=Fields.Nombres";
             // 
             // pageHeaderSection1
             // 
@@ -100,34 +139,36 @@ namespace check_asis.Presentacion.Reportes
             // textBox11
             // 
             this.textBox11.Anchoring = ((Telerik.Reporting.AnchoringStyles)((Telerik.Reporting.AnchoringStyles.Top | Telerik.Reporting.AnchoringStyles.Left)));
+            this.textBox11.Format = "{0:d}";
             this.textBox11.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(2.3D), Telerik.Reporting.Drawing.Unit.Cm(1.5D));
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.6D), Telerik.Reporting.Drawing.Unit.Cm(0.6D));
-            this.textBox11.Value = "=Field.desde";
+            this.textBox11.Value = "=Fields.desde";
             // 
             // textBox12
             // 
             this.textBox12.Anchoring = ((Telerik.Reporting.AnchoringStyles)((Telerik.Reporting.AnchoringStyles.Top | Telerik.Reporting.AnchoringStyles.Left)));
+            this.textBox12.Format = "{0:d}";
             this.textBox12.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(7.2D), Telerik.Reporting.Drawing.Unit.Cm(1.5D));
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.6D), Telerik.Reporting.Drawing.Unit.Cm(0.6D));
-            this.textBox12.Value = "=Field.hasta";
+            this.textBox12.Value = "=Fields.hasta";
             // 
             // textBox14
             // 
             this.textBox14.Anchoring = ((Telerik.Reporting.AnchoringStyles)((Telerik.Reporting.AnchoringStyles.Top | Telerik.Reporting.AnchoringStyles.Left)));
             this.textBox14.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(10D), Telerik.Reporting.Drawing.Unit.Cm(1.5D));
             this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3D), Telerik.Reporting.Drawing.Unit.Cm(0.6D));
-            this.textBox14.Value = "Semana # : ";
+            this.textBox14.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(2.4D), Telerik.Reporting.Drawing.Unit.Cm(0.6D));
+            this.textBox14.Value = "Semana Nro : ";
             // 
             // textBox13
             // 
             this.textBox13.Anchoring = ((Telerik.Reporting.AnchoringStyles)((Telerik.Reporting.AnchoringStyles.Top | Telerik.Reporting.AnchoringStyles.Left)));
-            this.textBox13.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(13D), Telerik.Reporting.Drawing.Unit.Cm(1.5D));
+            this.textBox13.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(12.4D), Telerik.Reporting.Drawing.Unit.Cm(1.5D));
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3D), Telerik.Reporting.Drawing.Unit.Cm(0.6D));
-            this.textBox13.Value = "=Field.semana";
+            this.textBox13.Value = "=Fields.semana";
             // 
             // detail
             // 
@@ -156,21 +197,21 @@ namespace check_asis.Presentacion.Reportes
             this.table1.Corner.SetCellContent(0, 2, this.textBox22);
             this.table1.Corner.SetCellContent(0, 3, this.textBox23);
             this.table1.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
+            this.textBox16,
+            this.textBox21,
+            this.textBox22,
+            this.textBox23,
             this.textBox20,
             this.textBox7,
             this.textBox5,
             this.textBox3,
             this.textBox18,
+            this.textBox15,
+            this.textBox17,
             this.textBox19,
             this.textBox6,
             this.textBox4,
-            this.textBox2,
-            this.textBox17,
-            this.textBox15,
-            this.textBox16,
-            this.textBox21,
-            this.textBox22,
-            this.textBox23});
+            this.textBox2});
             this.table1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0.6D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
             this.table1.Name = "table1";
             tableGroup7.Groupings.Add(new Telerik.Reporting.Grouping(null));
@@ -200,35 +241,6 @@ namespace check_asis.Presentacion.Reportes
             this.textBox18.StyleName = "";
             this.textBox18.Value = "=Fields.Horas";
             // 
-            // pageFooterSection1
-            // 
-            this.pageFooterSection1.Height = Telerik.Reporting.Drawing.Unit.Cm(2.5D);
-            this.pageFooterSection1.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
-            this.textBox8});
-            this.pageFooterSection1.Name = "pageFooterSection1";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(10.7D), Telerik.Reporting.Drawing.Unit.Cm(2D));
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(6.3D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
-            this.textBox8.Value = "Reporte generado por \'check-asis\'";
-            // 
-            // reportHeaderSection1
-            // 
-            this.reportHeaderSection1.Height = Telerik.Reporting.Drawing.Unit.Cm(4.8D);
-            this.reportHeaderSection1.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
-            this.table1});
-            this.reportHeaderSection1.Name = "reportHeaderSection1";
-            // 
-            // textBox19
-            // 
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.963D), Telerik.Reporting.Drawing.Unit.Cm(1.9D));
-            this.textBox19.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.Dashed;
-            this.textBox19.StyleName = "";
-            this.textBox19.Value = "=Fields.Nombres";
-            // 
             // textBox20
             // 
             this.textBox20.Name = "textBox20";
@@ -238,14 +250,6 @@ namespace check_asis.Presentacion.Reportes
             this.textBox20.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox20.StyleName = "";
             this.textBox20.Value = "Nombres";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.408D), Telerik.Reporting.Drawing.Unit.Cm(1.9D));
-            this.textBox2.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.Dashed;
-            this.textBox2.StyleName = "";
-            this.textBox2.Value = "=Sum(Fields.SueldoPorHora)*(Sum(Fields.Horas))";
             // 
             // textBox3
             // 
@@ -257,14 +261,6 @@ namespace check_asis.Presentacion.Reportes
             this.textBox3.StyleName = "";
             this.textBox3.Value = "Total bruto";
             // 
-            // textBox4
-            // 
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.905D), Telerik.Reporting.Drawing.Unit.Cm(1.9D));
-            this.textBox4.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.Dashed;
-            this.textBox4.StyleName = "";
-            this.textBox4.Value = "=Fields.SueldoPorHora\t";
-            // 
             // textBox5
             // 
             this.textBox5.Name = "textBox5";
@@ -275,14 +271,6 @@ namespace check_asis.Presentacion.Reportes
             this.textBox5.StyleName = "";
             this.textBox5.Value = "Valor por hora";
             // 
-            // textBox6
-            // 
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(3.879D), Telerik.Reporting.Drawing.Unit.Cm(1.9D));
-            this.textBox6.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.Dashed;
-            this.textBox6.StyleName = "";
-            this.textBox6.Value = "=Sum(Fields.Horas)";
-            // 
             // textBox7
             // 
             this.textBox7.Name = "textBox7";
@@ -292,13 +280,6 @@ namespace check_asis.Presentacion.Reportes
             this.textBox7.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox7.StyleName = "";
             this.textBox7.Value = "Total hs";
-            // 
-            // textBox15
-            // 
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.831D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
-            this.textBox15.StyleName = "";
-            this.textBox15.Value = "=Fields.dia";
             // 
             // textBox16
             // 
@@ -323,6 +304,27 @@ namespace check_asis.Presentacion.Reportes
             this.textBox23.Name = "textBox23";
             this.textBox23.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(4.408D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
             this.textBox23.StyleName = "";
+            // 
+            // pageFooterSection1
+            // 
+            this.pageFooterSection1.Height = Telerik.Reporting.Drawing.Unit.Cm(2.5D);
+            this.pageFooterSection1.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
+            this.textBox8});
+            this.pageFooterSection1.Name = "pageFooterSection1";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(10.7D), Telerik.Reporting.Drawing.Unit.Cm(2D));
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(6.3D), Telerik.Reporting.Drawing.Unit.Cm(0.5D));
+            this.textBox8.Value = "Reporte generado por \'check-asis\'";
+            // 
+            // reportHeaderSection1
+            // 
+            this.reportHeaderSection1.Height = Telerik.Reporting.Drawing.Unit.Cm(4.8D);
+            this.reportHeaderSection1.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
+            this.table1});
+            this.reportHeaderSection1.Name = "reportHeaderSection1";
             // 
             // ReportAsistencias
             // 
