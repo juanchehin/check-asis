@@ -16,7 +16,7 @@ namespace check_asis
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Presentacion.Login frm = new Presentacion.Login();
+            Presentacion.MenuPrincipal frm = new Presentacion.MenuPrincipal();
             frm.FormClosed += Frm_FormClosed;
             frm.ShowDialog();
             Application.Run();

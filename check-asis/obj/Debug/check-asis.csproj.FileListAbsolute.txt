@@ -17,3 +17,13 @@ C:\Programacion\check-asis\check-asis\obj\Debug\check_asis.Presentacion.asistent
 C:\Programacion\check-asis\check-asis\obj\Debug\check_asis.Presentacion.CtlUsuarios.resources
 C:\Programacion\check-asis\check-asis\obj\Debug\check_asis.Presentacion.Login.resources
 C:\Programacion\check-asis\check-asis\obj\Debug\check_asis.Presentacion.asistente_instalacion.UsuarioPrincipal.resources
+C:\Programacion\check-asis\check-asis\bin\Debug\Telerik.Reporting.dll
+C:\Programacion\check-asis\check-asis\bin\Debug\Telerik.ReportViewer.WinForms.dll
+C:\Programacion\check-asis\check-asis\bin\Debug\Telerik.Reporting.pdb
+C:\Programacion\check-asis\check-asis\bin\Debug\Telerik.Reporting.xml
+C:\Programacion\check-asis\check-asis\bin\Debug\Telerik.ReportViewer.WinForms.pdb
+C:\Programacion\check-asis\check-asis\bin\Debug\Telerik.ReportViewer.WinForms.xml
+C:\Programacion\check-asis\check-asis\obj\Debug\check_asis.Presentacion.Preplanilla.resources
+C:\Programacion\check-asis\check-asis\obj\Debug\check_asis.Presentacion.Reportes.ReportAsistencias.resources
+C:\Programacion\check-asis\check-asis\obj\Debug\check-asis.exe.licenses
+C:\Programacion\check-asis\check-asis\obj\Debug\check-asis.csproj.CopyComplete

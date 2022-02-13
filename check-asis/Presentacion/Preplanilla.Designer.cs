@@ -28,14 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.reportViewer1 = new Telerik.ReportViewer.WinForms.ReportViewer();
             this.label1 = new System.Windows.Forms.Label();
             this.dtInicio = new System.Windows.Forms.DateTimePicker();
-            this.dtFin = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
+            this.dtFin = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.lblNroSemana = new System.Windows.Forms.Label();
-            this.reportViewer1 = new Telerik.ReportViewer.WinForms.ReportViewer();
             this.SuspendLayout();
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.AccessibilityKeyMap = null;
+            this.reportViewer1.Location = new System.Drawing.Point(0, 123);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(949, 421);
+            this.reportViewer1.TabIndex = 6;
             // 
             // label1
             // 
@@ -55,14 +63,6 @@
             this.dtInicio.TabIndex = 1;
             this.dtInicio.ValueChanged += new System.EventHandler(this.dtInicio_ValueChanged);
             // 
-            // dtFin
-            // 
-            this.dtFin.Location = new System.Drawing.Point(511, 35);
-            this.dtFin.Name = "dtFin";
-            this.dtFin.Size = new System.Drawing.Size(200, 20);
-            this.dtFin.TabIndex = 3;
-            this.dtFin.ValueChanged += new System.EventHandler(this.dtFin_ValueChanged);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -72,6 +72,14 @@
             this.label2.Size = new System.Drawing.Size(87, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Fecha fin : ";
+            // 
+            // dtFin
+            // 
+            this.dtFin.Location = new System.Drawing.Point(511, 35);
+            this.dtFin.Name = "dtFin";
+            this.dtFin.Size = new System.Drawing.Size(200, 20);
+            this.dtFin.TabIndex = 3;
+            this.dtFin.ValueChanged += new System.EventHandler(this.dtFin_ValueChanged);
             // 
             // label3
             // 
@@ -93,14 +101,6 @@
             this.lblNroSemana.TabIndex = 5;
             this.lblNroSemana.Text = "#";
             // 
-            // reportViewer1
-            // 
-            this.reportViewer1.AccessibilityKeyMap = null;
-            this.reportViewer1.Location = new System.Drawing.Point(25, 130);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(727, 335);
-            this.reportViewer1.TabIndex = 6;
-            // 
             // Preplanilla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -120,13 +120,12 @@
         }
 
         #endregion
-
+        private Telerik.ReportViewer.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtInicio;
-        private System.Windows.Forms.DateTimePicker dtFin;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dtFin;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblNroSemana;
-        private Telerik.ReportViewer.WinForms.ReportViewer reportViewer1;
     }
 }

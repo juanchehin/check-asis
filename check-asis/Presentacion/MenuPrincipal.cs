@@ -79,5 +79,13 @@ namespace check_asis.Presentacion
 
             }
         }
+
+        private void btnPlanilla_Click(object sender, EventArgs e)
+        {
+            PanelPadre.Controls.Clear();
+            Preplanilla control = new Preplanilla();
+            control.Dock = DockStyle.Fill;
+            PanelPadre.Controls.Add(control);
+        }
     }
 }
