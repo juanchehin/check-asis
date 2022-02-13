@@ -87,5 +87,12 @@ namespace check_asis.Presentacion
             control.Dock = DockStyle.Fill;
             PanelPadre.Controls.Add(control);
         }
+
+        private void btnRegistro_Click(object sender, EventArgs e)
+        {
+            Dispose();
+            TomarAsistencia frm = new TomarAsistencia();
+            frm.ShowDialog();
+        }
     }
 }

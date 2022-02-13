@@ -44,6 +44,7 @@
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.Size = new System.Drawing.Size(949, 421);
             this.reportViewer1.TabIndex = 6;
+            this.reportViewer1.ViewMode = Telerik.ReportViewer.WinForms.ViewMode.PrintPreview;
             // 
             // label1
             // 
