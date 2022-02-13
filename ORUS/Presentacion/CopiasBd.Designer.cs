@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.Panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtRuta = new System.Windows.Forms.TextBox();
             this.Label3 = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
             this.btnGenerar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Panel12 = new System.Windows.Forms.Panel();
             this.Label1 = new System.Windows.Forms.Label();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
@@ -59,6 +59,17 @@
             this.Panel1.Size = new System.Drawing.Size(633, 258);
             this.Panel1.TabIndex = 616;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ORUSCURSO.Properties.Resources.buscar__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(29, 89);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(23, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // txtRuta
             // 
             this.txtRuta.BackColor = System.Drawing.Color.White;
@@ -69,6 +80,7 @@
             this.txtRuta.Name = "txtRuta";
             this.txtRuta.Size = new System.Drawing.Size(405, 26);
             this.txtRuta.TabIndex = 1;
+            this.txtRuta.TextChanged += new System.EventHandler(this.txtRuta_TextChanged);
             // 
             // Label3
             // 
@@ -111,17 +123,6 @@
             this.btnGenerar.Text = "Generar Copia ahora mismo";
             this.btnGenerar.UseVisualStyleBackColor = false;
             this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ORUSCURSO.Properties.Resources.buscar__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(29, 89);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(23, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Panel12
             // 

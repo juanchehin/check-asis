@@ -254,7 +254,7 @@ namespace check_asis.Presentacion
             // Idcargo = Idcargo;
             txtCargo.Text = cargo;
             txtSueldoHora.Text = sueldo;
-            datalistadoCargos.Visible = false;
+            //datalistadoCargos.Visible = false;
             // PanelBtnguardarPer.Visible = true;
             // lblsueldo.Visible = true;
         }
@@ -367,8 +367,8 @@ namespace check_asis.Presentacion
         /* Posiciona el Data Grid view de 'cargos' en un lugar en la pantalla */
         private void LocalizarDtvCargos()
         {
-            datalistadoCargos.Location = new Point(txtSueldoHora.Location.X, txtSueldoHora.Location.Y);
-            datalistadoCargos.Size = new Size(469, 141);
+            //    datalistadoCargos.Location = new Point(txtSueldoHora.Location.X, txtSueldoHora.Location.Y);
+            //    datalistadoCargos.Size = new Size(469, 141);
             datalistadoCargos.Visible = true;
             BuscarCargos();
             Limpiar();

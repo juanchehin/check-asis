@@ -51,10 +51,7 @@ namespace check_asis.Presentacion
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtNombres = new System.Windows.Forms.TextBox();
-            this.txtSueldoHora = new System.Windows.Forms.TextBox();
-            this.txtCargo = new System.Windows.Forms.TextBox();
             this.txtIdentifiacion = new System.Windows.Forms.TextBox();
             this.cbxPais = new System.Windows.Forms.ComboBox();
             this.btnAgregarCargo = new System.Windows.Forms.Button();
@@ -72,6 +69,10 @@ namespace check_asis.Presentacion
             this.txtCargoG = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.PanelRegistros = new System.Windows.Forms.Panel();
+            this.txtCargo = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtSueldoHora = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.datalistadoPersonal)).BeginInit();
             this.PanelPaginado.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -132,9 +133,9 @@ namespace check_asis.Presentacion
             this.PanelPaginado.Controls.Add(this.lbl_totalPaginas);
             this.PanelPaginado.Controls.Add(this.btn_Primera);
             this.PanelPaginado.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PanelPaginado.Location = new System.Drawing.Point(0, 440);
+            this.PanelPaginado.Location = new System.Drawing.Point(0, 505);
             this.PanelPaginado.Name = "PanelPaginado";
-            this.PanelPaginado.Size = new System.Drawing.Size(1496, 75);
+            this.PanelPaginado.Size = new System.Drawing.Size(1496, 10);
             this.PanelPaginado.TabIndex = 4;
             // 
             // btn_atras
@@ -274,11 +275,11 @@ namespace check_asis.Presentacion
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(119, 175);
+            this.label2.Location = new System.Drawing.Point(31, 169);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 17);
+            this.label2.Size = new System.Drawing.Size(138, 17);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Cargo:";
+            this.label2.Text = "Seleccione el Cargo:";
             // 
             // label3
             // 
@@ -300,37 +301,12 @@ namespace check_asis.Presentacion
             this.label4.TabIndex = 3;
             this.label4.Text = "Identificacion:";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(55, 219);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(114, 17);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Sueldo por hora:";
-            // 
             // txtNombres
             // 
             this.txtNombres.Location = new System.Drawing.Point(175, 45);
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(173, 20);
             this.txtNombres.TabIndex = 1;
-            // 
-            // txtSueldoHora
-            // 
-            this.txtSueldoHora.Location = new System.Drawing.Point(175, 219);
-            this.txtSueldoHora.Name = "txtSueldoHora";
-            this.txtSueldoHora.Size = new System.Drawing.Size(173, 20);
-            this.txtSueldoHora.TabIndex = 5;
-            this.txtSueldoHora.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSueldoHora_KeyPress);
-            // 
-            // txtCargo
-            // 
-            this.txtCargo.Location = new System.Drawing.Point(175, 175);
-            this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(173, 20);
-            this.txtCargo.TabIndex = 4;
             // 
             // txtIdentifiacion
             // 
@@ -544,7 +520,7 @@ namespace check_asis.Presentacion
             // 
             // btnAgregarCargo
             // 
-            this.btnAgregarCargo.Location = new System.Drawing.Point(391, 175);
+            this.btnAgregarCargo.Location = new System.Drawing.Point(548, 353);
             this.btnAgregarCargo.Name = "btnAgregarCargo";
             this.btnAgregarCargo.Size = new System.Drawing.Size(93, 23);
             this.btnAgregarCargo.TabIndex = 11;
@@ -554,7 +530,7 @@ namespace check_asis.Presentacion
             // 
             // btnGuardarPersonal
             // 
-            this.btnGuardarPersonal.Location = new System.Drawing.Point(58, 254);
+            this.btnGuardarPersonal.Location = new System.Drawing.Point(173, 382);
             this.btnGuardarPersonal.Name = "btnGuardarPersonal";
             this.btnGuardarPersonal.Size = new System.Drawing.Size(93, 23);
             this.btnGuardarPersonal.TabIndex = 6;
@@ -564,7 +540,7 @@ namespace check_asis.Presentacion
             // 
             // btnGuardarCambiosPersonal
             // 
-            this.btnGuardarCambiosPersonal.Location = new System.Drawing.Point(177, 254);
+            this.btnGuardarCambiosPersonal.Location = new System.Drawing.Point(272, 382);
             this.btnGuardarCambiosPersonal.Name = "btnGuardarCambiosPersonal";
             this.btnGuardarCambiosPersonal.Size = new System.Drawing.Size(158, 23);
             this.btnGuardarCambiosPersonal.TabIndex = 13;
@@ -574,7 +550,7 @@ namespace check_asis.Presentacion
             // 
             // btnVolverPersonal
             // 
-            this.btnVolverPersonal.Location = new System.Drawing.Point(345, 254);
+            this.btnVolverPersonal.Location = new System.Drawing.Point(440, 382);
             this.btnVolverPersonal.Name = "btnVolverPersonal";
             this.btnVolverPersonal.Size = new System.Drawing.Size(93, 23);
             this.btnVolverPersonal.TabIndex = 14;
@@ -590,10 +566,10 @@ namespace check_asis.Presentacion
             this.datalistadoCargos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datalistadoCargos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.EditarC});
-            this.datalistadoCargos.Location = new System.Drawing.Point(402, 219);
+            this.datalistadoCargos.Location = new System.Drawing.Point(175, 169);
             this.datalistadoCargos.Name = "datalistadoCargos";
             this.datalistadoCargos.ReadOnly = true;
-            this.datalistadoCargos.Size = new System.Drawing.Size(280, 137);
+            this.datalistadoCargos.Size = new System.Drawing.Size(358, 207);
             this.datalistadoCargos.TabIndex = 16;
             this.datalistadoCargos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datalistadoCargos_CellClick);
             // 
@@ -615,7 +591,7 @@ namespace check_asis.Presentacion
             this.PanelCargos.Controls.Add(this.label11);
             this.PanelCargos.Controls.Add(this.txtCargoG);
             this.PanelCargos.Controls.Add(this.label10);
-            this.PanelCargos.Location = new System.Drawing.Point(521, 63);
+            this.PanelCargos.Location = new System.Drawing.Point(548, 169);
             this.PanelCargos.Name = "PanelCargos";
             this.PanelCargos.Size = new System.Drawing.Size(445, 150);
             this.PanelCargos.TabIndex = 15;
@@ -688,6 +664,7 @@ namespace check_asis.Presentacion
             // PanelRegistros
             // 
             this.PanelRegistros.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelRegistros.Controls.Add(this.label7);
             this.PanelRegistros.Controls.Add(this.PanelCargos);
             this.PanelRegistros.Controls.Add(this.datalistadoCargos);
             this.PanelRegistros.Controls.Add(this.btnVolverPersonal);
@@ -707,8 +684,45 @@ namespace check_asis.Presentacion
             this.PanelRegistros.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelRegistros.Location = new System.Drawing.Point(0, 77);
             this.PanelRegistros.Name = "PanelRegistros";
-            this.PanelRegistros.Size = new System.Drawing.Size(1496, 363);
+            this.PanelRegistros.Size = new System.Drawing.Size(1496, 428);
             this.PanelRegistros.TabIndex = 3;
+            // 
+            // txtCargo
+            // 
+            this.txtCargo.Enabled = false;
+            this.txtCargo.Location = new System.Drawing.Point(493, 43);
+            this.txtCargo.Name = "txtCargo";
+            this.txtCargo.Size = new System.Drawing.Size(173, 20);
+            this.txtCargo.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(373, 87);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(114, 17);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Sueldo por hora:";
+            // 
+            // txtSueldoHora
+            // 
+            this.txtSueldoHora.Enabled = false;
+            this.txtSueldoHora.Location = new System.Drawing.Point(493, 87);
+            this.txtSueldoHora.Name = "txtSueldoHora";
+            this.txtSueldoHora.Size = new System.Drawing.Size(173, 20);
+            this.txtSueldoHora.TabIndex = 5;
+            this.txtSueldoHora.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSueldoHora_KeyPress);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(437, 44);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(50, 17);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Cargo:";
             // 
             // Personal
             // 
@@ -757,10 +771,7 @@ namespace check_asis.Presentacion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtNombres;
-        private System.Windows.Forms.TextBox txtSueldoHora;
-        private System.Windows.Forms.TextBox txtCargo;
         private System.Windows.Forms.TextBox txtIdentifiacion;
         private System.Windows.Forms.ComboBox cbxPais;
         private System.Windows.Forms.Button btnAgregarCargo;
@@ -778,5 +789,9 @@ namespace check_asis.Presentacion
         private System.Windows.Forms.TextBox txtCargoG;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel PanelRegistros;
+        private System.Windows.Forms.TextBox txtCargo;
+        private System.Windows.Forms.TextBox txtSueldoHora;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
     }
 }

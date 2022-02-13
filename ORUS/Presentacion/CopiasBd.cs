@@ -130,5 +130,10 @@ namespace ORUSCURSO.Presentacion
 
             }
         }
+
+        private void txtRuta_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
