@@ -47,9 +47,9 @@ namespace check_asis.Presentacion
         }
         private void ObtenerRuta()
         {
-            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            if (dlg.ShowDialog() == DialogResult.OK)
             {
-                txtRuta.Text = folderBrowserDialog1.SelectedPath;
+                txtRuta.Text = dlg.SelectedPath;
             }
         }
         private void ejecucion()

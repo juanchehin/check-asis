@@ -36,7 +36,7 @@
             this.btnGenerar = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.dlg = new System.Windows.Forms.FolderBrowserDialog();
             this.lblRuta = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnPath = new System.Windows.Forms.Button();
@@ -146,7 +146,7 @@
         private System.Windows.Forms.Button btnGenerar;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.FolderBrowserDialog dlg;
         private System.Windows.Forms.Label lblRuta;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnPath;

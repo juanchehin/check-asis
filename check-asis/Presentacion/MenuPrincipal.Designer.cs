@@ -40,16 +40,22 @@ namespace check_asis.Presentacion
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnRegistro = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblLogin = new System.Windows.Forms.Label();
             this.Icono = new System.Windows.Forms.PictureBox();
             this.btnPersonal = new System.Windows.Forms.Button();
             this.btnPlanilla = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.PanelPadre = new System.Windows.Forms.Panel();
+            this.panelLoading = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dlg = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Icono)).BeginInit();
             this.PanelPadre.SuspendLayout();
+            this.panelLoading.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -161,6 +167,7 @@ namespace check_asis.Presentacion
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.lblLogin);
             this.panel3.Controls.Add(this.Icono);
             this.panel3.Controls.Add(this.btnPersonal);
             this.panel3.Controls.Add(this.btnPlanilla);
@@ -169,6 +176,15 @@ namespace check_asis.Presentacion
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(220, 202);
             this.panel3.TabIndex = 0;
+            // 
+            // lblLogin
+            // 
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.Location = new System.Drawing.Point(91, 18);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(55, 13);
+            this.lblLogin.TabIndex = 3;
+            this.lblLogin.Text = "checkasis";
             // 
             // Icono
             // 
@@ -214,11 +230,46 @@ namespace check_asis.Presentacion
             // 
             // PanelPadre
             // 
+            this.PanelPadre.Controls.Add(this.panelLoading);
             this.PanelPadre.Controls.Add(this.label2);
             this.PanelPadre.Location = new System.Drawing.Point(226, 3);
             this.PanelPadre.Name = "PanelPadre";
             this.PanelPadre.Size = new System.Drawing.Size(886, 737);
             this.PanelPadre.TabIndex = 2;
+            // 
+            // panelLoading
+            // 
+            this.panelLoading.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelLoading.Controls.Add(this.label4);
+            this.panelLoading.Controls.Add(this.label3);
+            this.panelLoading.Location = new System.Drawing.Point(272, 300);
+            this.panelLoading.Name = "panelLoading";
+            this.panelLoading.Size = new System.Drawing.Size(349, 124);
+            this.panelLoading.TabIndex = 2;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(104, 63);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(137, 20);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Por favor espere...";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(72, 13);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(209, 20);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Restaurando Base de datos";
+            // 
+            // dlg
+            // 
+            this.dlg.FileName = "openFileDialog1";
             // 
             // MenuPrincipal
             // 
@@ -232,13 +283,17 @@ namespace check_asis.Presentacion
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Check-Asis";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Icono)).EndInit();
             this.PanelPadre.ResumeLayout(false);
             this.PanelPadre.PerformLayout();
+            this.panelLoading.ResumeLayout(false);
+            this.panelLoading.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -260,5 +315,10 @@ namespace check_asis.Presentacion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel PanelPadre;
         public System.Windows.Forms.PictureBox Icono;
+        private System.Windows.Forms.OpenFileDialog dlg;
+        private System.Windows.Forms.Label lblLogin;
+        private System.Windows.Forms.Panel panelLoading;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }
