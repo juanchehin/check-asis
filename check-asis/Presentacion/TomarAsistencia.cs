@@ -160,5 +160,12 @@ namespace check_asis.Presentacion
                 InsertarAsistencias();
             }
         }
+
+        private void btnIniciarSesion_Click(object sender, EventArgs e)
+        {
+            Dispose();
+            Login frm = new Login();
+            frm.ShowDialog();
+        }
     }
 }

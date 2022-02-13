@@ -53,6 +53,7 @@
             this.btnIniciarSesion.Size = new System.Drawing.Size(133, 54);
             this.btnIniciarSesion.TabIndex = 8;
             this.btnIniciarSesion.UseVisualStyleBackColor = true;
+            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
             // 
             // panel5
             // 
