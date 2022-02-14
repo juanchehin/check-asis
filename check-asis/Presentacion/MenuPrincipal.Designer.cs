@@ -50,7 +50,7 @@ namespace check_asis.Presentacion
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dlg = new System.Windows.Forms.OpenFileDialog();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -168,7 +168,7 @@ namespace check_asis.Presentacion
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.lblUser);
             this.panel3.Controls.Add(this.Icono);
             this.panel3.Controls.Add(this.btnPersonal);
             this.panel3.Controls.Add(this.btnPlanilla);
@@ -274,15 +274,15 @@ namespace check_asis.Presentacion
             // 
             this.dlg.FileName = "openFileDialog1";
             // 
-            // label5
+            // lblUser
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(90, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 26);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "checkasis";
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.Location = new System.Drawing.Point(90, 9);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(108, 26);
+            this.lblUser.TabIndex = 4;
+            this.lblUser.Text = "checkasis";
             // 
             // MenuPrincipal
             // 
@@ -333,6 +333,6 @@ namespace check_asis.Presentacion
         private System.Windows.Forms.Panel panelLoading;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblUser;
     }
 }

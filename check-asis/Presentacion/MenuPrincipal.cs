@@ -25,6 +25,7 @@ namespace check_asis.Presentacion
 
             //validarPermisos();
             lblLogin.Text = LoginV + "!";
+            lblUser.Text = LoginV;
             panelLoading.Hide();
         }
         private void btnPersonal_Click(object sender, EventArgs e)
