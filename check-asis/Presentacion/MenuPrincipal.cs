@@ -24,7 +24,7 @@ namespace check_asis.Presentacion
             //panelBienvenida.Dock = DockStyle.Fill;
 
             //validarPermisos();
-            lblLogin.Text = LoginV;
+            lblLogin.Text = LoginV + "!";
             panelLoading.Hide();
         }
         private void btnPersonal_Click(object sender, EventArgs e)

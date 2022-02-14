@@ -50,6 +50,7 @@ namespace check_asis.Presentacion
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dlg = new System.Windows.Forms.OpenFileDialog();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -167,7 +168,7 @@ namespace check_asis.Presentacion
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.lblLogin);
+            this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.Icono);
             this.panel3.Controls.Add(this.btnPersonal);
             this.panel3.Controls.Add(this.btnPlanilla);
@@ -180,10 +181,10 @@ namespace check_asis.Presentacion
             // lblLogin
             // 
             this.lblLogin.AutoSize = true;
-            this.lblLogin.Font = new System.Drawing.Font("Cascadia Mono SemiBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogin.Location = new System.Drawing.Point(78, 9);
+            this.lblLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.Location = new System.Drawing.Point(539, 39);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(120, 27);
+            this.lblLogin.Size = new System.Drawing.Size(262, 61);
             this.lblLogin.TabIndex = 3;
             this.lblLogin.Text = "checkasis";
             // 
@@ -222,15 +223,16 @@ namespace check_asis.Presentacion
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(230, 15);
+            this.label2.Location = new System.Drawing.Point(243, 37);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(323, 63);
+            this.label2.Size = new System.Drawing.Size(311, 63);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Bienvenidos";
+            this.label2.Text = "!Bienvenido";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PanelPadre
             // 
+            this.PanelPadre.Controls.Add(this.lblLogin);
             this.PanelPadre.Controls.Add(this.panelLoading);
             this.PanelPadre.Controls.Add(this.label2);
             this.PanelPadre.Location = new System.Drawing.Point(226, 3);
@@ -271,6 +273,16 @@ namespace check_asis.Presentacion
             // dlg
             // 
             this.dlg.FileName = "openFileDialog1";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(90, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(108, 26);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "checkasis";
             // 
             // MenuPrincipal
             // 
@@ -321,5 +333,6 @@ namespace check_asis.Presentacion
         private System.Windows.Forms.Panel panelLoading;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
     }
 }
