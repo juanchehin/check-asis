@@ -165,5 +165,11 @@ namespace check_asis.Presentacion
         {
             MessageBox.Show("Contraseña erronea", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        private void btnCambioUsuario_Click(object sender, EventArgs e)
+        {
+            PanelIngreso_de_contraseña.Visible = false;
+            PanelUsuarios.Visible = true;
+        }
     }
 }

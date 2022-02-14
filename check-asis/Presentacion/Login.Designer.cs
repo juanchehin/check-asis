@@ -33,7 +33,7 @@
             this.PanelIngreso_de_contraseña = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCambioUsuario = new System.Windows.Forms.Button();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -58,7 +58,7 @@
             // 
             this.PanelIngreso_de_contraseña.Controls.Add(this.label2);
             this.PanelIngreso_de_contraseña.Controls.Add(this.btnIniciarSesion);
-            this.PanelIngreso_de_contraseña.Controls.Add(this.button1);
+            this.PanelIngreso_de_contraseña.Controls.Add(this.btnCambioUsuario);
             this.PanelIngreso_de_contraseña.Controls.Add(this.txtContraseña);
             this.PanelIngreso_de_contraseña.Controls.Add(this.label1);
             this.PanelIngreso_de_contraseña.Location = new System.Drawing.Point(57, 72);
@@ -85,14 +85,15 @@
             this.btnIniciarSesion.UseVisualStyleBackColor = true;
             this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
             // 
-            // button1
+            // btnCambioUsuario
             // 
-            this.button1.Location = new System.Drawing.Point(219, 207);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 49);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Cambio de usuario";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCambioUsuario.Location = new System.Drawing.Point(219, 207);
+            this.btnCambioUsuario.Name = "btnCambioUsuario";
+            this.btnCambioUsuario.Size = new System.Drawing.Size(145, 49);
+            this.btnCambioUsuario.TabIndex = 2;
+            this.btnCambioUsuario.Text = "Cambio de usuario";
+            this.btnCambioUsuario.UseVisualStyleBackColor = true;
+            this.btnCambioUsuario.Click += new System.EventHandler(this.btnCambioUsuario_Click);
             // 
             // txtContraseña
             // 
@@ -178,7 +179,7 @@
         private System.Windows.Forms.Panel PanelIngreso_de_contraseña;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnIniciarSesion;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCambioUsuario;
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;

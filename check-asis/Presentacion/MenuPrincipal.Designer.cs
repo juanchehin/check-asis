@@ -180,9 +180,10 @@ namespace check_asis.Presentacion
             // lblLogin
             // 
             this.lblLogin.AutoSize = true;
-            this.lblLogin.Location = new System.Drawing.Point(91, 18);
+            this.lblLogin.Font = new System.Drawing.Font("Cascadia Mono SemiBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.Location = new System.Drawing.Point(78, 9);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(55, 13);
+            this.lblLogin.Size = new System.Drawing.Size(120, 27);
             this.lblLogin.TabIndex = 3;
             this.lblLogin.Text = "checkasis";
             // 
