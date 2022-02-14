@@ -19,7 +19,7 @@ namespace check_asis.Presentacion.asistente_instalacion
 
         private void btnConectar_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtIp.Text))
+            if (!string.IsNullOrEmpty(txtIP.Text))
             {
                 conectar_manualmente();
             }

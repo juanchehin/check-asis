@@ -653,15 +653,15 @@
 </value>
   </data>
   <data name="txtCrearUsuarioDb.Text" xml:space="preserve">
-    <value>CREATE LOGIN ada369 WITH PASSWORD = 'softwarereal'
+    <value>CREATE LOGIN checkasis WITH PASSWORD = 'softwarereal'
 GO
 Use BASEADA ;
 GO
-IF NOT EXISTS (SELECT * FROM sys.database_principals WHERE name = N'ada369')
+IF NOT EXISTS (SELECT * FROM sys.database_principals WHERE name = N'checkasis')
 BEGIN
-    CREATE USER [ada369] FOR LOGIN [ada369]
-    EXEC sp_addrolemember N'db_owner', N'ada369'
-    EXEC master..sp_addsrvrolemember @loginame = N'ada369', @rolename = N'sysadmin'
+    CREATE USER [checkasis] FOR LOGIN [checkasis]
+    EXEC sp_addrolemember N'db_owner', N'checkasis'
+    EXEC master..sp_addsrvrolemember @loginame = N'checkasis', @rolename = N'sysadmin'
 END;
 GO</value>
   </data>
@@ -815,87 +815,76 @@ BROWSERSVCSTARTUPTYPE="Disabled"</value>
   <data name="txtCrear_procedimientos.Text" xml:space="preserve">
     <value>USE [master]
 GO
-/****** Object:  Database [check]    Script Date: 8/2/2022 11:02:51 ******/
-CREATE DATABASE [check]
- CONTAINMENT = NONE
- ON  PRIMARY 
-( NAME = N'check', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA\check.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
- LOG ON 
-( NAME = N'check_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA\check_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
- WITH CATALOG_COLLATION = DATABASE_DEFAULT
-GO
-ALTER DATABASE [check] SET COMPATIBILITY_LEVEL = 150
-GO
 IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
 begin
-EXEC [check].[dbo].[sp_fulltext_database] @action = 'enable'
+EXEC [checkasis].[dbo].[sp_fulltext_database] @action = 'enable'
 end
 GO
-ALTER DATABASE [check] SET ANSI_NULL_DEFAULT OFF 
+ALTER DATABASE [checkasis] SET ANSI_NULL_DEFAULT OFF 
 GO
-ALTER DATABASE [check] SET ANSI_NULLS OFF 
+ALTER DATABASE [checkasis] SET ANSI_NULLS OFF 
 GO
-ALTER DATABASE [check] SET ANSI_PADDING OFF 
+ALTER DATABASE [checkasis] SET ANSI_PADDING OFF 
 GO
-ALTER DATABASE [check] SET ANSI_WARNINGS OFF 
+ALTER DATABASE [checkasis] SET ANSI_WARNINGS OFF 
 GO
-ALTER DATABASE [check] SET ARITHABORT OFF 
+ALTER DATABASE [checkasis] SET ARITHABORT OFF 
 GO
-ALTER DATABASE [check] SET AUTO_CLOSE OFF 
+ALTER DATABASE [checkasis] SET AUTO_CLOSE OFF 
 GO
-ALTER DATABASE [check] SET AUTO_SHRINK OFF 
+ALTER DATABASE [checkasis] SET AUTO_SHRINK OFF 
 GO
-ALTER DATABASE [check] SET AUTO_UPDATE_STATISTICS ON 
+ALTER DATABASE [checkasis] SET AUTO_UPDATE_STATISTICS ON 
 GO
-ALTER DATABASE [check] SET CURSOR_CLOSE_ON_COMMIT OFF 
+ALTER DATABASE [checkasis] SET CURSOR_CLOSE_ON_COMMIT OFF 
 GO
-ALTER DATABASE [check] SET CURSOR_DEFAULT  GLOBAL 
+ALTER DATABASE [checkasis] SET CURSOR_DEFAULT  GLOBAL 
 GO
-ALTER DATABASE [check] SET CONCAT_NULL_YIELDS_NULL OFF 
+ALTER DATABASE [checkasis] SET CONCAT_NULL_YIELDS_NULL OFF 
 GO
-ALTER DATABASE [check] SET NUMERIC_ROUNDABORT OFF 
+ALTER DATABASE [checkasis] SET NUMERIC_ROUNDABORT OFF 
 GO
-ALTER DATABASE [check] SET QUOTED_IDENTIFIER OFF 
+ALTER DATABASE [checkasis] SET QUOTED_IDENTIFIER OFF 
 GO
-ALTER DATABASE [check] SET RECURSIVE_TRIGGERS OFF 
+ALTER DATABASE [checkasis] SET RECURSIVE_TRIGGERS OFF 
 GO
-ALTER DATABASE [check] SET  DISABLE_BROKER 
+ALTER DATABASE [checkasis] SET  DISABLE_BROKER 
 GO
-ALTER DATABASE [check] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+ALTER DATABASE [checkasis] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
 GO
-ALTER DATABASE [check] SET DATE_CORRELATION_OPTIMIZATION OFF 
+ALTER DATABASE [checkasis] SET DATE_CORRELATION_OPTIMIZATION OFF 
 GO
-ALTER DATABASE [check] SET TRUSTWORTHY OFF 
+ALTER DATABASE [checkasis] SET TRUSTWORTHY OFF 
 GO
-ALTER DATABASE [check] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+ALTER DATABASE [checkasis] SET ALLOW_SNAPSHOT_ISOLATION OFF 
 GO
-ALTER DATABASE [check] SET PARAMETERIZATION SIMPLE 
+ALTER DATABASE [checkasis] SET PARAMETERIZATION SIMPLE 
 GO
-ALTER DATABASE [check] SET READ_COMMITTED_SNAPSHOT OFF 
+ALTER DATABASE [checkasis] SET READ_COMMITTED_SNAPSHOT OFF 
 GO
-ALTER DATABASE [check] SET HONOR_BROKER_PRIORITY OFF 
+ALTER DATABASE [checkasis] SET HONOR_BROKER_PRIORITY OFF 
 GO
-ALTER DATABASE [check] SET RECOVERY SIMPLE 
+ALTER DATABASE [checkasis] SET RECOVERY SIMPLE 
 GO
-ALTER DATABASE [check] SET  MULTI_USER 
+ALTER DATABASE [checkasis] SET  MULTI_USER 
 GO
-ALTER DATABASE [check] SET PAGE_VERIFY CHECKSUM  
+ALTER DATABASE [checkasis] SET PAGE_VERIFY CHECKSUM  
 GO
-ALTER DATABASE [check] SET DB_CHAINING OFF 
+ALTER DATABASE [checkasis] SET DB_CHAINING OFF 
 GO
-ALTER DATABASE [check] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+ALTER DATABASE [checkasis] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
 GO
-ALTER DATABASE [check] SET TARGET_RECOVERY_TIME = 60 SECONDS 
+ALTER DATABASE [checkasis] SET TARGET_RECOVERY_TIME = 60 SECONDS 
 GO
-ALTER DATABASE [check] SET DELAYED_DURABILITY = DISABLED 
+ALTER DATABASE [checkasis] SET DELAYED_DURABILITY = DISABLED 
 GO
-ALTER DATABASE [check] SET ACCELERATED_DATABASE_RECOVERY = OFF  
+ALTER DATABASE [checkasis] SET ACCELERATED_DATABASE_RECOVERY = OFF  
 GO
-ALTER DATABASE [check] SET QUERY_STORE = OFF
+ALTER DATABASE [checkasis] SET QUERY_STORE = OFF
 GO
-USE [check]
+USE [checkasis]
 GO
-/****** Object:  Table [dbo].[Asistencias]    Script Date: 8/2/2022 11:02:51 ******/
+/****** Object:  Table [dbo].[Asistencias]    Script Date: 14/2/2022 13:57:21 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -914,7 +903,7 @@ CREATE TABLE [dbo].[Asistencias](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Cargos]    Script Date: 8/2/2022 11:02:51 ******/
+/****** Object:  Table [dbo].[Cargos]    Script Date: 14/2/2022 13:57:21 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -929,7 +918,21 @@ CREATE TABLE [dbo].[Cargos](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Modulos]    Script Date: 8/2/2022 11:02:51 ******/
+/****** Object:  Table [dbo].[CopiasBD]    Script Date: 14/2/2022 13:57:21 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[CopiasBD](
+	[IdCopias] [int] IDENTITY(1,1) NOT NULL,
+	[Ruta] [varchar](max) NULL,
+ CONSTRAINT [PK_CopiasBD] PRIMARY KEY CLUSTERED 
+(
+	[IdCopias] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Modulos]    Script Date: 14/2/2022 13:57:21 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -943,7 +946,7 @@ CREATE TABLE [dbo].[Modulos](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Permisos]    Script Date: 8/2/2022 11:02:51 ******/
+/****** Object:  Table [dbo].[Permisos]    Script Date: 14/2/2022 13:57:21 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -958,7 +961,7 @@ CREATE TABLE [dbo].[Permisos](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Personal]    Script Date: 8/2/2022 11:02:51 ******/
+/****** Object:  Table [dbo].[Personal]    Script Date: 14/2/2022 13:57:21 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -978,7 +981,7 @@ CREATE TABLE [dbo].[Personal](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Usuarios]    Script Date: 8/2/2022 11:02:51 ******/
+/****** Object:  Table [dbo].[Usuarios]    Script Date: 14/2/2022 13:57:21 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1016,7 +1019,7 @@ REFERENCES [dbo].[Cargos] ([id_cargo])
 GO
 ALTER TABLE [dbo].[Personal] CHECK CONSTRAINT [FK_Personal_Cargos]
 GO
-/****** Object:  StoredProcedure [dbo].[buscarAsistenciasId]    Script Date: 8/2/2022 11:02:51 ******/
+/****** Object:  StoredProcedure [dbo].[buscarAsistenciasId]    Script Date: 14/2/2022 13:57:21 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1027,7 +1030,7 @@ as
 select * from Asistencias
 where Id_personal=@Idpersonal and ASISTENCIAS.Estado='ENTRADA'
 GO
-/****** Object:  StoredProcedure [dbo].[buscarCargos]    Script Date: 8/2/2022 11:02:51 ******/
+/****** Object:  StoredProcedure [dbo].[buscarCargos]    Script Date: 14/2/2022 13:57:21 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1038,7 +1041,7 @@ as
 select Id_cargo,Cargo,SueldoPorHora as Sueldo  from Cargos
 where Cargo lIKE '%' + @buscador +'%'
 GO
-/****** Object:  StoredProcedure [dbo].[BuscarPersonal]    Script Date: 8/2/2022 11:02:51 ******/
+/****** Object:  StoredProcedure [dbo].[BuscarPersonal]    Script Date: 14/2/2022 13:57:21 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1059,7 +1062,7 @@ inner join Cargos on Cargos.id_cargo=Personal.id_cargo ) as Paginado
 Where (Paginado.Numero_de_fila &gt;=@Desde) and (Paginado.Numero_de_fila&lt;=@Hasta)
 and (Nombres + Identificacion Like '%' + @Buscador + '%')
 GO
-/****** Object:  StoredProcedure [dbo].[BuscarPersonalIdentidad]    Script Date: 8/2/2022 11:02:51 ******/
+/****** Object:  StoredProcedure [dbo].[BuscarPersonalIdentidad]    Script Date: 14/2/2022 13:57:21 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1071,7 +1074,7 @@ select * from Personal
 where Identificacion=@Buscador
 
 GO
-/****** Object:  StoredProcedure [dbo].[ConfirmarSalida]    Script Date: 8/2/2022 11:02:51 ******/
+/****** Object:  StoredProcedure [dbo].[ConfirmarSalida]    Script Date: 14/2/2022 13:57:21 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1087,7 +1090,7 @@ Horas =@Horas ,
 Estado='SALIDA'
 where Id_personal   =@Id_personal and Estado='ENTRADA'
 GO
-/****** Object:  StoredProcedure [dbo].[editar_Cargo]    Script Date: 8/2/2022 11:02:51 ******/
+/****** Object:  StoredProcedure [dbo].[editar_Cargo]    Script Date: 14/2/2022 13:57:21 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1103,7 +1106,18 @@ else
 update  Cargos set Cargo=@Cargo, SueldoPorHora=@Sueldo
 where Id_cargo=@id
 GO
-/****** Object:  StoredProcedure [dbo].[editarPersonal]    Script Date: 8/2/2022 11:02:51 ******/
+/****** Object:  StoredProcedure [dbo].[EditarCopiasBd]    Script Date: 14/2/2022 13:57:21 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create proc [dbo].[EditarCopiasBd]
+@Ruta varchar(max)
+as
+update CopiasBD 
+set Ruta=@Ruta 
+GO
+/****** Object:  StoredProcedure [dbo].[editarPersonal]    Script Date: 14/2/2022 13:57:21 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1123,7 +1137,7 @@ Update Personal set
 Nombres=@Nombres ,Identificacion=@Identificacion,Pais=@Pais,Id_cargo =@Id_cargo ,SueldoPorHora =@Sueldo_por_hora 
 where Id_personal=@Id_personal
 GO
-/****** Object:  StoredProcedure [dbo].[eliminarPersonal]    Script Date: 8/2/2022 11:02:51 ******/
+/****** Object:  StoredProcedure [dbo].[eliminarPersonal]    Script Date: 14/2/2022 13:57:21 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1134,7 +1148,7 @@ as
 Update Personal set Estado ='ELIMINADO'
 where Id_personal = @Idpersonal 
 GO
-/****** Object:  StoredProcedure [dbo].[Insertar_ASISTENCIAS]    Script Date: 8/2/2022 11:02:51 ******/
+/****** Object:  StoredProcedure [dbo].[Insertar_ASISTENCIAS]    Script Date: 14/2/2022 13:57:21 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1156,7 +1170,7 @@ create proc [dbo].[Insertar_ASISTENCIAS]
 	@Observacion)
 
 GO
-/****** Object:  StoredProcedure [dbo].[insertar_Cargo]    Script Date: 8/2/2022 11:02:51 ******/
+/****** Object:  StoredProcedure [dbo].[insertar_Cargo]    Script Date: 14/2/2022 13:57:21 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1170,7 +1184,19 @@ RAISERROR ('YA EXISTE UN CARGO CON ESTE NOMBRE, Ingrese de nuevo', 16,1)
 else
 insert into Cargos  values (@Cargo, @SueldoPorHora)
 GO
-/****** Object:  StoredProcedure [dbo].[insertar_Permisos]    Script Date: 8/2/2022 11:02:51 ******/
+/****** Object:  StoredProcedure [dbo].[insertar_Modulos]    Script Date: 14/2/2022 13:57:21 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create PROC [dbo].[insertar_Modulos]
+@Modulo As varchar(MAX)
+As
+INSERT INTO Modulos
+Values (
+@Modulo)
+GO
+/****** Object:  StoredProcedure [dbo].[insertar_Permisos]    Script Date: 14/2/2022 13:57:21 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1184,7 +1210,7 @@ Values (
 @IdModulo,
 @IdUsuario)
 GO
-/****** Object:  StoredProcedure [dbo].[insertar_usuario]    Script Date: 8/2/2022 11:02:51 ******/
+/****** Object:  StoredProcedure [dbo].[insertar_usuario]    Script Date: 14/2/2022 13:57:21 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1202,7 +1228,19 @@ else
 insert into Usuarios 
 values (@nombres, @Login, @Password ,@Icono ,@Estado)
 GO
-/****** Object:  StoredProcedure [dbo].[InsertarPersonal]    Script Date: 8/2/2022 11:02:51 ******/
+/****** Object:  StoredProcedure [dbo].[InsertarCopiasBd]    Script Date: 14/2/2022 13:57:21 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create proc [dbo].[InsertarCopiasBd]
+as
+declare @Ruta varchar(max)
+set @Ruta='-'
+insert into CopiasBD
+values(@Ruta)
+GO
+/****** Object:  StoredProcedure [dbo].[InsertarPersonal]    Script Date: 14/2/2022 13:57:21 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1233,7 +1271,24 @@ values(@Nombres ,
 Select @Id_personal=scope_identity()
 Update Personal set codigo = @Id_personal where Id_personal=@Id_personal
 GO
-/****** Object:  StoredProcedure [dbo].[mostrar_Permisos]    Script Date: 8/2/2022 11:02:51 ******/
+/****** Object:  StoredProcedure [dbo].[mostrar_asistencias_diarias]    Script Date: 14/2/2022 13:57:21 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE proc [dbo].[mostrar_asistencias_diarias]
+@desde as date,
+@hasta as date,
+@semana as int
+as
+select Personal.Nombres ,Personal.Identificacion ,convert(date, Fecha_salida) as fecha,sum(Horas) as Horas,
+@desde as desde , @hasta as hasta, Datename(WEEKDAY,Fecha_salida) as dia,@semana as Semana,Personal.SueldoPorHora ,DATENAME ( DAY , Fecha_salida ) 
+from ASISTENCIAS inner join Personal on Personal.Id_personal =ASISTENCIAS.Id_personal 
+where Fecha_salida &gt;=@desde and Fecha_salida &lt;=@hasta 
+group by Personal.Nombres,Personal.Identificacion, Fecha_salida,Personal.SueldoPorHora ,convert(date, Fecha_salida)
+order by convert(date, Fecha_salida) asc
+GO
+/****** Object:  StoredProcedure [dbo].[mostrar_Permisos]    Script Date: 14/2/2022 13:57:21 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1244,7 +1299,7 @@ as
 select Permisos.IdModulo , Modulos.Modulo  from Permisos inner join Modulos on Modulos.IdModulo=Permisos.IdModulo 
 where IdUsuario=@idusuario
 GO
-/****** Object:  StoredProcedure [dbo].[mostrarPersonal]    Script Date: 8/2/2022 11:02:51 ******/
+/****** Object:  StoredProcedure [dbo].[mostrarPersonal]    Script Date: 14/2/2022 13:57:21 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1263,7 +1318,7 @@ from Personal
 inner join Cargos on Cargos.Id_cargo=Personal.Id_cargo ) as Paginado
 Where (Paginado.Numero_de_fila &gt;=@Desde) and (Paginado.Numero_de_fila&lt;=@Hasta)
 GO
-/****** Object:  StoredProcedure [dbo].[ObtenerIdUsuario]    Script Date: 8/2/2022 11:02:51 ******/
+/****** Object:  StoredProcedure [dbo].[ObtenerIdUsuario]    Script Date: 14/2/2022 13:57:21 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1274,7 +1329,7 @@ as
 select idUsuario from Usuarios 
 where Login=@Login 
 GO
-/****** Object:  StoredProcedure [dbo].[restaurar_personal]    Script Date: 8/2/2022 11:02:51 ******/
+/****** Object:  StoredProcedure [dbo].[restaurar_personal]    Script Date: 14/2/2022 13:57:21 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1285,7 +1340,7 @@ as
 update Personal set Estado = 'ACTIVO'
 where Id_personal=@Idpersonal
 GO
-/****** Object:  StoredProcedure [dbo].[validar_usuario]    Script Date: 8/2/2022 11:02:51 ******/
+/****** Object:  StoredProcedure [dbo].[validar_usuario]    Script Date: 14/2/2022 13:57:21 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1299,7 +1354,7 @@ where Password = @password and Login =@login and Estado ='ACTIVO'
 GO
 USE [master]
 GO
-ALTER DATABASE [check] SET  READ_WRITE 
+ALTER DATABASE [checkasis] SET  READ_WRITE 
 GO</value>
   </data>
   <metadata name="timerCRARINI.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
