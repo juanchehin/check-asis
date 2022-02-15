@@ -34,23 +34,22 @@ namespace check_asis.Presentacion
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnEstaciones = new System.Windows.Forms.Button();
             this.btnRespaldos = new System.Windows.Forms.Button();
             this.btnRestaurar = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnRegistro = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lblLogin = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
             this.Icono = new System.Windows.Forms.PictureBox();
             this.btnPersonal = new System.Windows.Forms.Button();
             this.btnPlanilla = new System.Windows.Forms.Button();
+            this.lblLogin = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.PanelPadre = new System.Windows.Forms.Panel();
             this.panelLoading = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dlg = new System.Windows.Forms.OpenFileDialog();
-            this.lblUser = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -73,7 +72,6 @@ namespace check_asis.Presentacion
             // 
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.panel5);
-            this.panel4.Controls.Add(this.btnEstaciones);
             this.panel4.Controls.Add(this.btnRespaldos);
             this.panel4.Controls.Add(this.btnRestaurar);
             this.panel4.Controls.Add(this.btnUsuarios);
@@ -101,18 +99,6 @@ namespace check_asis.Presentacion
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(207, 59);
             this.panel5.TabIndex = 6;
-            // 
-            // btnEstaciones
-            // 
-            this.btnEstaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstaciones.Image = ((System.Drawing.Image)(resources.GetObject("btnEstaciones.Image")));
-            this.btnEstaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEstaciones.Location = new System.Drawing.Point(-3, 223);
-            this.btnEstaciones.Name = "btnEstaciones";
-            this.btnEstaciones.Size = new System.Drawing.Size(213, 48);
-            this.btnEstaciones.TabIndex = 5;
-            this.btnEstaciones.Text = "Estaciones";
-            this.btnEstaciones.UseVisualStyleBackColor = true;
             // 
             // btnRespaldos
             // 
@@ -178,15 +164,15 @@ namespace check_asis.Presentacion
             this.panel3.Size = new System.Drawing.Size(220, 202);
             this.panel3.TabIndex = 0;
             // 
-            // lblLogin
+            // lblUser
             // 
-            this.lblLogin.AutoSize = true;
-            this.lblLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogin.Location = new System.Drawing.Point(539, 39);
-            this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(262, 61);
-            this.lblLogin.TabIndex = 3;
-            this.lblLogin.Text = "checkasis";
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.Location = new System.Drawing.Point(90, 9);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(108, 26);
+            this.lblUser.TabIndex = 4;
+            this.lblUser.Text = "checkasis";
             // 
             // Icono
             // 
@@ -218,6 +204,16 @@ namespace check_asis.Presentacion
             this.btnPlanilla.Text = "Pre planilla";
             this.btnPlanilla.UseVisualStyleBackColor = true;
             this.btnPlanilla.Click += new System.EventHandler(this.btnPlanilla_Click);
+            // 
+            // lblLogin
+            // 
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.Location = new System.Drawing.Point(539, 39);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(262, 61);
+            this.lblLogin.TabIndex = 3;
+            this.lblLogin.Text = "checkasis";
             // 
             // label2
             // 
@@ -274,16 +270,6 @@ namespace check_asis.Presentacion
             // 
             this.dlg.FileName = "openFileDialog1";
             // 
-            // lblUser
-            // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.Location = new System.Drawing.Point(90, 9);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(108, 26);
-            this.lblUser.TabIndex = 4;
-            this.lblUser.Text = "checkasis";
-            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -315,7 +301,6 @@ namespace check_asis.Presentacion
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btnEstaciones;
         private System.Windows.Forms.Button btnRespaldos;
         private System.Windows.Forms.Button btnRestaurar;
         private System.Windows.Forms.Button btnUsuarios;
