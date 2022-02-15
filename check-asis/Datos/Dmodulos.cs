@@ -36,7 +36,7 @@ namespace check_asis.Datos
 			try
 			{
 				ConexionMaestra.abrir();
-				SqlCommand cmd = new SqlCommand("Insertar_Modulos", ConexionMaestra.conectar);
+				SqlCommand cmd = new SqlCommand("insertar_Modulos", ConexionMaestra.conectar);
 				cmd.CommandType = CommandType.StoredProcedure;
 				cmd.Parameters.AddWithValue("@Modulo", parametros.Modulo);
 				cmd.ExecuteNonQuery();
