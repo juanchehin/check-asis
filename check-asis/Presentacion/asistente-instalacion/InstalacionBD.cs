@@ -1,15 +1,9 @@
 ﻿using check_asis.Logica;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 
@@ -46,10 +40,10 @@ namespace check_asis.Presentacion.asistente_instalacion
         private void reemplazar()
         {
             //Solo modificar este campo
-            txtCrear_procedimientos.Text = txtCrear_procedimientos.Text.Replace("check", TXTbasededatos.Text);
+            txtCrear_procedimientos.Text = txtCrear_procedimientos.Text.Replace("checkasis", TXTbasededatos.Text);
             //***************
-            txtEliminarBase.Text = txtEliminarBase.Text.Replace("check", TXTbasededatos.Text);
-            txtCrearUsuarioDb.Text = txtCrearUsuarioDb.Text.Replace("check", txtusuario.Text);
+            txtEliminarBase.Text = txtEliminarBase.Text.Replace("checkasis", TXTbasededatos.Text);
+            txtCrearUsuarioDb.Text = txtCrearUsuarioDb.Text.Replace("checkasis", txtusuario.Text);
             txtCrearUsuarioDb.Text = txtCrearUsuarioDb.Text.Replace("checkuser", TXTbasededatos.Text);
             txtCrearUsuarioDb.Text = txtCrearUsuarioDb.Text.Replace("softwarereal", lblcontraseña.Text);
             //Adjuntando al texbox que contiene los procedimientos almacenados

@@ -204,6 +204,7 @@
             this.txtnombre_scrypt.Name = "txtnombre_scrypt";
             this.txtnombre_scrypt.Size = new System.Drawing.Size(100, 20);
             this.txtnombre_scrypt.TabIndex = 9;
+            this.txtnombre_scrypt.Text = "script_checkasis";
             // 
             // TXTbasededatos
             // 
@@ -211,6 +212,7 @@
             this.TXTbasededatos.Name = "TXTbasededatos";
             this.TXTbasededatos.Size = new System.Drawing.Size(100, 20);
             this.TXTbasededatos.TabIndex = 8;
+            this.TXTbasededatos.Text = "checkasis";
             // 
             // lblcontraseña
             // 
@@ -218,6 +220,7 @@
             this.lblcontraseña.Name = "lblcontraseña";
             this.lblcontraseña.Size = new System.Drawing.Size(100, 20);
             this.lblcontraseña.TabIndex = 7;
+            this.lblcontraseña.Text = "check123";
             // 
             // txtusuario
             // 
@@ -225,6 +228,7 @@
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(100, 20);
             this.txtusuario.TabIndex = 6;
+            this.txtusuario.Text = "checkasis";
             // 
             // lblnombredeservicio
             // 
@@ -232,6 +236,7 @@
             this.lblnombredeservicio.Name = "lblnombredeservicio";
             this.lblnombredeservicio.Size = new System.Drawing.Size(100, 20);
             this.lblnombredeservicio.TabIndex = 5;
+            this.lblnombredeservicio.Text = "SQLEXPRESS";
             // 
             // label7
             // 

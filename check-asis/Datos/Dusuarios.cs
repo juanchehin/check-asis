@@ -180,7 +180,6 @@ namespace check_asis.Datos
 			}
 			catch (Exception)
 			{
-
 				Indicador = "Incorrecto";
 			}
 		}
