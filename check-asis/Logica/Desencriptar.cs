@@ -1,4 +1,5 @@
-﻿using System.Xml;
+﻿using System;
+using System.Xml;
 
 namespace check_asis.Logica
 {
@@ -17,7 +18,5 @@ namespace check_asis.Logica
             CnString = (aes.Decrypt(dbcnString, appPwdUnique, int.Parse("256")));
             return CnString;
         }
-
-
     }
 }
