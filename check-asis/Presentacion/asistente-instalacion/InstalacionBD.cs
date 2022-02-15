@@ -53,7 +53,7 @@ namespace check_asis.Presentacion.asistente_instalacion
         {
             txtservidor.Text = @".\" + lblnombredeservicio.Text;
             ejecutar_scryt_ELIMINARBase_comprobacion_de_inicio();
-            //ejecutar_scryt_crearBase_comprobacion_De_inicio();
+            ejecutar_scryt_crearBase_comprobacion_De_inicio();
 
         }
         private void ejecutar_scryt_ELIMINARBase_comprobacion_de_inicio()
@@ -172,11 +172,13 @@ namespace check_asis.Presentacion.asistente_instalacion
             if (milisegundo == 60)
             {
                 segundos += 1;
+                progressBar1.Value += 9; 
                 // seg3.Text = segundos.ToString();
                 milisegundo = 0;
             }
-            if (segundos == 15)
+            if (segundos == 10)
             {
+                progressBar1.Value = 100;
                 timer4.Stop();
                 try
                 {
@@ -186,6 +188,7 @@ namespace check_asis.Presentacion.asistente_instalacion
                 {
 
                 }
+                MessageBox.Show("Instalacion correcta, vuelva a abrir el programa", "CheckAsis", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Dispose();
             }
         }
