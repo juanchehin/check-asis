@@ -3,6 +3,7 @@ using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using System.Xml;
@@ -31,7 +32,7 @@ namespace check_asis.Presentacion.asistente_instalacion
         }
         private void centrarPaneles()
         {
-            // Panel2.Location = new Point((Width - Panel2.Width) / 2, (Height - Panel2.Height) / 2);
+            panelCargando.Location = new Point((Width - panelCargando.Width) / 2, (Height - panelCargando.Height) / 2);
             nombre_del_equipo_usuario = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
             Cursor = Cursors.WaitCursor;
             panelCargando.Visible = false;
@@ -96,6 +97,7 @@ namespace check_asis.Presentacion.asistente_instalacion
                 /*Label1.Text = @"Instancia Encontrada...
             No Cierre esta Ventana, se cerrara Automaticamente cuando este todo Listo";
                 Panel6.Visible = false;*/
+                panelCargando.Visible = true;
                 timer4.Start();
 
             }

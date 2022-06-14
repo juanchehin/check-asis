@@ -52,12 +52,12 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
-            this.panelCargando = new System.Windows.Forms.Panel();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.txtservidor = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.panelCargando = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.GroupBox6.SuspendLayout();
             this.GroupBox1.SuspendLayout();
@@ -137,8 +137,8 @@
             this.txtEliminarBase.Name = "txtEliminarBase";
             this.txtEliminarBase.Size = new System.Drawing.Size(310, 135);
             this.txtEliminarBase.TabIndex = 589;
-            this.txtEliminarBase.Text = "alter database check set single_user with rollback immediate \nDROP DATABASE check" +
-    "";
+            this.txtEliminarBase.Text = "alter database checkasis set single_user with rollback immediate \nDROP DATABASE c" +
+    "heckasis";
             // 
             // GroupBox2
             // 
@@ -250,33 +250,24 @@
             // 
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
-            // panelCargando
+            // txtservidor
             // 
-            this.panelCargando.Controls.Add(this.progressBar1);
-            this.panelCargando.Controls.Add(this.label2);
-            this.panelCargando.Controls.Add(this.label1);
-            this.panelCargando.Controls.Add(this.panel5);
-            this.panelCargando.Location = new System.Drawing.Point(140, 51);
-            this.panelCargando.Name = "panelCargando";
-            this.panelCargando.Size = new System.Drawing.Size(851, 398);
-            this.panelCargando.TabIndex = 15;
+            this.txtservidor.AutoSize = true;
+            this.txtservidor.ForeColor = System.Drawing.Color.White;
+            this.txtservidor.Location = new System.Drawing.Point(640, 273);
+            this.txtservidor.Name = "txtservidor";
+            this.txtservidor.Size = new System.Drawing.Size(16, 13);
+            this.txtservidor.TabIndex = 612;
+            this.txtservidor.Text = "---";
             // 
-            // progressBar1
+            // panel5
             // 
-            this.progressBar1.Location = new System.Drawing.Point(37, 340);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(776, 23);
-            this.progressBar1.TabIndex = 17;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(233, 87);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(375, 20);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "No cierre esta ventana, se cerrara automaticamente";
+            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel5.Location = new System.Drawing.Point(313, 126);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(218, 177);
+            this.panel5.TabIndex = 14;
             // 
             // label1
             // 
@@ -288,24 +279,33 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Instalacion del servidor";
             // 
-            // panel5
+            // label2
             // 
-            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel5.Location = new System.Drawing.Point(313, 126);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(218, 177);
-            this.panel5.TabIndex = 14;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(233, 87);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(375, 20);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "No cierre esta ventana, se cerrara automaticamente";
             // 
-            // txtservidor
+            // progressBar1
             // 
-            this.txtservidor.AutoSize = true;
-            this.txtservidor.ForeColor = System.Drawing.Color.White;
-            this.txtservidor.Location = new System.Drawing.Point(640, 273);
-            this.txtservidor.Name = "txtservidor";
-            this.txtservidor.Size = new System.Drawing.Size(16, 13);
-            this.txtservidor.TabIndex = 612;
-            this.txtservidor.Text = "---";
+            this.progressBar1.Location = new System.Drawing.Point(37, 340);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(776, 23);
+            this.progressBar1.TabIndex = 17;
+            // 
+            // panelCargando
+            // 
+            this.panelCargando.Controls.Add(this.progressBar1);
+            this.panelCargando.Controls.Add(this.label2);
+            this.panelCargando.Controls.Add(this.label1);
+            this.panelCargando.Controls.Add(this.panel5);
+            this.panelCargando.Location = new System.Drawing.Point(140, 51);
+            this.panelCargando.Name = "panelCargando";
+            this.panelCargando.Size = new System.Drawing.Size(851, 398);
+            this.panelCargando.TabIndex = 15;
             // 
             // InstalacionBD
             // 
@@ -356,11 +356,11 @@
         private System.Windows.Forms.Timer timer4;
         internal System.Windows.Forms.GroupBox GroupBox6;
         internal System.Windows.Forms.TextBox txtCrearUsuarioDb;
-        private System.Windows.Forms.Panel panelCargando;
         internal System.Windows.Forms.Label txtservidor;
-        private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Panel panelCargando;
     }
 }
